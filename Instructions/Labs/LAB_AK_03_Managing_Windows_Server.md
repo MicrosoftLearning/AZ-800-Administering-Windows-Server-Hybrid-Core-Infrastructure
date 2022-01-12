@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Lab: Managing Windows Server'
     type: 'Answer Key'

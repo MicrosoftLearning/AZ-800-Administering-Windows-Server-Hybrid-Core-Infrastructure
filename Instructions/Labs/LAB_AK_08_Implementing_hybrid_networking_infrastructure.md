@@ -1,6 +1,6 @@
 ---
 lab:
-    title: '08 - Implementing Windows Server IaaS VM networking'
+    title: 'Lab - Implementing Windows Server IaaS VM networking'
     type: 'Answer Key'
     module: 'Module 08 - Implementing Windows Server IaaS VM networking'
 ---

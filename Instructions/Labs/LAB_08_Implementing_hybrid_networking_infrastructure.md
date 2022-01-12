@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Lab:Implementing hybrid networking infrastructure'
-    module: 'Module 8:Implementing Windows Server IaaS VM networking'
+    title: 'Lab: Implementing hybrid networking infrastructure'
+    module: 'Module 8: Implementing Windows Server IaaS VM networking'
 ---
 
 # Lab: Implementing hybrid networking infrastructure

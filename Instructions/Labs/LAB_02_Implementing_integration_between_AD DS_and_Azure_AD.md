@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Lab: Implementing integration between AD DS and Azure AD'
     module: 'Module 2: Implementing Identity in Hybrid Scenarios'

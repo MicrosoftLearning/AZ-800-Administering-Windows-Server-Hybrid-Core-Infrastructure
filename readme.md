@@ -1,4 +1,4 @@
-# INF99X: Sample Course
+# AZ-800T00: Administering Windows Server Hybrid Core Infrastructure
 
 - **[Download Latest Student Handbook and AllFiles Content](../../releases/latest)**
 - **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)

@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Lab: Implementing storage solutions in Windows Server'
     module: 'Module 9: File servers and storage management in Windows Server'

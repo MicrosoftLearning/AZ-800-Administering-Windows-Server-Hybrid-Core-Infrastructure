@@ -1,0 +1,1 @@
+This folder is for lab files and LAKs.

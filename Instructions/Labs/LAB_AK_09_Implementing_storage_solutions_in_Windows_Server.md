@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Lab: Implementing storage solutions in Windows Server'
     type: 'Answer Key'

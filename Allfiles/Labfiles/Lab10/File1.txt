@@ -1,0 +1,5 @@
+This file has original content until the line.
+File is used for testing Azure Files and Azure FIle Sync.
+Here is the line:
+---------------------------------------------------------
+

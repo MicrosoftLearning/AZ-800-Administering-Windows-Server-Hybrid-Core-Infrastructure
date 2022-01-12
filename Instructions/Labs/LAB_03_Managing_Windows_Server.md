@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Lab: Managing Windows Server'
     module: 'Module 3: Windows Server administration'

@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Lab: Implementing Azure File Sync'
     module: 'Module 10: Implementing a hybrid file server infrastructure'

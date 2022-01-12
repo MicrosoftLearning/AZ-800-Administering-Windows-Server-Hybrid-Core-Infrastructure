@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Lab: Implementing identity services and Group Policy'
     module: 'Module 1: Identity services in Windows Server'

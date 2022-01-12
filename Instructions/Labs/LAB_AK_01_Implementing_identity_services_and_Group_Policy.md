@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: 'Lab: Implementing identity services and Group Policy'
     type: 'Answer Key'

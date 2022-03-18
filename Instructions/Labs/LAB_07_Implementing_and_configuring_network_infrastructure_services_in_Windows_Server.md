@@ -124,9 +124,9 @@ The main tasks for this exercise are as follows:
 ### Task 5: Verify DHCP functionality
 
 1. On **SEA-ADM1**, change the IP configuration from statically to dynamically assigned.
-1. Examine the resulting IP configuration and verify that the DHCP lease was obtained from **SEA-SVR2 (172.16.10.12)**.
+1. Examine the resulting IP configuration and verify that the DHCP lease was obtained from **SEA-SVR1 (172.16.10.12)**.
 1. On **SEA-ADM1**, in the **DHCP management console**, verify that both DHCP servers list the lease for **SEA-ADM1** in the **Contoso** scope.
-1. On **SEA-ADM1**, use the **DHCP management console** to stop the **DHCP** service on **SEA-SVR2 (172.16.10.12)**.
+1. On **SEA-ADM1**, use the **DHCP management console** to stop the **DHCP** service on **SEA-SVR1 (172.16.10.12)**.
 1. Force renewal of the lease by disabling and re-enabling the Ethernet network connection on **SEA-ADM1**.
 1. On **SEA-ADM1**, verify that the same DHCP lease is obtained from **SEA-DC1 (172.16.10.10)**.
 

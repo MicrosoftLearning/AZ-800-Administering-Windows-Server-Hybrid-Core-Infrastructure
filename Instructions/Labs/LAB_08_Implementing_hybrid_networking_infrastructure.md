@@ -447,13 +447,13 @@ In this task, you will validate external DNS name resolution by using Azure publ
 1. From the Cloud Shell pane, run the following command to list all resource groups created throughout this lab:
 
    ```powershell
-   Get-AzResourceGroup -Name 'az800l08*'
+   Get-AzResourceGroup -Name 'AZ800-L08*'
    ```
 
 1. Run the following command to delete all resource groups you created throughout this lab:
 
    ```powershell
-   Get-AzResourceGroup -Name 'az800l08*' | Remove-AzResourceGroup -Force -AsJob
+   Get-AzResourceGroup -Name 'AZ800-L08*' | Remove-AzResourceGroup -Force -AsJob
    ```
 
    >**Note**: The command executes asynchronously (as determined by the *-AsJob* parameter), so while you'll be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.

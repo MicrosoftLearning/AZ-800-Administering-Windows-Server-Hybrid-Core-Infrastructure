@@ -104,8 +104,8 @@ In this task, you will deploy three virtual machines into the same Azure region 
 In this task, you will configure local peering between the virtual networks you deployed in the previous tasks to create a hub and spoke network topology.
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open another tab and browse to the **[Azure portal](https://portal.azure.com)**.
-1. In the Azure portal, browse to the **az800l08-vnet1** virtual network page.
-1. From the **az800l08-vnet1** virtual network page, create a peering with the following settings (leave others with their default values):
+1. In the Azure portal, browse to the **az800l08-vnet0** virtual network page.
+1. From the **az800l08-vnet0** virtual network page, create a peering with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |

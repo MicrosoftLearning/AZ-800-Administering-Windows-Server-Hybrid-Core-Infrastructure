@@ -64,8 +64,8 @@ lab:
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open another tab and browse to the **[Azure portal](https://portal.azure.com)**.
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual networks**.
-1. In the list of virtual networks, select **az800l08-vnet1**.
-1. On the **az800l08-vnet1** virtual network page, in the **Settings** section, select **Peerings**, and then select **+ Add**.
+1. In the list of virtual networks, select **az800l08-vnet0**.
+1. On the **az800l08-vnet0** virtual network page, in the **Settings** section, select **Peerings**, and then select **+ Add**.
 1. Specify the following settings (leave others with their default values), and then select **Add**:
 
     | Setting | Value |

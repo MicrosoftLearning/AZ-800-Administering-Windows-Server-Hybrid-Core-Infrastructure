@@ -25,6 +25,8 @@ lab:
    ```
 
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
+   
+   > **Note**: After installation completes, you may encounter the error message 'ERR_Connection_Refused'. If this occurs, restart SEA-ADM1 to correct the issue.
 
 #### Task 2: Add servers for remote administration
 
@@ -38,7 +40,7 @@ lab:
 1. Review the **All connections** page and note that it includes the **sea-adm1.contoso.com** entry. 
 1. On the **All connections** page, select **+ Add**. 
 1. In the Add or create resources pane, on the **Servers** tile, select **Add**.
-1. In the **Server name** text box, enter **sea-svr1.contoso.com**.
+1. In the **Server name** text box, enter **sea-dc1.contoso.com**.
 1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
    - Username: **CONTOSO\\Administrator**
@@ -76,7 +78,7 @@ lab:
 1. In the **Settings** section on the right side, select **Remote Desktop**.
 1. In the **Remote Desktop** section, select the option **Allow remote connections to this computer** checkbox, and then select **Save**.
 1. In the left pane, in the list of **Tools**, select **Remote Desktop**.
-1. In the Remote Desktop pane, select the **Do not ask again me again for connections to this computer** checkbox, and then select **Connect**.
+1. In the Remote Desktop pane, select the **Automatically connect with the certificate presented by this machine** checkbox, and then select **Connect**.
 1. When prompted, select **Confirm**, and then select **Connect**.
 1. Verify that you successfully connected via Remote Desktop to **SEA-DC1** within the Windows Admin Center interface.
 1. Select **Disconnect**.

@@ -125,6 +125,8 @@ The main tasks for this exercise are as follows:
 
 1. On the lab VM, in the Notepad window displaying the contents of the **template.json** file, insert the following code directly underneath the `    "resources": [` line):
 
+   >**Note**: If you are using a tool that pastes the code in line by line, intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into the JSON file.
+
    ```json
         {
            "type": "Microsoft.Compute/virtualMachines/extensions",

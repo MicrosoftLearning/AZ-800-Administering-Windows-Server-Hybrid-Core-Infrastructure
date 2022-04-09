@@ -99,6 +99,7 @@ In this task, you will use the Azure portal to create resource groups and create
 #### Task 2: Add an Azure VM extension section to the existing template
 
 1. On **SEA-ADM1**, in the Notepad window displaying the content of the **template.json** file, insert the following code directly after the `    "resources": [` line):
+   >**Note**: If you are using a tool that pastes the code in line by line, intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into the JSON file.
 
    ```json
         {

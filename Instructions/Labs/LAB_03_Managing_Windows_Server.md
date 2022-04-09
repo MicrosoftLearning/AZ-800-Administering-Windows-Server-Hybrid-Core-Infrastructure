@@ -61,6 +61,8 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
 
+   > **Note**: After installation completes, you may encounter the error message 'ERR_Connection_Refused'. If this occurs, restart SEA-ADM1 to correct the issue.
+
 #### Task 2: Add servers for remote administration
 
 1. On **SEA-ADM1**, start Microsoft Edge, and then go to `https://SEA-ADM1.contoso.com`. 

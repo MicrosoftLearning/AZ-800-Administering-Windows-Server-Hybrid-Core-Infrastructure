@@ -189,6 +189,7 @@ The main tasks for this exercise are as follows:
      SubnetName = $subnetName
      GenerateSslCert = $true
      size = $size
+     PublicIPAddressName = $pipname
    }
    ```
 1. Run the following commands to disable certificate verification for PowerShell remoting:

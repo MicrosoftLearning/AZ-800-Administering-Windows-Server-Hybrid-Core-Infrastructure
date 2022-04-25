@@ -95,7 +95,7 @@ lab:
    - Username: **CONTOSO\\Administrator**
    - Password: **Pa55w.rd**
 
-1. On the **sea-svr1.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\\Administrator** user with **Pa55w.rd** as its password.
+1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\\Administrator** user with **Pa55w.rd** as its password.
 1. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
 
    ```powershell

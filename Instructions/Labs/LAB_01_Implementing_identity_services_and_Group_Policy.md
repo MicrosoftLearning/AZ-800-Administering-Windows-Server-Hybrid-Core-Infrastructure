@@ -4,7 +4,7 @@ lab:
     module: 'Module 1: Identity services in Windows Server'
 ---
 
-# Lab: Implementing identity services and Group Policy_2
+# Lab: Implementing identity services and Group Policy
 
 ## Scenario
 

@@ -43,7 +43,7 @@ The main tasks for this exercise are as follows:
 1. Deploy AD DS on a new Windows Server Core server.
 1. Manage AD DS objects with GUI tools and with Windows PowerShell.
 
-### Task 1: Deploy AD DS on a new Windows Server Core server
+#### Task 1: Deploy AD DS on a new Windows Server Core server
 
 1. Switch to **SEA-ADM1** and from **Server Manager**, open Windows PowerShell.
 1. Use the **Install-WindowsFeature** cmdlet in Windows PowerShell to install the AD DS role on **SEA-SVR1**.
@@ -54,7 +54,7 @@ The main tasks for this exercise are as follows:
 
 > **Note**: You might need to wait after the installation process completes before verifying that the AD DS role has installed. If you do not observe the expected results from the **Get-WindowsFeature** command, you can try again after a few minutes.
 
-### Task 2: Prepare the AD DS installation and promote a remote server
+#### Task 2: Prepare the AD DS installation and promote a remote server
 
 1. On **SEA-ADM1**, from **Server Manager**, on the **All Servers** node, add **SEA-SVR1** as a managed server.
 1. On **SEA-ADM1**, from **Server Manager**, configure **SEA-SVR1** as an AD DS domain controller by using the following settings:
@@ -94,7 +94,7 @@ The main tasks for this exercise are as follows:
 1. Set the **SafeModeAdministratorPassword** as **Pa55w.rd**.
 1. After **SEA-SVR1** restarts, on **SEA-ADM1**, switch to **Server Manager**, and then select the **AD D** node. Note that **SEA-SVR1** has been added as a domain controller and that the warning notification has disappeared. You might have to select **Refresh**.
 
-### Task 3: Manage objects in AD DS
+#### Task 3: Manage objects in AD DS
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** console.
 1. To create an organizational unit (OU) called **Seattle**, in the **Windows PowerShell** console, run the following command:
@@ -158,7 +158,7 @@ The main tasks for this exercise are as follows:
 1. Create and edit GPO settings.
 1. Apply and verify settings on the client computer.
 
-### Task 1: Create and edit a GPO
+#### Task 1: Create and edit a GPO
 
 1. On **SEA-ADM1**, from **Server Manager**, open the **Group Policy Management** console.
 1. Create a GPO named **Contoso Standards** in the **Group Policy Objects** container.
@@ -167,11 +167,11 @@ The main tasks for this exercise are as follows:
 1. Browse to the **User Configuration\Policies\Administrative Templates\Control Panel\Personalization** folder, and then configure the **Screen saver** timeout policy to **600** seconds.
 1. Enable the **Password protect the screen saver** policy setting, and then close the **Group Policy Management Editor** window.
 
-### Task 2: Link the GPO
+#### Task 2: Link the GPO
 
   - Link the **Contoso Standards** GPO to the `contoso.com` domain.
 
-### Task 3: Review the effects of the GPO’s settings
+#### Task 3: Review the effects of the GPO’s settings
 
 1. On **SEA-ADM1**, open **Control Panel**.
 1. Use the **Windows Defender Firewall** interface to enable **Remote Event Log Management** domain traffic. 
@@ -180,12 +180,12 @@ The main tasks for this exercise are as follows:
 1. Attempt to run Registry Editor. Verify that Group Policy blocks this action. 
 1. Sign out and then sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
-### Task 4: Create and link the required GPOs
+#### Task 4: Create and link the required GPOs
 
 1. On **SEA-ADM1**, in the **Group Policy Management** console, create a new GPO named **Seattle Application Override** that is linked to the **Seattle** OU.
 1. Configure the **Screen saver timeout** policy setting to be disabled, and then close the **Group Policy Management Editor** window.
 
-### Task 5: Verify the order of precedence
+#### Task 5: Verify the order of precedence
 
 1. On **SEA-ADM1**, from **Server Manager**, open the **Group Policy Management** console.
 1. In the **Group Policy Management Console** tree, select the **Seattle** OU.
@@ -193,12 +193,12 @@ The main tasks for this exercise are as follows:
 
    > **Note**: The Seattle Application Override GPO has higher precedence than the CONTOSO Standards GPO. The screen saver time-out policy setting that you just configured in the Seattle Application Override GPO is applied after the setting in the CONTOSO Standards GPO. Therefore, the new setting will overwrite the CONTOSO Standards GPO setting. Screen saver time-out will be disabled for users within the scope of the Seattle Application Override GPO.
 
-### Task 6: Configure the scope of a GPO with security filtering
+#### Task 6: Configure the scope of a GPO with security filtering
 
 1. On **SEA-ADM1**, in the **Group Policy Management** console, select the **Seattle Application Override** GPO. Notice that in the **Security Filtering** section, the GPO applies by default to all authenticated users.
 1. In the **Security Filtering** section, first remove **Authenticated Users**, and then add the **SeattleBranchUsers** group and the **SEA-ADM1** computer account.
 
-### Task 7: Verify the application of settings
+#### Task 7: Verify the application of settings
 
 1. In Group Policy Management, in the navigation pane, select **Group Policy Modeling**.
 1. Launch the **Group Policy Modeling Wizard**.

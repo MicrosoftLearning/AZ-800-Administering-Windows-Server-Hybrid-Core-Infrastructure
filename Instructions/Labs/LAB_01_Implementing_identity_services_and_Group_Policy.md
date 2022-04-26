@@ -43,7 +43,7 @@ The main tasks for this exercise are as follows:
 1. Deploy AD DS on a new Windows Server Core server.
 1. Manage AD DS objects with GUI tools and with Windows PowerShell.
 
-#### Task 1: Deploy AD DS on a new Windows Server Core server
+### Task 1: Deploy AD DS on a new Windows Server Core server
 
 1. Switch to **SEA-ADM1** and from **Server Manager**, open Windows PowerShell.
 1. Use the **Install-WindowsFeature** cmdlet in Windows PowerShell to install the AD DS role on **SEA-SVR1**.
@@ -54,7 +54,7 @@ The main tasks for this exercise are as follows:
 
 > **Note**: You might need to wait after the installation process completes before verifying that the AD DS role has installed. If you do not observe the expected results from the **Get-WindowsFeature** command, you can try again after a few minutes.
 
-#### Task 2: Prepare the AD DS installation and promote a remote server
+### Task 2: Prepare the AD DS installation and promote a remote server
 
 1. On **SEA-ADM1**, from **Server Manager**, on the **All Servers** node, add **SEA-SVR1** as a managed server.
 1. On **SEA-ADM1**, from **Server Manager**, configure **SEA-SVR1** as an AD DS domain controller by using the following settings:
@@ -94,7 +94,7 @@ The main tasks for this exercise are as follows:
 1. Set the **SafeModeAdministratorPassword** as **Pa55w.rd**.
 1. After **SEA-SVR1** restarts, on **SEA-ADM1**, switch to **Server Manager**, and then select the **AD D** node. Note that **SEA-SVR1** has been added as a domain controller and that the warning notification has disappeared. You might have to select **Refresh**.
 
-#### Task 3: Manage objects in AD DS
+### Task 3: Manage objects in AD DS
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** console.
 1. To create an organizational unit (OU) called **Seattle**, in the **Windows PowerShell** console, run the following command:
@@ -180,7 +180,7 @@ The main tasks for this exercise are as follows:
 1. Attempt to run Registry Editor. Verify that Group Policy blocks this action. 
 1. Sign out and then sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
 
-#### Task 4: Create and link the required GPOs
+### Task 4: Create and link the required GPOs
 
 1. On **SEA-ADM1**, in the **Group Policy Management** console, create a new GPO named **Seattle Application Override** that is linked to the **Seattle** OU.
 1. Configure the **Screen saver timeout** policy setting to be disabled, and then close the **Group Policy Management Editor** window.

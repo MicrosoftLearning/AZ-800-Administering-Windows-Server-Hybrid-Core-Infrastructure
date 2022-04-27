@@ -15,7 +15,7 @@ lab:
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 1. In Server Manager, select **All Servers**.
 1. In the Servers list, select the **SEA-SVR1** entry, display its context menu, and then select **Hyper-V Manager**.
-1. In Hyper-V Manager, ensure that **SEA-SVR1.Contoso.com** is selet box, entercted.
+1. In Hyper-V Manager, ensure that **SEA-SVR1.CONTOSO.COM** is selet box, entercted.
 1. In the Actions pane, select **Virtual Switch Manager**.
 1. In the **Virtual Switch Manager**, in the **Create virtual switch** pane, select **Private**, and then select **Create Virtual Switch**.
 1. In the **Virtual Switch Properties** box, specify the following settings, and then select **OK**:
@@ -81,7 +81,7 @@ lab:
    - Password: **Pa55w.rd**
 
 1. On the **All connections** pane, select **+ Add**.
-1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**
+1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
 1. In the **Server name** text box, enter **sea-svr1.contoso.com**.
 1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
@@ -98,11 +98,11 @@ lab:
 1. Select **Settings**, and then select **Disks**.
 1. Scroll to the bottom of the pane and select **+ Add disk**.
 1. Select **New Virtual Hard Disk**.
-1. On the New Virtual Hard Disk pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
+1. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
 1. Select **Save disks settings**, and then select **Close**.
 1. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
 1. Scroll down and display the statistics for the running VM.
-1. Refresh the page, select **Powers**, select **Shut down**, and then select **Yes** to confirm.
+1. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
 1. In the **Tools** list, select **Virtual switches** and verify that the pane displays two switches.
 
 ### Exercise 1 results

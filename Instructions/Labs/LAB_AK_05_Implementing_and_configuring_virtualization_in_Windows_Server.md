@@ -167,11 +167,6 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
    > **Note**: Verify that there are no images in the local repository store.
 
-1. Enter the following command, and then press Enter to list docker base images from the online Microsoft repository:
-
-   ```powershell
-   docker search microsoft
-   ```
 1. Enter the following command, and then press Enter to download a Nano Server image containing an Internet Information Services (IIS) installation:
 
    ```powershell

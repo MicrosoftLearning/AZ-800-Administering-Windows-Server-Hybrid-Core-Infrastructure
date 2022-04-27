@@ -83,7 +83,7 @@ The main tasks for this exercise are as follows:
 1. Paste the copied command between the braces ({ }) and run the resulting command to start the installation. The complete command should have the following format:
 
    ```powershell
-   Invoke-Command –ComputerName SEA-SVR1 {Install-ADDSDomainController -NoGlobalCatalog:\$false -CreateDnsDelegation:\$false -Credential (Get-Credential) -CriticalReplicationOnly:\$false -DatabasePath "C:\Windows\NTDS" -DomainName "Contoso.com" -InstallDns:\$true -LogPath "C:\Windows\NTDS" -NoRebootOnCompletion:\$false -SiteName "Default-First-Site-Name" -SysvolPath "C:\Windows\SYSVOL" -Force:\$true}
+   Invoke-Command –ComputerName SEA-SVR1 {Install-ADDSDomainController -NoGlobalCatalog:$false -CreateDnsDelegation:$false -Credential (Get-Credential) -CriticalReplicationOnly:$false -DatabasePath "C:\Windows\NTDS" -DomainName "Contoso.com" -InstallDns:$true -LogPath "C:\Windows\NTDS" -NoRebootOnCompletion:$false -SiteName "Default-First-Site-Name" -SysvolPath "C:\Windows\SYSVOL" -Force:$true}
    ```
 
 1. Provide the following credentials:
@@ -202,7 +202,7 @@ The main tasks for this exercise are as follows:
 
 1. In Group Policy Management, in the navigation pane, select **Group Policy Modeling**.
 1. Launch the **Group Policy Modeling Wizard**.
-1. Set the target user and computer to the **CONTOSO\\Ty** user account and the **SEA-ADM1** computer, respectively.
+1. Set the target user and computer to the **CONTOSO\Ty** user account and the **CONTOSO\SEA-ADM1** computer, respectively.
 1. Step through the remaining pages of the wizard, review the default settings without modifying them, and complete the wizard, which will generate a report containing its outcome.
 1. After the report is created, in the details pane, select the **Details** tab, and then select **show all**.
 1. In the report, scroll down until you locate the **User Details** section, and then locate the **Control Panel/Personalization** section. You should notice that the **Screen saver timeout** settings are obtained from the Seattle Application Override GPO.

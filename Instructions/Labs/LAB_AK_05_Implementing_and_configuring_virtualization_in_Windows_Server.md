@@ -26,7 +26,7 @@ lab:
 #### Task 2: Create a virtual hard disk
 
 1. On **SEA-ADM1**, in Hyper-V Manager connected to **SEA-SVR1**, select **New**, and then select **Hard Disk**. The **New Virtual Hard Disk Wizard** starts.
-1. On the **Before you Begin page**, select **Next**.
+1. On the **Before You Begin** page, select **Next**.
 1. On the **Choose Disk Format** page, select **VHD** and then select **Next**.
 1. On the **Choose Disk Type** page, select **Differencing**, and then select **Next**.
 1. On the **Specify Name and Location** page, specify the following settings, and then select **Next**:
@@ -40,11 +40,11 @@ lab:
 #### Task 3: Create a virtual machine
 
 1. On **SEA-ADM1**, in Hyper-V Manager, select **New**, and then select **Virtual Machine**. The **New Virtual Machine Wizard** starts.
-1. On the **Before you Begin page**, select **Next**.
+1. On the **Before You Begin** page, select **Next**.
 1. On the **Specify Name and Location** page, enter **SEA-VM1**, and then select the check box next to **Store the virtual machine in a different location**.
 1. In the **Location** box, enter **C:\Base**, and then select **Next**.
 1. On the **Specify Generation** page, select **Generation 1**, and then select **Next**.
-1. On the **Assign Memory** page, enter **4096**, and then select **Next**:
+1. On the **Assign Memory** page, enter **4096**, and then select **Next**.
 1. On the **Configure Networking** page, select the Connection drop-down menu, select **Contoso Private Switch**, and then select **Next**.
 1. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk**, and then select **Browse**.
 1. Browse to **C:\Base**, select **SEA-VM1.vhd**, select **Open**, and then select **Next**.

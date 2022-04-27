@@ -77,7 +77,7 @@ lab:
 
    > **Note**: You might have to select **Refresh**.
 
-### Task 3: Manage objects in AD DS
+#### Task 3: Manage objects in AD DS
 
 1. Ensure that you are connected to the console session of **SEA-ADM1**.
 1. Switch to **Windows PowerShell (Admin)**.

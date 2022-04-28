@@ -93,7 +93,7 @@ In this task, you will connect to your Azure subscription and enable the enhance
    |NIC network security group|None|
    |Accelerated networking|Off|
    |Place this virtual machine behind an existing load balancing solution?|No|
-   |Boot diagnostics|**Enabled with managed storage account (recommended)**|
+   |Boot diagnostics|**Enable with managed storage account (recommended)**|
 
 1. When you reach the **Review + Create** tab of the **Create a virtual machine** page, proceed to task 3.
 
@@ -199,7 +199,7 @@ The main tasks for this exercise are as follows:
 1. In the Azure portal, browse to the **Microsoft Defender for Cloud** page.
 1. Verify that the enhanced security features of Microsoft Defender for Cloud are enabled.
 
-#### Task 2: Review the Just in time access settings
+#### Task 2: Review the Just-in-time VM access settings
 
 1. In the Azure portal, browse to the **Microsoft Defender for Cloud \| Workload protections** page and review **Just in time VM access** settings.
 1. On the **Just-in-time VM access** page, review the **Configured**, **Not Configured**, and **Unsupported** tabs.
@@ -263,7 +263,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, browse back to the **az800l06-vm0** page.
 1. On the **az800l06-vm0** page, select **Configuration**. 
-1. On the **az800l06-vm0 \| Configuration** page, select **Enable JIT VM access** and select the **Open Azure Security Center** link.
+1. On the **az800l06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Azure Security Center** link.
 1. On the **Just-in-time VM access** page, verify that the entry representing the **az800l06-vm0** Azure VM appears on the **Configured** tab.
 
 #### Task 4: Connect to the Azure VM via JIT VM access

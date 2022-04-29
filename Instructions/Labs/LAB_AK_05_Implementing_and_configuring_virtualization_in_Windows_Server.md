@@ -223,7 +223,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 #### Task 3: Use Windows Admin Center to manage containers
 
 1. On **SEA-ADM1**, in the Windows Admin Center, in the Tools menu of **sea-svr1.contoso.com**, select **Containers**. When prompted to close the **PowerShell** session, select **Continue**.
-1. In the Containers pane, browse through the **Summary**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
+1. In the Containers pane, browse through the **Overview**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
 
 ### Exercise 2 results
 

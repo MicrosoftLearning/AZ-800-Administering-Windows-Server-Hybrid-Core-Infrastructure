@@ -48,7 +48,7 @@ lab:
    Get-PSDrive -Name M
    ```
 
-   > **Note**: Record the free space on drive **M**.
+   > **Note**: Record the free space on drive **M**. 
 
 #### Task 2: Enable and configure Data Deduplication
 
@@ -56,11 +56,11 @@ lab:
 1. In the **Server Manager** tree pane, select **File and Storage Services**, and then select **Disks**.
 1. In the Disks pane, browse to the list of disks of **SEA-SVR3** and select the entry representing the disk number **1**, which you configured in the previous task.
 1. In the Volumes pane, display the context-sensitive menu of the **M:** volume, and then, in the menu, select **Configure Data Deduplication**.
-1. In the **Volume (M:\) Deduplication Settings** window, in the **Data Deduplication** drop-down list, select the **General purpose file server** setting.
+1. In the **Volume (M:\\) Deduplication Settings** window, in the **Data deduplication** drop-down list, select the **General purpose file server** setting.
 1. In the **Deduplicate files older than (in days):** text box, replace the default value of **3** with **0**.
 1. Select the **Set Deduplication Schedule** button.
 1. In the **SEA-SVR3 Deduplication Schedule** window, select **Enable throughput optimization**, and then select **OK**.
-1. Back in the **Volume (M:\) Deduplication Settings** window, select **OK**.
+1. Back in the **Volume (M:\\) Deduplication Settings** window, select **OK**.
 
 #### Task 3: Test Data Deduplication
 
@@ -95,7 +95,7 @@ lab:
    - Username: **CONTOSO\\Administrator**
    - Password: **Pa55w.rd**
 
-1. On the **sea-svr1.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\\Administrator** user with **Pa55w.rd** as its password.
+1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\\Administrator** user with **Pa55w.rd** as its password.
 1. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
 
    ```powershell
@@ -121,7 +121,7 @@ lab:
    ```
 1. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
 1. Select the **M:** volume in the **VOLUMES** section, display its context sensitive menu, and select **Properties** from the menu. 
-1. In the **Volume (M:\) Deduplication Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
+1. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
 
 ## Exercise 2: Configuring iSCSI storage
 
@@ -276,7 +276,7 @@ lab:
 1. On the **Specify the virtual disk name** page, in the **Name** text box, enter **Three-Mirror**, and then select **Next**.
 1. On the **Specify enclosure resiliency** page, select **Next**.
 1. On the **Select the storage layout** page, select **Mirror**, and then select **Next**.
-1. On the **Specify the provisioning enter** page, select **Thin**, and then select **Next**.
+1. On the **Specify the provisioning type** page, select **Thin**, and then select **Next**.
 1. On the **Specify the size of the virtual disk** page, in the **Specify size** text box, enter **25**, and then select **Next**.
 1. On the **Confirm selections** page, review the settings, and then select **Create**.
 1. On the **View results** page, clear the **Create a volume when this wizard closes** check box, and then select **Close**.
@@ -415,7 +415,7 @@ lab:
    > **Note**: Wait until the step completes. This should take less than 1 minute. 
 
 1. Verify that the output of the command includes definition of a file share, with the attribute **Path** set to **C:\\ClusterStorage\\CSV\\VM01**. This validates that the command completed successfully.
-1. In the **Failover Cluster Manager** window, select **S2D-SOFS**, and then select the **Shares** tab.
+1. In the **Failover Cluster Manager** window, in the **Roles** pane, select **S2D-SOFS** under the **Name** column, and then select the **Shares** tab.
 1. Verify the existence of the share named **VM01**. This also verifies that the command completed successfully.
 
 #### Task 5: Verify Storage Spaces Direct functionality
@@ -437,14 +437,14 @@ lab:
 1. Verify that for the **Cluster Virtual Disk (CSV)**, the **Health Status** is set to **Warning** and **Operational Status** to **Degraded** (**Operational Status** might also be listed as **Incomplete**.)
 1. On **SEA-ADM1**, switch to the **Microsoft Edge** window displaying Windows Admin Center. 
 1. Browse to the All connections pane and select **+ Add**.
-1. In the Add or create resources pane, in the Server cluster pane, select **Add**.
+1. In the **Add or create resources** pane, in the **Server clusters** pane, select **Add**.
 1. In the **Cluster name** text box, enter **S2DCluster.Contoso.com**.
 1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Connect with account**:
 
    - Username: **CONTOSO\\Administrator**
    - Password: **Pa55w.rd**
-
-1  Clear **Also add servers in the cluster** and select **Add**.
+   
+1. Clear **Also add servers in the cluster** and select **Add**.
 1. Back on the **All connections** page, select **s2dcluster.contoso.com**.
 1. Verify that when the page loads, the Dashboard pane has an alert indicating that **SEA-SVR3** is not reachable. 
 1. Switch to the console session to **SEA-SVR3** and start it. 

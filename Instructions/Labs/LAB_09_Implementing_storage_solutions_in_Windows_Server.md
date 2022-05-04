@@ -138,7 +138,7 @@ The main tasks for this exercise are as follows:
    Get-DedupMetadata –Volume M: |fl
    ```
 1. On **SEA-ADM1**, refresh the Disks pane in **Server Manager** and display the properties of the **M:** volume.
-1. In the **Volume (M:\) Deduplication Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
+1. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
 
 ## Lab exercise 2: Configuring iSCSI storage
 

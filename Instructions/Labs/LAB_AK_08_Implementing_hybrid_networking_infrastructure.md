@@ -231,7 +231,7 @@ lab:
 
     > **Note**: **10.80.0.4** represents the private IP address of **az800l08-vm0**. 
 
-1. Select **OK**.
+1. Select **Add**.
 1. Back on the **az800l08-rt12** route table page, in the **Settings** section, select **Subnets**, and then select **+ Associate**.
 1. Associate the route table **az800l08-rt12** with the following subnet:
 
@@ -267,7 +267,7 @@ lab:
     | Next hop type | **Virtual appliance** |
     | Next hop address | **10.80.0.4** |
 
-1. Select **OK**.
+1. Select **Add**.
 1. Back on the **az800l08-rt21** route table page, in the **Settings** section, select **Subnets**, and then select **+ Associate**.
 1. Associate the route table **az800l08-rt21** with the following subnet:
 

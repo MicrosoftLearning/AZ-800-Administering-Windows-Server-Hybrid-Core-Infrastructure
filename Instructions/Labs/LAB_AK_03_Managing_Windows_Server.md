@@ -5,7 +5,7 @@ lab:
     module: 'Module 3: Windows Server administration'
 ---
 
-# Lab: Managing Windows Server
+# Lab answer key: Managing Windows Server
 
 ## Exercise 1: Implementing and using remote server administration
 

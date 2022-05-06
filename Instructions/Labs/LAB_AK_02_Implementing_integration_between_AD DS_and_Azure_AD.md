@@ -5,7 +5,7 @@ lab:
     module: 'Module 2: Implementing Identity in Hybrid Scenarios'
 ---
 
-# Lab: Implementing integration between AD DS and Azure AD
+# Lab answer key: Implementing integration between AD DS and Azure AD
 
 ## Exercise 1: Preparing Azure AD for AD DS integration
 

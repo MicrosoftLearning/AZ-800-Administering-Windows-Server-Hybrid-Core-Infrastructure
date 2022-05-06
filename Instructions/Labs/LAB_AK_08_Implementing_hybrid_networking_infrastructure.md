@@ -5,7 +5,7 @@ lab:
     module: 'Module 8: Implementing Windows Server IaaS VM networking'
 ---
 
-# Lab: Implementing hybrid networking infrastructure
+# Lab answer key: Implementing hybrid networking infrastructure
 
 ### Exercise 1: Implement virtual network routing in Azure
 

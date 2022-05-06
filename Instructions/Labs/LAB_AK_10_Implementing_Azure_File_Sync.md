@@ -5,7 +5,7 @@ lab:
     module: 'Module 10: Implementing a hybrid file server infrastructure'
 ---
 
-# Lab: Implementing Azure File Sync
+# Lab answer key: Implementing Azure File Sync
 
 ## Exercise 1: Implementing Distributed File System (DFS) Replication in your on-premises environment
 

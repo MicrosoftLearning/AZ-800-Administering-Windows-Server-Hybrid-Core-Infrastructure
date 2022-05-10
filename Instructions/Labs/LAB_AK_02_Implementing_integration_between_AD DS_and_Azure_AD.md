@@ -118,7 +118,7 @@ lab:
 #### Task 3: Update a user account in Active Directory
 
 1. On **SEA-ADM1**, in Server Manager, on the **Tools** menu, select **Active Directory Users and Computers**.
-1. In **Active Directory Users and Computers**, expand the **Sales** organizational unit (OU), and then open the properties for **Ben Miller**.
+1. In **Active Directory Users and Computers**, expand the **Sales** organizational unit (OU), and then open the properties for **Sumesh Rajan**.
 1. In the properties of the user, select the **Organization** tab.
 1. In the **Job Title** text box, enter **Manager**, and then select **OK**.
 
@@ -149,8 +149,8 @@ lab:
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Azure Active Directory** page.
 1. On the **Azure Active Directory** page, select **Users**.
-1. On the **All Users** page, search for the user **Ben**.
-1. Open the properties page of the user **Ben Miller**, and then verify that the **Job title** attribute has been synced from Active Directory.
+1. On the **All Users** page, search for the user **Sumesh**.
+1. Open the properties page of the user **Sumesh Rajan**, and then verify that the **Job title** attribute has been synced from Active Directory.
 1. In Microsoft Edge, go back to the **All Users** page.
 1. On the **All Users** page, search for the user **Jordan**.
 1. Open the properties page of the user **Jordan Mitchell** and review the attributes of the user account that was synced from Active Directory.
@@ -220,14 +220,14 @@ lab:
 1. On the **Seamless single sign-on** page, note the on-premises domain name.
 1. In Microsoft Edge, go back to the **Azure AD Connect** page.
 1. On the **Azure AD Connect** page, under **User Sign-In**, select **Pass-through authentication**.
-1. On the **Pass-through authentication** page, note the **SEA-ADM1** server name under **Authentication Agent**.
+1. On the **Passthrough Authentication** page, note the **SEA-ADM1** server name under **Authentication Agent**.
 
    > **Note**: To install the Azure AD Authentication Agent on multiple servers in your environment, you can download its binaries from the **Pass-through authentication** page in the Azure portal. 
 
 #### Task 5: Install and register the Azure AD Password Protection proxy service and DC agent
 
 1. On **SEA-ADM1**, start Microsoft Edge, go to the Microsoft Downloads website, browse to the **Azure AD Password Protection for Windows Server Active Directory** page where you can download installers, and then select **Download**.
-1. On **the Azure AD Password Protection for Windows Server Active Directory** page, select the **AzureADPasswordProtectionProxySetup.msi** and the **AzureADPasswordProtectionDCAgentSetup.msi** files, and then select **Next**.
+1. On the **Azure AD Password Protection for Windows Server Active Directory** page, select the **AzureADPasswordProtectionProxySetup.exe** and the **AzureADPasswordProtectionDCAgentSetup.msi** files, and then select **Next**.
 1. Select **Download**.
 1. In the **Download multiple files** dialog box, select **Allow**.
 
@@ -239,12 +239,12 @@ lab:
    ```powershell
    Get-ChildItem -Path "$env:USERPROFILE\Downloads" -File | Unblock-File
    ```
-1. Run the following commands to create the **C:\Temp** directory on **SEA-SVR1**, copy the **AzureADPasswordProtectionProxySetup.msi** installer to that directory, and then invoke the installation:
+1. Run the following commands to create the **C:\Temp** directory on **SEA-SVR1**, copy the **AzureADPasswordProtectionProxySetup.exe** installer to that directory, and then invoke the installation:
 
    ```powershell
    New-Item -Type Directory -Path '\\SEA-SVR1.contoso.com\C$\Temp' -Force
-   Copy-Item -Path "$env:USERPROFILE\Downloads\AzureADPasswordProtectionProxySetup.msi" -Destination '\\SEA-SVR1.contoso.com\C$\Temp\'
-   Invoke-Command -ComputerName SEA-SVR1.contoso.com -ScriptBlock { Start-Process -FilePath C:\Temp\AzureADPasswordProtectionProxySetup.msi -ArgumentList '/quiet /log C:\Temp\AzureADPPProxyInstall.log' -Wait }
+   Copy-Item -Path "$env:USERPROFILE\Downloads\AzureADPasswordProtectionProxySetup.exe" -Destination '\\SEA-SVR1.contoso.com\C$\Temp\'
+   Invoke-Command -ComputerName SEA-SVR1.contoso.com -ScriptBlock { Start-Process -FilePath C:\Temp\AzureADPasswordProtectionProxySetup.exe -ArgumentList '/quiet /log C:\Temp\AzureADPPProxyInstall.log' -Wait }
    ```
 1. Run the following commands to create the **C:\Temp** directory on **SEA-DC1**, copy the **AzureADPasswordProtectionDCAgentSetup.msi** installer to that directory, invoke the installation, and restart the domain controller after the installation completes:
 

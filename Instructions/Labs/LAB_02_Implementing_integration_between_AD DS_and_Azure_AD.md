@@ -272,8 +272,8 @@ The main tasks for this exercise are:
 1. On the **Azure AD Connect** page, review the information under **User Sign-In**.
 1. Under **User Sign-In**, select **Seamless single sign-on**.
 1. On the **Seamless single sign-on** page, review the on-premises domain name.
-1. From the **Seamless single sign-on** page, browse to the **Pass-through authentication** page.
-1. On the **Pass-through authentication** page, review the list of servers under **Authentication Agent**.
+1. From the **Seamless single sign-on** page, browse to the **Passthrough Authentication** page.
+1. On the **Passthrough Authentication** page, review the list of servers under **Authentication Agent**.
 
    > **Note**: To install the Azure AD Authentication Agent on multiple servers in your environment, you can download its binaries from the **Pass-through authentication** page in the Azure portal.
 

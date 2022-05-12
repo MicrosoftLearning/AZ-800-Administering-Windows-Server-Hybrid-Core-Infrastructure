@@ -30,10 +30,10 @@ lab:
 
 1. On **SEA-ADM1**, select **Start**, enter **DFS**, and then select **DFS Management**.
 1. In **DFS Management**, in the navigation pane, right-click or access the context menu for **Namespaces**, and then select **Add Namespaces to Display**.
-1. In the **Add Namespaces to Display** dialog box, in the list of namespaces, select **\\Contoso.com\Root**, and then select **OK**.
+1. In the **Add Namespaces to Display** dialog box, in the list of namespaces, select **\\\contoso.com\Root**, and then select **OK**.
 1. In the navigation pane, right-click or access the context menu for **Replication**, and then select **Add Replication Groups to Display**.
 1. In the **Add Replication Groups to Display** dialog box, in the **Replication groups** section, select **Branch1**, and then select **OK**.
-1. In the navigation pane, expand the **\\Contoso.com\Root** namespace, and then select the **Data** folder.
+1. In the navigation pane, expand the **\\\contoso.com\Root** namespace, and then select the **Data** folder.
 1. In the details pane, verify that the **Data** folder has two referrals to the **Data** folder on **SEA-SVR1** and **SEA-SVR2**.
 1. In the navigation pane, select **Branch1**.
 1. In the details pane, verify that the **S:\\Data** folder on **SEA-SVR1** and on **SEA-SVR2** are members of the **Branch1** replication group.
@@ -87,7 +87,7 @@ lab:
 1. Verify that the file **File1.txt** appears in the details pane. This is the file that you uploaded to the Azure file share.
 1. Double-click or select **File1.txt**, and then press Enter to open the file in Notepad. 
 1. Use Notepad to modify the file content by appending your name in the last line, save the change, and close Notepad.
-1. Right-click or access the context menu for **File1**, select **Properties**, and then, in the **File1.txt Properties** window, select the **Previous Versions** tab.
+1. Right-click or access the context menu for **File1**, select **Properties**, and then, in the **File1 Properties** window, select the **Previous Versions** tab.
 1. Verify that one previous file version is available. Select that version (**File1.txt**), select **Restore** twice, and then select **OK** twice.
 1. Double-click or select **File1.txt**, select Enter, and then confirm that it doesn't include your name. This is because you restored the snapshot created before you modified the file.
 1. Close **Notepad**.
@@ -202,7 +202,7 @@ lab:
 
 1. On **SEA-ADM1**, use File Explorer to copy the **C:\\Windows\\INF** folder to **\\\\SEA-SVR2\\Data\\**. The folder will sync to the cloud endpoint, which will cause sync traffic.
 1. On **SEA-ADM1**, switch to the Azure portal displaying the **Sync1** sync group page of the **FileSync1** Storage Sync Service.
-1. In the **Server endpoint** section, verify that the **Health** of both endpoints has green check marks.
+1. In the **server endpoints** section, verify that the **Health** of both endpoints has green check marks.
 1. Select the **SEA-SVR2.Contoso.com** endpoint in the Server Endpoint Properties pane, review **Sync Activity**, and then close the pane.
 1. Select the **Files Synced** graph, and then explore how you can customize the graph by using a filter.
 1. Switch to the File Explorer window displaying the content of drive **Z** mapped to the Azure File share and verify that the drive contains the content of the **INF** folder synchronized from **\\\\SEA-SVR2\\Data**.

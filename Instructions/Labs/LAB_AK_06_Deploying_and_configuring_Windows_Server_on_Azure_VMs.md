@@ -25,7 +25,7 @@ In this task, you will connect to your Azure subscription and enable enhanced se
 
 In this task, you will use the Azure portal to create resource groups and create a disk in the resource group.
 
-1. On **SEA-ADM1**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines**. In the **Virtual machines** page, select **+ Create**, and then select **Virtual machine**.
+1. On **SEA-ADM1**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines**. In the **Virtual machines** page, select **+ Create**, and then select **Azure virtual machine**.
 1. In the **Create a virtual machine** page, on the **Basics** tab, specify the following settings and leave all other settings with their default values, but do not deploy it:
 
    |Setting|Value|
@@ -49,7 +49,7 @@ In this task, you will use the Azure portal to create resource groups and create
    |---|---|
    |OS disk type|**Standard HDD**|
 
-1. Select **Next: Networking >**, and in the **Create a virtual machine** page, on the **Networking** tab, select the **Create new** hyperlink that follows the **Virtual network** text box*.
+1. Select **Next: Networking >**, and in the **Create a virtual machine** page, on the **Networking** tab, select the **Create new** hyperlink that follows the **Virtual network** text box.
 1. On the **Create virtual network** page, specify the following settings, leaving all other settings with their default values, and then select **OK**:
 
    |Setting|Value|
@@ -72,7 +72,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
    |Setting|Value|
    |---|---|
-   |Boot diagnostics|**Enabled with managed storage account (recommended)**|
+   |Boot diagnostics|**Enable with managed storage account (recommended)**|
    
 1. Select **Next: Advanced >**, on the **Advanced** tab of the **Create a virtual machine** page, review the available settings without modifying any of them, and then select **Review + Create**.
 
@@ -155,7 +155,7 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Resource groups** page, select the **AZ800-L0601-RG** entry.
 1. On the **AZ800-L0601-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l06-vm0**.
 1. Within the list of resources, select the Azure VM **az800l06-vm0** entry. 
-1. On the **az800l06-vm0** page, select **Extensions**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
+1. On the **az800l06-vm0** page, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
 1. Browse back to the **AZ800-L0601-RG** page, and in the **Settings** section, select **Deployments**.
 1. On the **AZ800-L0601-RG \| Deployments** page, select the **Microsoft.Template** link.
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
@@ -171,10 +171,10 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Settings \| Auto provisioning** page, in the list of extensions, to the right side of the **Log Analytics agent for Azure VMs** entry, select the **Edit configuration** link.
 1. On the **Extension deployment configuration**, ensure that the **Connect Azure VMs to the default workspace(s) created by Defender for Cloud** entry is selected, select **Apply**, and back on the **Settings \| Auto provisioning** page, select **Save**.
 
-#### Task 2: Review Just in time VM access settings
+#### Task 2: Review the Just-in-time VM access settings
 
 1. Browse back to the **Overview** page of Microsoft Defender for Cloud, and then, in the **Cloud Security** section, select **Workload protections**.
-1. On the ***Microsoft Defender for Cloud \| Workload protections** page, select **Just-in-time VM access**.
+1. On the **Microsoft Defender for Cloud \| Workload protections** page, select **Just-in-time VM access**.
 1. On the **Just-in-time VM access** page, review the **Configured**, **Not Configured**, and **Unsupported** tabs.
 
    >**Note**: It might take up to 24 hours for the newly deployed VM to appear on the **Unsupported** tab. Rather than wait, continue to the next exercise.
@@ -239,7 +239,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
 1. On the **az800l06-vm0** page, select **Configuration**. 
-1. On the **az800l06-vm0 \| Configuration** page, select **Enable JIT VM access** and select the **Open Azure Security Center** link.
+1. On the **az800l06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Azure Security Center** link.
 1. On the **Just-in-time VM access** page, verify that the entry representing the **az800l06-vm0** Azure VM appears on the **Configured** tab.
 
 #### Task 4: Connect to the Azure VM via JIT VM access

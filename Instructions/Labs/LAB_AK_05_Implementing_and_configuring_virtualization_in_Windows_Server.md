@@ -15,7 +15,7 @@ lab:
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 1. In Server Manager, select **All Servers**.
 1. In the Servers list, select the **SEA-SVR1** entry, display its context menu, and then select **Hyper-V Manager**.
-1. In Hyper-V Manager, ensure that **SEA-SVR1.Contoso.com** is selet box, entercted.
+1. In Hyper-V Manager, ensure that **SEA-SVR1.CONTOSO.COM** is selected.
 1. In the Actions pane, select **Virtual Switch Manager**.
 1. In the **Virtual Switch Manager**, in the **Create virtual switch** pane, select **Private**, and then select **Create Virtual Switch**.
 1. In the **Virtual Switch Properties** box, specify the following settings, and then select **OK**:
@@ -26,7 +26,7 @@ lab:
 #### Task 2: Create a virtual hard disk
 
 1. On **SEA-ADM1**, in Hyper-V Manager connected to **SEA-SVR1**, select **New**, and then select **Hard Disk**. The **New Virtual Hard Disk Wizard** starts.
-1. On the **Before you Begin page**, select **Next**.
+1. On the **Before You Begin** page, select **Next**.
 1. On the **Choose Disk Format** page, select **VHD** and then select **Next**.
 1. On the **Choose Disk Type** page, select **Differencing**, and then select **Next**.
 1. On the **Specify Name and Location** page, specify the following settings, and then select **Next**:
@@ -40,11 +40,11 @@ lab:
 #### Task 3: Create a virtual machine
 
 1. On **SEA-ADM1**, in Hyper-V Manager, select **New**, and then select **Virtual Machine**. The **New Virtual Machine Wizard** starts.
-1. On the **Before you Begin page**, select **Next**.
+1. On the **Before You Begin** page, select **Next**.
 1. On the **Specify Name and Location** page, enter **SEA-VM1**, and then select the check box next to **Store the virtual machine in a different location**.
 1. In the **Location** box, enter **C:\Base**, and then select **Next**.
 1. On the **Specify Generation** page, select **Generation 1**, and then select **Next**.
-1. On the **Assign Memory** page, enter **4096**, and then select **Next**:
+1. On the **Assign Memory** page, enter **4096**, and then select **Next**.
 1. On the **Configure Networking** page, select the Connection drop-down menu, select **Contoso Private Switch**, and then select **Next**.
 1. On the **Connect Virtual Hard Disk** page, select **Use an existing virtual hard disk**, and then select **Browse**.
 1. Browse to **C:\Base**, select **SEA-VM1.vhd**, select **Open**, and then select **Next**.
@@ -81,7 +81,7 @@ lab:
    - Password: **Pa55w.rd**
 
 1. On the **All connections** pane, select **+ Add**.
-1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**
+1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
 1. In the **Server name** text box, enter **sea-svr1.contoso.com**.
 1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
@@ -98,11 +98,11 @@ lab:
 1. Select **Settings**, and then select **Disks**.
 1. Scroll to the bottom of the pane and select **+ Add disk**.
 1. Select **New Virtual Hard Disk**.
-1. On the New Virtual Hard Disk pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
+1. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
 1. Select **Save disks settings**, and then select **Close**.
 1. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
 1. Scroll down and display the statistics for the running VM.
-1. Refresh the page, select **Powers**, select **Shut down**, and then select **Yes** to confirm.
+1. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
 1. In the **Tools** list, select **Virtual switches** and verify that the pane displays two switches.
 
 ### Exercise 1 results
@@ -218,7 +218,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 #### Task 3: Use Windows Admin Center to manage containers
 
 1. On **SEA-ADM1**, in the Windows Admin Center, in the Tools menu of **sea-svr1.contoso.com**, select **Containers**. When prompted to close the **PowerShell** session, select **Continue**.
-1. In the Containers pane, browse through the **Summary**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
+1. In the Containers pane, browse through the **Overview**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
 
 ### Exercise 2 results
 

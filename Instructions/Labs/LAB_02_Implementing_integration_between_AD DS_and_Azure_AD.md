@@ -178,7 +178,7 @@ The main tasks for this exercise are:
 #### Task 3: Update a user account in Active Directory
 
 1. On **SEA-ADM1**, in **Server Manager**, open **Active Directory Users and Computers**.
-1. In **Active Directory Users and Computers**, expand the **Sales** organizational unit (OU), and then open the properties for **Ben Miller**.
+1. In **Active Directory Users and Computers**, expand the **Sales** organizational unit (OU), and then open the properties for **Sumesh Rajan**.
 1. In the properties of the user, select the **Organization** tab.
 1. In the **Job Title** text box, enter **Manager**, and then select **OK**.
 
@@ -205,8 +205,8 @@ The main tasks for this exercise are:
 
 1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and go back to the **Azure Active Directory** page.
 1. From the **Azure Active Directory** page, browse to the **Users** page.
-1. On the **All Users** page, search for the user **Ben**.
-1. Open the properties page of the user **Ben Miller**, and then verify that the **Job title** attribute has been synced from Active Directory.
+1. On the **All Users** page, search for the user **Sumesh**.
+1. Open the properties page of the user **Sumesh Rajan**, and then verify that the **Job title** attribute has been synced from Active Directory.
 1. In Microsoft Edge, go back to the **All Users** page.
 1. On the **All Users** page, search for the user **Jordan**.
 1. Open the properties page of the user **Jordan Mitchell**, and then review the attributes of the user account that have been synced from Active Directory.
@@ -272,8 +272,8 @@ The main tasks for this exercise are:
 1. On the **Azure AD Connect** page, review the information under **User Sign-In**.
 1. Under **User Sign-In**, select **Seamless single sign-on**.
 1. On the **Seamless single sign-on** page, review the on-premises domain name.
-1. From the **Seamless single sign-on** page, browse to the **Pass-through authentication** page.
-1. On the **Pass-through authentication** page, review the list of servers under **Authentication Agent**.
+1. From the **Seamless single sign-on** page, browse to the **Passthrough Authentication** page.
+1. On the **Passthrough Authentication** page, review the list of servers under **Authentication Agent**.
 
    > **Note**: To install the Azure AD Authentication Agent on multiple servers in your environment, you can download its binaries from the **Pass-through authentication** page in the Azure portal.
 

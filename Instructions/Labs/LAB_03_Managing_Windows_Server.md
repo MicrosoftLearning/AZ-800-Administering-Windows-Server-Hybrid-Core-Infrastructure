@@ -90,7 +90,7 @@ The main tasks for this exercise are as follows:
 #### Task 4: Verify remote administration
 
 1. On **SEA-ADM1**, in Windows Admin Center, while connected to `sea-dc1.contoso.com`, review the Overview pane. Note that the details pane of Windows Admin Center displays basic server information and performance monitoring.
-1. In Windows Admin Center, install **Telnet Client** on `sea-dc1.contoso.com` by using the Roles and Features tool. 
+1. In Windows Admin Center, install **Telnet Client** on `sea-dc1.contoso.com` by using the Roles & features tool. 
 1. In Windows Admin Center, use the **Settings** interface to enable Remote Desktop on `sea-dc1.contoso.com`.
 1. In Windows Admin Center, connect via Remote Desktop to `sea-dc1.contoso.com`.
 1. Disconnect from the Remote Desktop session. 

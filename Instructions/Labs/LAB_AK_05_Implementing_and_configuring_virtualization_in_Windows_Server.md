@@ -15,7 +15,7 @@ lab:
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 1. In Server Manager, select **All Servers**.
 1. In the Servers list, select the **SEA-SVR1** entry, display its context menu, and then select **Hyper-V Manager**.
-1. In Hyper-V Manager, ensure that **SEA-SVR1.Contoso.com** is selet box, entercted.
+1. In Hyper-V Manager, ensure that **SEA-SVR1.Contoso.com** is the selected Hyper-V server.
 1. In the Actions pane, select **Virtual Switch Manager**.
 1. In the **Virtual Switch Manager**, in the **Create virtual switch** pane, select **Private**, and then select **Create Virtual Switch**.
 1. In the **Virtual Switch Properties** box, specify the following settings, and then select **OK**:
@@ -72,7 +72,7 @@ lab:
    Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
    ```
 
-   > **Note**: Wait until the installation completes. This should take about 2 minutes.
+   > **Note**: Wait until the installation completes. This should take about 2 minutes. If the web page does not respond, open **services.msc** and verify that the Windows Admin Center server is **Started**.
 
 1. On **SEA-ADM1**, start Microsoft Edge, and then go to `https://SEA-ADM1.contoso.com`. 
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:

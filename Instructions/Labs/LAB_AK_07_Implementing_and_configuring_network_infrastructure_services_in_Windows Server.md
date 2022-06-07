@@ -71,6 +71,9 @@ lab:
 #### Task 3: Create a scope
 
 1. On **SEA-ADM1**, switch to Windows Admin Center in the Microsoft Edge window displaying the **DHCP** settings on **SEA-SVR1**.
+
+   > **Note**: It might take a few minutes for the DHCP option to appear in the menu. If necessary, refresh the connection to sea-svr1. If prompted to install the DHCP Powershell tools, select **Install**.
+
 1. On the **DHCP** page, select **+ New scope**.
 1. In the Create a new scope pane, specify the following settings, and then select **Create**.
 

@@ -58,7 +58,7 @@ lab:
 
    > **Note**: If the **Security (Preview)** extension is not available, choose another Microsoft extension.
 
-1. In the details pane, select **Installed extensions** and verify that the list includes the DNS (Preview) extension.
+1. In the details pane, select **Installed extensions** and verify that the list includes the extension you just installed.
 1. On the top menu, next to **Settings**, select the drop-down arrow, and then select **Server Manager**.
 1. On the **Server connections** page, select the **sea-dc1.contoso.com** link.
 1. Ensure that **Use another account for this connection** option is selected, select the **Use these credentials for all connections**, enter the following credentials, and then select **Continue**:

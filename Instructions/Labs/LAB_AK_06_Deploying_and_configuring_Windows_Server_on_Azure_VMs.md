@@ -25,7 +25,7 @@ In this task, you will connect to your Azure subscription and enable enhanced se
 
 In this task, you will use the Azure portal to create resource groups and create a disk in the resource group.
 
-1. On **SEA-ADM1**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines**. In the **Virtual machines** page, select **+ Create**, and then select **Virtual machine**.
+1. On **SEA-ADM1**, in the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines**. In the **Virtual machines** page, select **+ Create**, and then select **Azure Virtual machine**.
 1. In the **Create a virtual machine** page, on the **Basics** tab, specify the following settings and leave all other settings with their default values, but do not deploy it:
 
    |Setting|Value|
@@ -41,7 +41,7 @@ In this task, you will use the Azure portal to create resource groups and create
    |Username|**Student**|
    |Password|**Pa55w.rd1234**|
    |Public inbound ports|None|
-   |Would you like to use an existing Windows Server license|No|
+   |Would you like to use an existing Windows Server license|Off|
 
 1. Select **Next: Disks >**, and then on the **Create a virtual machine** page, on the **Disks** tab, specify the following settings, leaving all other settings with their default values:
 
@@ -66,7 +66,7 @@ In this task, you will use the Azure portal to create resource groups and create
    |Public IP|None|
    |NIC network security group|None|
    |Accelerated networking|Off|
-   |Place this virtual machine behind an existing load balancing solution?|No|
+   |Place this virtual machine behind an existing load balancing solution?|Off|
 
 1. Select **Next: Management >**, and on the **Create a virtual machine** page, on the **Management** tab, specify the following settings, leaving all other settings with their default values:
 
@@ -129,7 +129,7 @@ In this task, you will use the Azure portal to create resource groups and create
 #### Task 1: Deploy an Azure VM by using an ARM template
 
 1. On **SEA-ADM1**, switch to the browser window displaying the Azure portal.
-1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Template deployment (deploy using custom templates)**.
+1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Deploy a Custom Template**.
 1. In the **Custom deployment** page, select **Build your own template in the editor**.
 1. On the **Edit template** page, select **Load file**, upload the template file **template.json** that you edited in the previous exercise, and then select **Save**.
 1. On the **Custom deployment** page, select **Edit parameters**.
@@ -239,7 +239,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
 1. On the **az800l06-vm0** page, select **Configuration**. 
-1. On the **az800l06-vm0 \| Configuration** page, select **Enable JIT VM access** and select the **Open Azure Security Center** link.
+1. On the **az800l06-vm0 \| Configuration** page, select **Enable JIT VM access** and select the **Open Microsoft Defender for Cloud** link.
 1. On the **Just-in-time VM access** page, verify that the entry representing the **az800l06-vm0** Azure VM appears on the **Configured** tab.
 
 #### Task 4: Connect to the Azure VM via JIT VM access

@@ -168,14 +168,14 @@ The main tasks for this exercise are as follows:
    ```powershell
    Enable-AzureRmAlias -Scope Process
    ```
-1. Run the following commands to set values of variables necessary to run the the Windows Admin Center provisioning script:
+1. Run the following commands to set values of variables necessary to run the the Windows Admin Center provisioning script (Replace the `<Azure region>` placeholder with the name of an Azure region into which you deploy resources earlier in this lab, such as **eastus**.):
 
    ```powershell
    $rgName = 'AZ800-L0401-RG'
    $vnetName = 'az800l04-vnet'
    $nsgName = 'az800l04-web-nsg'
    $subnetName = 'subnet1'
-   $location = 'eastus'
+   $location = '<Azure region>'
    $pipName = 'wac-public-ip'
    $size = 'Standard_D2s_v3'
    ```
@@ -189,9 +189,10 @@ The main tasks for this exercise are as follows:
      SubnetName = $subnetName
      GenerateSslCert = $true
      size = $size
+     PublicIPAddressName = $pipname
    }
    ```
-1. Run the following commands to disable certificate verification for PowerShell remoting:
+1. Run the following commands to disable certificate verification for PowerShell remoting (when prompted following the first command, enter **A** and press the Enter key):
 
    ```powershell
    install-module pswsman

@@ -5,7 +5,7 @@ lab:
     module: 'Module 3: Windows Server administration'
 ---
 
-# Lab: Managing Windows Server
+# Lab answer key: Managing Windows Server
 
 ## Exercise 1: Implementing and using remote server administration
 
@@ -72,8 +72,8 @@ lab:
 #### Task 4: Verify remote administration
 
 1. On **SEA-ADM1**, in Windows Admin Center, in the left pane, in the list of **Tools**, select **Overview**. Note that the details pane of Windows Admin Center displays basic server information and performance monitoring.
-1. In the left pane, in the list of **Tools**, scroll down and review the basic administration tools available. Select **Roles and Features** and note which roles and features are listed as installed and which ones are available to install. Scroll down, select the **Telnet Client** checkbox, and then select **+ Install** at the top of the pane.
-1. In the Install Roles and Features pane, select **Yes** and wait for the message confirming that Telnet Client was installed successfully.
+1. In the left pane, in the list of **Tools**, scroll down and review the basic administration tools available. Select **Roles & features** and note which roles and features are listed as installed and which ones are available to install. Scroll down, select the **Telnet Client** checkbox, and then select **+ Install** at the top of the pane.
+1. In the **Install Roles and Features** pane, select **Yes** and wait for the message confirming that Telnet Client was installed successfully.
 1. At the very bottom of the left pane, below the list of **Tools**, select **Settings**.
 1. In the **Settings** section on the right side, select **Remote Desktop**.
 1. In the **Remote Desktop** section, select the option **Allow remote connections to this computer** checkbox, and then select **Save**.

@@ -158,7 +158,7 @@ The main tasks for this exercise are as follows:
 1. Create and edit GPO settings.
 1. Apply and verify settings on the client computer.
 
-### Task 1: Create and edit a GPO
+#### Task 1: Create and edit a GPO
 
 1. On **SEA-ADM1**, from **Server Manager**, open the **Group Policy Management** console.
 1. Create a GPO named **Contoso Standards** in the **Group Policy Objects** container.
@@ -167,11 +167,11 @@ The main tasks for this exercise are as follows:
 1. Browse to the **User Configuration\Policies\Administrative Templates\Control Panel\Personalization** folder, and then configure the **Screen saver** timeout policy to **600** seconds.
 1. Enable the **Password protect the screen saver** policy setting, and then close the **Group Policy Management Editor** window.
 
-### Task 2: Link the GPO
+#### Task 2: Link the GPO
 
   - Link the **Contoso Standards** GPO to the `contoso.com` domain.
 
-### Task 3: Review the effects of the GPO’s settings
+#### Task 3: Review the effects of the GPO’s settings
 
 1. On **SEA-ADM1**, open **Control Panel**.
 1. Use the **Windows Defender Firewall** interface to enable **Remote Event Log Management** domain traffic. 
@@ -185,7 +185,7 @@ The main tasks for this exercise are as follows:
 1. On **SEA-ADM1**, in the **Group Policy Management** console, create a new GPO named **Seattle Application Override** that is linked to the **Seattle** OU.
 1. Configure the **Screen saver timeout** policy setting to be disabled, and then close the **Group Policy Management Editor** window.
 
-### Task 5: Verify the order of precedence
+#### Task 5: Verify the order of precedence
 
 1. On **SEA-ADM1**, from **Server Manager**, open the **Group Policy Management** console.
 1. In the **Group Policy Management Console** tree, select the **Seattle** OU.
@@ -193,12 +193,12 @@ The main tasks for this exercise are as follows:
 
    > **Note**: The Seattle Application Override GPO has higher precedence than the CONTOSO Standards GPO. The screen saver time-out policy setting that you just configured in the Seattle Application Override GPO is applied after the setting in the CONTOSO Standards GPO. Therefore, the new setting will overwrite the CONTOSO Standards GPO setting. Screen saver time-out will be disabled for users within the scope of the Seattle Application Override GPO.
 
-### Task 6: Configure the scope of a GPO with security filtering
+#### Task 6: Configure the scope of a GPO with security filtering
 
 1. On **SEA-ADM1**, in the **Group Policy Management** console, select the **Seattle Application Override** GPO. Notice that in the **Security Filtering** section, the GPO applies by default to all authenticated users.
 1. In the **Security Filtering** section, first remove **Authenticated Users**, and then add the **SeattleBranchUsers** group and the **SEA-ADM1** computer account.
 
-### Task 7: Verify the application of settings
+#### Task 7: Verify the application of settings
 
 1. In Group Policy Management, in the navigation pane, select **Group Policy Modeling**.
 1. Launch the **Group Policy Modeling Wizard**.

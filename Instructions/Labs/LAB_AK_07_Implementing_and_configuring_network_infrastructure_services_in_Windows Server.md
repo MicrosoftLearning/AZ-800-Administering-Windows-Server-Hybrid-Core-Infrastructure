@@ -187,7 +187,7 @@ lab:
    - Dynamic update: **Do not allow dynamic update**
 
 1. Back in the DNS pane, select **TreyResearch.net**, and then select **+ Create a new DNS record**.
-1. In the Create a new DNS record pane, specify the following settings, and then select **Create**:
+1. In the **Create a new DNS record** pane, specify the following settings, and then select **Create**:
 
    - DNS record type: **Host (A)**
    - Record name: **TestApp**

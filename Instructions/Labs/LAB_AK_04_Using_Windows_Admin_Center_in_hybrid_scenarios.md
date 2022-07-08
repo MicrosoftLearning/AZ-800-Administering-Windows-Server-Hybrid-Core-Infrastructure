@@ -94,7 +94,7 @@ lab:
    >**Note**: This will automatically display the Azure pane on the **Settings** page within Windows Admin Center.
 
 1. In Windows Admin Center, in the Azure pane, on the **Settings** page, select **Register**.
-1. In the Get started with Azure in Windows Admin Center pane, select **Copy** to copy the code displayed in the listing of the steps of the registration procedure. 
+1. In the **Get started with Azure in Windows Admin Center** pane, select **Copy** to copy the code displayed in the listing of the steps of the registration procedure. 
 1. In the listing of step of the registration procedure, select the **Enter the code** link.
 
    >**Note**: This will open another tab in the Microsoft Edge window displaying the **Enter code** page.
@@ -103,7 +103,7 @@ lab:
 1. On the **Sign in** page, provide the same username that you used to sign into your Azure subscription in the previous exercise, select **Next**, provide the corresponding password, and then select **Sign in**.
 1. When prompted **Are you trying to sign in to Windows Admin Center?**, select **Continue**.
 1. In Windows Admin Center, verify that the sign in was successful and close the newly opened tab of the Microsoft Edge window.
-1. In the Get started with Azure in Windows Admin Center pane, ensure that **Azure Active Directory application** is set to **Create new**, and then select **Connect**.
+1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Azure Active Directory application** is set to **Create new**, and then select **Connect**.
 1. In the listing of the steps of the registration procedure, select **Sign in**. This will open a pop-up window labeled **Permissions requested**.
 1. In the **Permissions requested** pop-up window, select **Consent on behalf of your organization**, and then select **Accept**.
 
@@ -111,7 +111,7 @@ lab:
 
 1. On **SEA-ADM1**, back in the Microsoft Edge window displaying Windows Admin Center, browse to the **sea-svr2.contoso.com** page, and then select **Networks**.
 1. In Windows Admin Center, on the **Networks** page, from the **Actions** menu, select the **+ Add Azure Network Adapter (Preview)** entry again.
-1. In the Add Network Adapter Settings pane, specify the following settings, and then select **Create** (leave others with their default values):
+1. In the **Add Azure Network Adapter** settings pane, specify the following settings, and then select **Create** (leave others with their default values):
 
    |Setting|Value|
    |---|---|
@@ -124,7 +124,7 @@ lab:
    |Authentication Certificate|Auto-generated Self-signed root and client Certificate|
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual network gateways**.
-1. On the **Virtual network gateways** page, select **Refresh** and verify that the new entry with the name starting with **WAC-Created-vpngw-** appears in the list of virtual network gateways.
+1. On the **Virtual network gateways** page, select **Refresh** and verify that the new entry with the name starting with **WAC-Created-vpngw-96** appears in the list of virtual network gateways.
 
 >**Note**: The provisioning of the Azure virtual network gateway can take up to 45 minutes. Do not wait for the provisioning to complete but instead proceed to the next exercise.
 

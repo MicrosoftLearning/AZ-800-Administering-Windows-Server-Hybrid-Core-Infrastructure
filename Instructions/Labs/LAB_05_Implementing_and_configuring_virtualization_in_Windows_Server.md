@@ -183,11 +183,6 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Verify that there are no images in the local repository store.
 
-1. Run the following command to list docker base images from the online Microsoft repository:
-
-   ```powershell
-   docker search microsoft
-   ```
 1. Run the following command to download a Nano Server image containing an Internet Information Services (IIS) installation:
 
    ```powershell
@@ -239,7 +234,7 @@ The main tasks for this exercise are as follows:
 #### Task 3: Use Windows Admin Center to manage containers
 
 1. On **SEA-ADM1**, in Windows Admin Center, in the **Tools** menu of **sea-svr1.contoso.com**, select **Containers**. When prompted to close the **PowerShell** session, select **Continue**.
-1. In the Containers pane, browse through the **Summary**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
+1. In the Containers pane, browse through the **Overview**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
 
 ### Exercise 2 results
 

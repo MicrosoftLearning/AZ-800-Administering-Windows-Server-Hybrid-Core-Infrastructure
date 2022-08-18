@@ -78,7 +78,7 @@ The main tasks for this exercise are as follows:
 
 1. In Windows Admin Center, add a connection to **sea-svr1.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**.
 1. In the **Tools** list, use **Roles & features** to install the DHCP role on **SEA-SVR1**.
-1. In the **Tools** list, browse to the **DHCP** tool and install the **DHCP PowerShell** tools. 
+1. In the **Tools** list, browse to the **DHCP** tool and install the **DHCP PowerShell** tools. There is no DHCP Power Shell Tools in DHCP/Tools.
 
    > **Note**: If the **DHCP** entry is not available in the Tools pane for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again.
 

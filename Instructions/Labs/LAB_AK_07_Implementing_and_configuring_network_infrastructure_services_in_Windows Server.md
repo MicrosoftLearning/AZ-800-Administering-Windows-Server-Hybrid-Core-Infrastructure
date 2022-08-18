@@ -140,7 +140,7 @@ lab:
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
 1. Verify that here as well there is an entry representing the **SEA-ADM1.contoso.com** lease.
 1. Select **172.16.10.12**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
-1. On **SEA-ADM1**, switch back to the **Ethernet Status** window, and then select **Disable**.
+1. On **SEA-ADM1**, switch back to the **Ethernet Status** window, and then select **Disable**. Do not use that idiotic idea of obtaining a new DHCP address on any of your real life servers. You will loose the access to the server and block youselve the access if there is no remote IT or Out-Of-Band Managemnet subnet/ILO/iDRAC. Never disable the ethernet interfaces on a server. Use ipconfig /release and ipconfig /renew instead if you wanna release and obtain the IP from the DHCP again.
 1. Back in the **Network and Sharing Center** window, select **Change adapter settings**, select **Ethernet**, and then select **Enable this network device**.
 1. Double-click the enabled **Ethernet** connection to display its status window.
 1. In the **Ethernet Status** window, select **Details**.

@@ -110,6 +110,7 @@ The main tasks for this exercise are as follows:
 
 1. In Windows Admin Center, add a connection to **sea-svr1.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**. 
 1. In the **Tools** list, select **Virtual Machines** and review the **Summary** pane.
+1. In the **Inventory** pane open **SEA-VM1** and review the **Setting**.
 1. Use Windows Admin Center to create a new disk, 5 GB in size.
 1. Use Windows Admin Center to start **SEA-VM1**, and then display the statistics for the running VM.
 1. Use Windows Admin Center to shut down **SEA-VM1**.

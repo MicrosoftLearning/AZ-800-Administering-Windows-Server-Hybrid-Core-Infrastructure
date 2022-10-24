@@ -55,7 +55,7 @@ lab:
    - Remove the line breaks.
 
 1. Now the **Install-ADDSDomainController** command and all the parameters are on one line. Place the cursor in front of the line, and then, on the **Edit** menu, select **Select All** to select the whole line. On the menu, select **Edit**, and then select **Copy**.
-1. Switch to the **Active Directory Domain Services Configuration Wizard**, and then select **Cancel**.
+
 1. When prompted for confirmation, select **Yes** to cancel the wizard.
 1. At the Windows PowerShell command prompt, enter the following command:
 

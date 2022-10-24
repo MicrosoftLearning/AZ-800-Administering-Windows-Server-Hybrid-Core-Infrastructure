@@ -92,7 +92,7 @@ The main tasks for this exercise are as follows:
    - Password: **Pa55w.rd**
 
 1. Set the **SafeModeAdministratorPassword** as **Pa55w.rd**.
-1. After **SEA-SVR1** restarts, on **SEA-ADM1**, switch to **Server Manager**, and then select the **AD D** node. Note that **SEA-SVR1** has been added as a domain controller and that the warning notification has disappeared. You might have to select **Refresh**.
+1. After **SEA-SVR1** restarts, on **SEA-ADM1**, switch to **Server Manager**, and then select the **AD DS** node. Note that **SEA-SVR1** has been added as a domain controller and that the warning notification has disappeared. You might have to select **Refresh**.
 
 #### Task 3: Manage objects in AD DS
 

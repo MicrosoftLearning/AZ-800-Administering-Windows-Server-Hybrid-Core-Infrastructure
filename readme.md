@@ -3,6 +3,7 @@
 - **[Download Latest Student Handbook and AllFiles Content](../../releases/latest)**
 - **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
 - **Need to manually build the lab instructions?** - Instructions are available in the [MicrosoftLearning/Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) repository
+- To preview this course in a self-paced format, see our **[interactive lab simulations](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulations%20-%20Administering%20Windows%20Server%20Hybrid%20Core%20Infrastructure)**. You may find slight differences between the interactive simulations and the hosted labs, but the core concepts and ideas being demonstrated are the same.
 
 ## What are we doing?
 

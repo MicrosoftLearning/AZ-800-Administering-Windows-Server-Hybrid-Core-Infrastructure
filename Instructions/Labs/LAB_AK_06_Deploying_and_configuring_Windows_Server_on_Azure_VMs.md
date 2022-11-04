@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Deploying and configuring Windows Server on Azure VMs
 
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Deploying%20and%20configuring%20Windows%20Server%20on%20Azure%20VMs)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
 ## Exercise 1: Authoring Azure Resource Manager (ARM) templates for Azure VM deployment
 
 #### Task 1: Connect to your Azure subscription and enable enhanced security of Microsoft Defender for Cloud

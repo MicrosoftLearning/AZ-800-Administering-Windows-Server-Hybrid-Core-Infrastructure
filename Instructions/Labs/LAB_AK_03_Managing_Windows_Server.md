@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Managing Windows Server
 
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Managing%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
 ## Exercise 1: Implementing and using remote server administration
 
 #### Task 1: Install Windows Admin Center

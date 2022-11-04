@@ -12,6 +12,8 @@ To address concerns regarding the consistent operational and management model, r
 
 Your goal is to verify that Windows Admin Center can be used in a consistent manner regardless of the location of managed systems.
 
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Using%20Windows%20Admin%20Center%20in%20hybrid%20scenarios)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
 ## Objectives
 
 After completing this lab, you'll be able to:

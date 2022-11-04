@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Implementing integration between AD DS and Azure AD
 
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20integration%20between%20AD%20DS%20and%20Azure%20AD)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
 ## Exercise 1: Preparing Azure AD for AD DS integration
 
 #### Task 1: Create a custom domain in Azure

@@ -14,6 +14,8 @@ The process will involve Azure Resource Manager (ARM) templates and OS configura
 
 Your goal is to deploy and configure Azure VMs running Windows Server in the manner that satisfies manageability and security requirements.
 
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Deploying%20and%20configuring%20Windows%20Server%20on%20Azure%20VMs)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
 ## Objectives
 
 After completing this lab, you'll be able to:

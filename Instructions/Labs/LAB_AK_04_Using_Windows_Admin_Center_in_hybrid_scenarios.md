@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Using Windows Admin Center in hybrid scenarios
 
+**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Using%20Windows%20Admin%20Center%20in%20hybrid%20scenarios)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
 ## Exercise 1: Provisioning Azure VMs running Windows Server
 
 #### Task 1: Create an Azure resource group by using an Azure Resource Manager template

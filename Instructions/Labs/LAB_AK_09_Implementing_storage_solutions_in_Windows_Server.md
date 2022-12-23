@@ -15,7 +15,7 @@ lab:
 
 #### Task 1: Install the Data Deduplication role service
 
-1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 1. In Server Manager, select **Manage**, and then select **Add Roles and Features**.
 1. In the **Add Roles and Features Wizard**, select **Next** twice.
@@ -28,9 +28,12 @@ lab:
 1. In the **Network access** window, in the **Type a name and then click Add, or click the arrow to find someone** text box, type **Users** and click **Add**.
 1. In the **Network access** window, select **Share**, and once you are presented with the **Your folder is shared** window, select **Done**.
 1. Switch back to the **Server Manager** window, and then, on the **Add Roles and Features Wizard installation succeeded** page, select **Close**.
-1. Switch to the **SEA-SVR3** console session, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+1. Switch to the **SEA-SVR3** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. If presented with the **SConfig** menu, at **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
-1. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each to create a new drive formatted with ReFS:
+   
+   > **Note**: To open Notepad from PowerShell, type **Notepad** and press enter.
+
+2. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each to create a new drive formatted with ReFS:
 
    ```powershell
    Get-Disk
@@ -38,7 +41,7 @@ lab:
    New-Partition -DiskNumber 1 -UseMaximumSize -DriveLetter M
    Format-Volume -DriveLetter M -FileSystem ReFS
    ```
-1. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each to copy from **SEA-ADM1** a script that creates sample files to be deduplicated, execute it, and identify the outcome:
+3. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each to copy from **SEA-ADM1** a script that creates sample files to be deduplicated, execute it, and identify the outcome:
 
    ```powershell
    New-PSDrive –Name 'X' –PSProvider FileSystem –Root '\\SEA-ADM1\Labfiles'
@@ -83,28 +86,33 @@ lab:
 
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
 
-1. On **SEA-ADM1**, start Microsoft Edge, and then go to `https://SEA-ADM1.contoso.com`. 
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. On **SEA-ADM1**, start Microsoft Edge, and then go to `https://SEA-ADM1.contoso.com`.
 
-   - Username: **CONTOSO\\Administrator**
+   >**Note**: If the link does not work, on **SEA-ADM1**, open File Explorer, select Downloads folder, in the Downloads folder select **WindowsAdminCenter.msi** file and install manually. After the install completes, refresh Microsoft Edge.
+
+   >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
+
+2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-1. On the All connections pane, select **+ Add**.
-1. On the Add or create resources pane, on the **Servers** tile, select **Add**.
-1. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
-1. If needed, ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+3. On the All connections pane, select **+ Add**.
+4. On the Add or create resources pane, on the **Servers** tile, select **Add**.
+5. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
+6. If needed, ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
-   - Username: **CONTOSO\\Administrator**
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\\Administrator** user with **Pa55w.rd** as its password.
-1. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
+7. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
+8. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
 
    ```powershell
    Start-DedupJob -Volume M: -Type Optimization –Memory 50
    ```
-1. Switch back to the console session to **SEA-SVR3**.
-1. On **SEA-SVR3**, at the **Windows PowerShell** prompt, enter the following command and press Enter to identify the available space on the volume being deduplicated:
+9.  Switch back to the console session to **SEA-SVR3**.
+10. On **SEA-SVR3**, at the **Windows PowerShell** prompt, enter the following command and press Enter to identify the available space on the volume being deduplicated:
 
    ```powershell
    Get-PSDrive -Name M
@@ -112,18 +120,18 @@ lab:
 
    > **Note**: Compare the previously displayed values with the current ones. 
 
-1. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
-1. Switch back to console session to **SEA-ADM1**.
-1. On **SEA-ADM1**, in the **Windows PowerShell** console within the **Microsoft Edge** window displaying Windows Admin Center connection to **sea-svr3.contoso.com**, enter the following commands and press Enter after each to determine the status of the deduplication job:
+11. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
+12. Switch back to console session to **SEA-ADM1**.
+13. On **SEA-ADM1**, in the **Windows PowerShell** console within the **Microsoft Edge** window displaying Windows Admin Center connection to **sea-svr3.contoso.com**, enter the following commands and press Enter after each to determine the status of the deduplication job:
 
    ```powershell
    Get-DedupStatus –Volume M: | fl
    Get-DedupVolume –Volume M: |fl
    Get-DedupMetadata –Volume M: |fl
    ```
-1. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
-1. Select the **M:** volume in the **VOLUMES** section, display its context sensitive menu, and select **Properties** from the menu. 
-1. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
+14. On **SEA-ADM1**, switch to the Disks pane in **Server Manager**, and then, in the **TASKS** menu in the upper right corner, select **Refresh**.
+15. Select the **M:** volume in the **VOLUMES** section, display its context sensitive menu, and select **Properties** from the menu. 
+16. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
 
 ## Exercise 2: Configuring iSCSI storage
 
@@ -200,7 +208,7 @@ lab:
    - Disk size: **5 GB**, **Dynamically Expanding**
    - iSCSI target: **iSCSIFarm**
 
-1. Switch to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+1. Switch to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. If presented with the **SConfig** menu, at the **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
 1. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each, to start the iSCSI Initiator service and display the iSCSI Initiator configuration:
 
@@ -443,7 +451,7 @@ lab:
 1. In the **Cluster name** text box, enter **S2DCluster.Contoso.com**.
 1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Connect with account**:
 
-   - Username: **CONTOSO\\Administrator**
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
    
 1. Clear **Also add servers in the cluster** and select **Add**.

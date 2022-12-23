@@ -13,7 +13,7 @@ lab:
 
 #### Task 1: Create an Azure resource group by using an Azure Resource Manager template
 
-1. Connect to **SEA-ADM1**, and if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com), and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon directly next to the search text box.
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
@@ -79,15 +79,17 @@ lab:
 
 1. On **SEA-ADM1**, start Microsoft Edge, and then browse to `https://SEA-ADM1.contoso.com`.
 
-   >**Note**: If the link does not work, on **SEA-ADM1**, browse to the **WindowsAdminCenter.msi** file, open the context menu for it, and then select **Repair**. After the repair completes, refresh Microsoft Edge. 
+   >**Note**: If the link does not work, on **SEA-ADM1**, open File Explorer, select Downloads folder, in the Downloads folder select **WindowsAdminCenter.msi** file and install manually. After the install completes, refresh Microsoft Edge.
+
+   >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**. 
    
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\\Administrator**
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
 1. On the **All connections** page, select the **sea-adm1.contoso.com** entry. 
-1. In Windows Admin Center, select **Networks**, select **Actions**, and then select **+ Add Azure Network Adapter (Preview)**.
+1. In Windows Admin Center, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
 
    > **Note**: Depending on the screen resolution, you might need to select the **ellipsis** icon if the **Actions** menu is not available.
 
@@ -126,7 +128,7 @@ lab:
    |Authentication Certificate|Auto-generated Self-signed root and client Certificate|
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual network gateways**.
-1. On the **Virtual network gateways** page, select **Refresh** and verify that the new entry with the name starting with **WAC-Created-vpngw-96** appears in the list of virtual network gateways.
+1. On the **Virtual network gateways** page, select **Refresh** and verify that the new entry with the name starting with **WAC-Created-vpngw-ID_NO** appears in the list of virtual network gateways.
 
 >**Note**: The provisioning of the Azure virtual network gateway can take up to 45 minutes. Do not wait for the provisioning to complete but instead proceed to the next exercise.
 
@@ -165,7 +167,8 @@ lab:
      SubnetName = $subnetName
      GenerateSslCert = $true
      size = $size
-     PublicIPAddressName = $pipname
+     PublicIPAddressName = $pipName
+     SecurityGroupName = $nsgName
    }
    ```
 

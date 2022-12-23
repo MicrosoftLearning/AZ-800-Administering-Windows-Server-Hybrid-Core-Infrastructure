@@ -13,7 +13,7 @@ lab:
 
 #### Task 1: Create a Hyper-V virtual switch
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **Contoso\\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 1. In Server Manager, select **All Servers**.
 1. In the Servers list, select the **SEA-SVR1** entry, display its context menu, and then select **Hyper-V Manager**.
@@ -77,35 +77,40 @@ lab:
    > **Note**: Wait until the installation completes. This should take about 2 minutes. If the web page does not respond, open **services.msc** and verify that the Windows Admin Center server is **Started**.
 
 1. On **SEA-ADM1**, start Microsoft Edge, and then go to `https://SEA-ADM1.contoso.com`. 
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+   
+   >**Note**: If the link does not work, on **SEA-ADM1**, open File Explorer, select Downloads folder, in the Downloads folder select **WindowsAdminCenter.msi** file and install manually. After the install completes, refresh Microsoft Edge.
 
-   - Username: **CONTOSO\\Administrator**
+   >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
+   
+2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-1. On the **All connections** pane, select **+ Add**.
-1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
-1. In the **Server name** text box, enter **sea-svr1.contoso.com**.
-1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+3. On the **All connections** pane, select **+ Add**.
+4. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
+5. In the **Server name** text box, enter **sea-svr1.contoso.com**.
+6. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
-   - Username: **CONTOSO\\Administrator**
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
    > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
 
    > **Note**: To perform single sign-on, you would need to set up Kerberos constrained delegation.
 
-1. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Virtual machines**, select the **Summary** tab, and then review its content.
-1. Select the **Inventory** tab and verify that it contains the list of two virtual machines.
-1. Select **SEA-VM1** and review its Properties pane.
-1. Select **Settings**, and then select **Disks**.
-1. Scroll to the bottom of the pane and select **+ Add disk**.
-1. Select **New Virtual Hard Disk**.
-1. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
-1. Select **Save disks settings**, and then select **Close**.
-1. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
-1. Scroll down and display the statistics for the running VM.
-1. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
-1. In the **Tools** list, select **Virtual switches** and verify that the pane displays two switches.
+7. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Virtual machines**, select the **Summary** tab, and then review its content.
+8. Select the **Inventory** tab and verify that it contains SEA-VM1.
+9.  Select **SEA-VM1** and review its Properties pane.
+10. Select **Settings**, and then select **Disks**.
+11. Scroll to the bottom of the pane and select **+ Add disk**.
+12. Select **New Virtual Hard Disk**.
+13. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
+14. Select **Save disks settings**, and then select **Close**.
+15. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
+16. Scroll down and display the statistics for the running VM.
+17. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
+18. In the **Tools** list, select **Virtual switches** and identify the existing switches.
 
 ### Exercise 1 results
 
@@ -115,7 +120,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
 #### Task 1: Install Docker on Windows Server
 
-1. On **SEA-ADM1**, in the **Tools** listing for **SEA-SVR1**, select **PowerShell**. When prompted, type **Pa55w.rd** to authenticate using the **CONTOSO\\Administrator** user account, and then press Enter. 
+1. On **SEA-ADM1**, in the **Tools** listing for **SEA-SVR1**, select **PowerShell**. When prompted, type **Pa55w.rd** to authenticate using the **CONTOSO\Administrator** user account, and then press Enter. 
 
    > **Note**: This establishes a PowerShell Remoting connection to SEA-SVR1.
 

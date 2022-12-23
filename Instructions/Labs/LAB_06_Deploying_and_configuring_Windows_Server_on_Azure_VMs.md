@@ -265,7 +265,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, browse back to the **az800l06-vm0** page.
 1. On the **az800l06-vm0** page, select **Configuration**. 
-1. On the **az800l06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Azure Security Center** link.
+1. On the **az800l06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Microsoft Defender for Cloud** link.
 1. On the **Just-in-time VM access** page, verify that the entry representing the **az800l06-vm0** Azure VM appears on the **Configured** tab.
 
 #### Task 4: Connect to the Azure VM via JIT VM access

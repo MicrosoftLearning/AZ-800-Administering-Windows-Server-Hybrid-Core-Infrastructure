@@ -13,7 +13,7 @@ lab:
 
 #### Task 1: Deploy AD DS on a new Windows Server Core server
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **Contoso\\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. On **SEA-ADM1**, select **Start**, and then select **Windows PowerShell (Admin)**.
 1. To install the AD DS server role, at the Windows PowerShell command prompt, enter the following command, and then press Enter:
 	
@@ -41,7 +41,7 @@ lab:
 1. Note the post-deployment configuration of **SEA-SVR1**, and then select the **Promote this server to a domain controller** link.
 1. In the **Active Directory Domain Services Configuration Wizard**, on the **Deployment Configuration** page, under **Select the deployment operation**, verify that **Add a domain controller to an existing domain** is selected.
 1. Ensure that the `Contoso.com` domain is specified, and then in the **Supply the credentials to perform this operation** section, select **Change**.
-1. In the **Credentials for deployment operation** dialog box, in the **User name** box, enter **CONTOSO\\Administrator**, and then in the **Password** box, enter **Pa55w.rd**.
+1. In the **Credentials for deployment operation** dialog box, in the **User name** box, enter **CONTOSO\Administrator**, and then in the **Password** box, enter **Pa55w.rd**.
 1. Select **OK**, and then select **Next**.
 1. On the **Domain Controller Options** page, ensure that the **Domain Name System (DNS) server** and **Global Catalog (GC)** checkboxes are selected. Ensure that the **Read-only domain controller (RODC)** checkbox is cleared.
 1. In the **Type the Directory Services Restore Mode (DSRM) password** section, enter and confirm the password **Pa55w.rd**, and then select **Next**.
@@ -67,10 +67,10 @@ lab:
 1. Place the cursor between the braces (**{ }**), and then paste the content of the copied script line from the clipboard. The complete command should have the following format:
 	
    ```powershell
-   Invoke-Command –ComputerName SEA-SVR1 {Install-ADDSDomainController -NoGlobalCatalog:\$false -CreateDnsDelegation:$false -Credential (Get-Credential) -CriticalReplicationOnly:$false -DatabasePath "C:\Windows\NTDS" -DomainName "Contoso.com" -InstallDns:$true -LogPath "C:\Windows\NTDS" -NoRebootOnCompletion:$false -SiteName "Default-First-Site-Name" -SysvolPath "C:\Windows\SYSVOL" -Force:\$true}
+   Invoke-Command –ComputerName SEA-SVR1 {Install-ADDSDomainController -NoGlobalCatalog:$false -CreateDnsDelegation:$false -Credential (Get-Credential) -CriticalReplicationOnly:$false -DatabasePath "C:\Windows\NTDS" -DomainName "Contoso.com" -InstallDns:$true -LogPath "C:\Windows\NTDS" -NoRebootOnCompletion:$false -SiteName "Default-First-Site-Name" -SysvolPath "C:\Windows\SYSVOL" -Force:$true}
    ```
 1. To invoke the command, press Enter.
-1. In the **Windows PowerShell Credential Request** dialog box, enter **CONTOSO\\Administrator** in the **User name** box, enter **Pa55w.rd** in the **Password** box, and then select **OK**.
+1. In the **Windows PowerShell Credential Request** dialog box, enter **CONTOSO\Administrator** in the **User name** box, enter **Pa55w.rd** in the **Password** box, and then select **OK**.
 1. When prompted for the password, in the **SafeModeAdministratorPassword** text box, enter **Pa55w.rd**, and then press Enter.
 1. When prompted for confirmation, in the **Confirm SafeModeAdministratorPassword** text box, enter **Pa55w.rd**, and then press Enter.
 1. Wait until the command runs and the **Status Success** message is returned. The **SEA-SVR1** virtual machine restarts.
@@ -173,7 +173,7 @@ lab:
 1. Right-click or access the context menu for **Start**, and then select **Run**.
 1. In the **Run** dialog box, in the **Open** text box, enter **regedit**, and then select **OK**. Note the error message stating **Registry editing has been disabled by your administrator**.
 1. In the **Registry Editor** dialog box, select **OK**.
-1. Sign out and then sign in back as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+1. Sign out and then sign in back as **CONTOSO\Administrator** with the password **Pa55w.rd**.
 
 #### Task 4: Create and link the required GPOs
 
@@ -220,18 +220,18 @@ lab:
 1. In **Group Policy Modeling Wizard**, select **Next**.
 1. On the **Domain Controller Selection** page, accept the default settings, and then select **Next**.
 1. On the **User and Computer Selection** page, in the **User information** section, select **User**, and then, in the **User** text box, enter **CONTOSO\Ty** or use the **Browse** command button to locate the **Ty** user account.
-1. On the **User and Computer Selection** page, in the **Computer information** section, select **Computer**, and then, in the **Computer** text box, enter **CONTOSO\SEA-ADM1**.
-1. On the **User and Computer Selection** page, select **Next**.
-1. On the **Advanced Simulation Options** page, accept the default settings, and then select **Next**.
-1. On the **Alternate Active Directory Paths** page, note the user and computer locations, and then select **Next**.
-1. On the **User Security Groups** page, verify that the list of groups includes **CONTOSO\\SeattleBranchUsers**, and then select **Next**.
-1. On the **Computer Security Groups** page, select **Next**.
-1. On the **WMI Filters for Users** page, accept the default settings, and then select **Next**.
-1. On the **WMI Filters for Computers** page, accept the default settings, and then select **Next**.
-1. On the **Summary of Selections** page, select **Next**.
-1. Select **Finish** when prompted.
-1. In the details pane, select the **Details** tab, and then select **show all**.
-1. In the report, scroll down until you locate the **User Details** section, and then locate the **Control Panel/Personalization** section. Note that the **Screen saver timeout** settings are disabled and the winning GPO is set to Seattle Application Override GPO.
-1. Close the **Group Policy Management** console.
+2. On the **User and Computer Selection** page, in the **Computer information** section, select **Computer**, and then, in the **Computer** text box, enter **CONTOSO\SEA-ADM1** or use the **Browse** command button to locate the **SEA-ADM1** computer.
+3. On the **User and Computer Selection** page, select **Next**.
+4. On the **Advanced Simulation Options** page, accept the default settings, and then select **Next**.
+5. On the **Alternate Active Directory Paths** page, note the user and computer locations, and then select **Next**.
+6. On the **User Security Groups** page, verify that the list of groups includes **CONTOSO\\SeattleBranchUsers**, and then select **Next**.
+7. On the **Computer Security Groups** page, select **Next**.
+8. On the **WMI Filters for Users** page, accept the default settings, and then select **Next**.
+9. On the **WMI Filters for Computers** page, accept the default settings, and then select **Next**.
+10. On the **Summary of Selections** page, select **Next**.
+11. Select **Finish** when prompted.
+12. In the details pane, select the **Details** tab, and then select **show all**.
+13. In the report, scroll down until you locate the **User Details** section, and then locate the **Control Panel/Personalization** section. Note that the **Screen saver timeout** settings are disabled and the winning GPO is set to Seattle Application Override GPO.
+14. Close the **Group Policy Management** console.
 
 **Results**: After this exercise, you should have successfully created and configured GPOs.

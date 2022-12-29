@@ -13,7 +13,7 @@ lab:
 
 #### Task 1: Create a custom domain in Azure
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **Contoso\\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal, and authenticate with your Azure credentials.
 1. In the Azure portal, browse to **Azure Active Directory**.
 1. On the **Azure Active Directory** page, select **Custom domain names**.
@@ -81,7 +81,7 @@ lab:
 1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account you created in exercise 1, and then select **Next**.
 1. On the **Connect to AD DS** page, enter the following credentials, and then select **Next**:
 
-   - Username: **CONTOSO\\Administrator**
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
 1. On the **Azure AD sign-in configuration** page, note that the new domain you added is in the list of Active Directory UPN Suffixes, but its status is listed as **Not verified**.

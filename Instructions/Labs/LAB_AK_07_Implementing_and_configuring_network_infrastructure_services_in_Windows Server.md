@@ -13,7 +13,7 @@ lab:
 
 #### Task 1: Install the DHCP role
 
-1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. On **SEA-ADM1**, select **Start**, and then select **Windows PowerShell (Admin)**.
 
    >**Note**: Perform the next two steps in case you have not already installed Windows Admin Center on **SEA-ADM1**.
@@ -32,42 +32,45 @@ lab:
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
 
 1. On **SEA-ADM1**, start Microsoft Edge, and then browse to `https://SEA-ADM1.contoso.com`.
+ 
+   >**Note**: If the link does not work, on **SEA-ADM1**, open File Explorer, select Downloads folder, in the Downloads folder select **WindowsAdminCenter.msi** file and install manually. After the install completes, refresh Microsoft Edge.
 
-   >**Note**: If the link does not work, on **SEA-ADM1**, browse to the **WindowsAdminCenter.msi** file, open the context menu for it, and then select **Repair**. After the repair completes, refresh Microsoft Edge. 
+   >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\\Administrator**
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-1. In the All connections pane, select **+ Add**.
-1. In the Add or create resources pane, on the **Servers** tile, select **Add**.
-1. In the **Server name** text box, enter **sea-svr1.contoso.com**. 
-1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+3. In the All connections pane, select **+ Add**.
+4. In the Add or create resources pane, on the **Servers** tile, select **Add**.
+5. In the **Server name** text box, enter **sea-svr1.contoso.com**. 
+6. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
-   - Username: **CONTOSO\\Administrator**
+   - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
    > **Note**: To perform single sign-on, you would need to set up a Kerberos constrained delegation.
 
-1. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Roles & features**.
-1. In the Roles and features pane, select the **DHCP Server** checkbox, and then select **+ Install**.
-1. In the Install Roles and Features pane, select **Yes**.
+7. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Roles & features**.
+8. In the Roles and features pane, select the **DHCP Server** checkbox, and then select **+ Install**.
+9. In the Install Roles and Features pane, select **Yes**.
 
    > **Note**: Wait until the notification indicating that the DHCP role is installed. If necessary, select the **Notifications** icon to verify the current status.
 
-1. Refresh the **Microsoft Edge** page back on the **sea-svr1.contoso.com** page, in the **Tools** list, select **DHCP**, and then, in the details pane, select **Install** to install the DHCP PowerShell tools. 
+10. Refresh the **Microsoft Edge** page back on the **sea-svr1.contoso.com** page, in the **Tools** list, select **DHCP**, and then, in the details pane, select **Install** to install the DHCP PowerShell tools. 
 
    > **Note**: If the **DHCP** entry is not available in the **Tools** list for **sea-svr1.contoso.com**, refresh the **Microsoft Edge** page and try again.
+   Depending on your network performance, it may take upto 5 minutes for the DHCP server to appear.
 
-1. Wait for a notification that the DHCP PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
+11. Wait for a notification that the DHCP PowerShell tools are installed. If necessary, select the **Notifications** icon to verify the current status.
 
 #### Task 2: Authorize the DHCP server
 
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 1. In **Server Manager**, select **Notifications** in the menu, and then select **Complete DHCP configuration**.
 1. In the **DHCP Post-Install configuration wizard** window, on the **Description** screen, select **Next**.
-1. On the **Authorization** screen, ensure that the **CONTOSO\\Administrator** option is selected, and then select **Commit**.
+1. On the **Authorization** screen, ensure that the **CONTOSO\Administrator** option is selected, and then select **Commit**.
 1. When you complete both tasks, select **Close**.
 
 #### Task 3: Create a scope
@@ -92,7 +95,7 @@ lab:
 1. In the **Manage Authorized Servers** window, select **Refresh**, ensure that **sea-svr1.contoso.com** appears in the list of authorized DHCP servers, and then close the **Manage Authorized Servers** window.
 1. In the **DHCP** window, in the Actions pane, select **More Actions**, and then select **Add Server**.
 1. In the **Add Server** dialog box, select **This authorized DHCP server**, select **sea-svr1.contoso.com**, and then select **OK**.
-1. In the **DHCP** window, expand **172.16.10.12**, expand **IPv4**, expand **Scope [10.100.150.0] ContosoClients**, and then select **Scope Options**.
+1. In the **DHCP** window, expand **sea-svr1 **, expand **IPv4**, expand **Scope [10.100.150.0] ContosoClients**, and then select **Scope Options**.
 1. In the Actions pane, select **More Actions**, and then select **Configure Options**.
 1. In the **Scope Options** dialog box, select the **006 DNS Servers** checkbox.
 1. In the **Server name** text box, enter **sea-dc1.contoso.com**, select **Resolve**, verify that the name resolves to **172.16.10.10**, select **Add**, and then select **OK**.
@@ -125,7 +128,7 @@ lab:
 1. On the **Specify the partner server to use for failover** screen, in the **Partner Server** box, enter **172.16.10.12**, select the **Reuse existing failover relationships configured with this server (if any exist)** checkbox, and then select **Next**.
 1. On the **Select from failover relationships which are already configured on this server** screen, select **Next**, and then select **Finish**.
 1. In the **Configure Failover** dialog box, select **Close**.
-1. Under **172.16.10.12**, select **IPv4**, and then verify that both scopes are listed. If necessary, press the **F5** key to refresh.
+1. Under **sea-svr1 **, select **IPv4**, and then verify that both scopes are listed. If necessary, press the **F5** key to refresh.
 
 #### Task 5: Verify DHCP functionality
 
@@ -135,13 +138,13 @@ lab:
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4)**, and then select **Properties**.
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, select **Obtain an IP address automatically**, select **Obtain DNS server address automatically**, and then select **OK**.
 1. Select **Close**, and then, in the **Ethernet Status** window, select **Details**.
-1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **SEA-SVR1 (172.16.10.12)** DHCP server issued the lease.
+1. In the **Network Connection Details** dialog box, verify that DHCP is enabled, an IP address was obtained, and that the **sea-svr1 ** DHCP server issued the lease.
 1. Select **Close** to return to the **Ethernet Status** window.
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **172.16.10.12** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
 1. Verify that there is an entry representing the **SEA-ADM1.contoso.com** lease.
 1. On **SEA-ADM1**, in the **DHCP** window, expand the **sea-dc1** node, expand the **IPv4** node, expand the **Scope [172.16.0.0] Contoso** node, and then select **Address Leases**.
 1. Verify that here as well there is an entry representing the **SEA-ADM1.contoso.com** lease.
-1. Select **172.16.10.12**, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
+1. Select **sea-svr1 **, in the Actions pane, select **More Actions**, select **All tasks**, and then select **Stop**.
 1. On **SEA-ADM1**, switch back to the **Ethernet Status** window, and then select **Disable**.
 1. Back in the **Network and Sharing Center** window, select **Change adapter settings**, select **Ethernet**, and then select **Enable this network device**.
 1. Double-click the enabled **Ethernet** connection to display its status window.
@@ -234,7 +237,7 @@ lab:
 #### Task 5: Configure DNS policies
 
 1. On **SEA-ADM1**, switch back to the Microsoft Edge window displaying the connection to **sea-svr1.contoso.com** in Windows Admin Center.
-1. In the **Tools** list, select **PowerShell**, and when prompted, sign in as the **CONTOSO\\Administrator** user with **Pa55w.rd** as its password.
+1. In the **Tools** list, select **PowerShell**, and when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to create a head office subnet:
 
    ```powershell

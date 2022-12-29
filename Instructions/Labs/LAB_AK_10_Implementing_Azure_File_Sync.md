@@ -13,7 +13,7 @@ lab:
 
 ### Task 1: Deploy DFS
 
-1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
 1. On **SEA-ADM1**, on the **Start** menu, select **Windows PowerShell**.
 1. In the **Windows PowerShell** console, enter the following, and then press Enter to install Distributed File System (DFS) management tools:
 
@@ -68,7 +68,7 @@ lab:
 
    - Redundancy: **Locally-redundant storage (LRS)**
 
-1. Accept the default values for all other settings, select **Review + create**, and then select **Create**.
+1. Accept the default values for all other settings, select **Review**, and then select **Create**.
 1. After the storage account is created, on the **Deployment** page, select **Go to resource**.
 1. On the **storage account** page, select **File shares**, and then select **+ File share**.
 1. On the **New file share** tab, enter **share1** in the **Name** text box, and then select **Create**.
@@ -79,7 +79,7 @@ lab:
 1. In the details pane, select **Upload**.
 1. On the **Upload files** tab, browse to **C:\\Labfiles\\Lab10\\File1.txt**, select **Upload**, and when the upload is complete, close the **Upload files** tab.
 1. On the **share1** page, select **Snapshots**, select **Add snapshot**, and then select **OK**.
-1. On the **share1** page, select **Overview**, select **Connect**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
+1. On the **share1** page, select **Overview**, select **Connect**, select **Show Script**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
 1. On **SEA-ADM1**, switch to the **Windows PowerShell ISE** window, open another tab in the script pane, and paste the copied script into it.
 1. Review the content of the script, and then execute it by selecting the **Run Script** icon in the toolbar or by pressing F5. 
 

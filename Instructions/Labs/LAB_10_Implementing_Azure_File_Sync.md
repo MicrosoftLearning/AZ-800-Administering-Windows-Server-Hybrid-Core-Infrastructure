@@ -33,9 +33,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 1. Select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
-   - User name: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
+   - Domain: `CONTOSO`
 
 For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
 

@@ -39,16 +39,16 @@ lab:
 
 2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
 
 3. In the All connections pane, select **+ Add**.
 4. In the Add or create resources pane, on the **Servers** tile, select **Add**.
 5. In the **Server name** text box, enter **sea-svr1.contoso.com**. 
 6. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
 
    > **Note**: To perform single sign-on, you would need to set up a Kerberos constrained delegation.
 

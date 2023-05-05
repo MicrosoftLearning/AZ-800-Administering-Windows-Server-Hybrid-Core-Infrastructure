@@ -14,7 +14,7 @@ lab:
 #### Task 1: Provision lab infrastructure resources
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
-1. On **SEA-ADM1**, start Microsoft Edge, go to the **[Azure portal](https://portal.azure.com)**, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+1. On **SEA-ADM1**, start Microsoft Edge, go to the Azure portal at `https://portal.azure.com`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon next to the search text box.
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
@@ -64,7 +64,7 @@ lab:
 
 #### Task 2: Configure the hub and spoke network topology
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open another tab and browse to the **[Azure portal](https://portal.azure.com)**.
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open another tab and browse to the Azure portal at `https://portal.azure.com`.
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual networks**.
 1. In the list of virtual networks, select **az800l08-vnet0**.
 1. On the **az800l08-vnet0** virtual network page, in the **Settings** section, select **Peerings**, and then select **+ Add**.
@@ -359,7 +359,7 @@ lab:
 
 #### Task 3: Configure Azure public DNS name resolution
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open a new tab and browse to **https://www.godaddy.com/domains/domain-name-search**.
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open a new tab and browse to `https://www.godaddy.com/domains/domain-name-search`.
 1. Use the domain name search to identify a domain name that is not currently in use.
 1. On **SEA-ADM1**, switch to the Microsoft Edge tab displaying the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **DNS zones**, and then, on the **DNS zones** page, select **+ Create**.
 1. On the **Create DNS zone** page, specify the following settings (leave others with their default values):

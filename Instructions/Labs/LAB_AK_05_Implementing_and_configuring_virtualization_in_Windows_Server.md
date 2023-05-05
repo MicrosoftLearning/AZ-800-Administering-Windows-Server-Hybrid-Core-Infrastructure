@@ -203,7 +203,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
    > **Note**: Identify the IPv4 address of the Ethernet adapter named vEthernet (nat). This is the address of the new container. Next, identify the IPv4 address of the Ethernet adapter named **Ethernet**. This is the IP address of the host (**SEA-SVR1**) and is set to **172.16.10.12**.
 
-1. On **SEA-ADM1**, switch to the Microsoft Edge window, open another tab and go to **http://172.16.10.12**. Verify that the browser displays the default IIS page.
+1. On **SEA-ADM1**, switch to the Microsoft Edge window, open another tab and go to `http://172.16.10.12`. Verify that the browser displays the default IIS page.
 1. On **SEA-ADM1**, switch back to the PowerShell Remoting session to **SEA-SVR1**, and then, in the **Windows PowerShell** console, enter the following command, and then press Enter to list running containers:
 
    ```powershell

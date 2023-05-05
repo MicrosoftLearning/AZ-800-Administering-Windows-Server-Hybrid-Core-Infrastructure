@@ -94,16 +94,16 @@ lab:
 
 2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
 
 3. On the All connections pane, select **+ Add**.
 4. On the Add or create resources pane, on the **Servers** tile, select **Add**.
 5. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
 6. If needed, ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
 
 7. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
 8. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
@@ -451,8 +451,8 @@ lab:
 1. In the **Cluster name** text box, enter **S2DCluster.Contoso.com**.
 1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Connect with account**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
    
 1. Clear **Also add servers in the cluster** and select **Add**.
 1. Back on the **All connections** page, select **s2dcluster.contoso.com**.

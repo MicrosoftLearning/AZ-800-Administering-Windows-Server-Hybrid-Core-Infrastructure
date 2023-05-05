@@ -52,7 +52,7 @@ lab:
 
 #### Task 1: Install IdFix
 
-1. On **SEA-ADM1**, open Microsoft Edge, and then browse to **https://github.com/microsoft/idfix**.
+1. On **SEA-ADM1**, open Microsoft Edge, and then browse to `https://github.com/microsoft/idfix`.
 1. On the **Github** page, under **ClickOnce Launch**, select **launch**.
 1. On the status bar, select **Open file**.
 1. In the **Application Install - Security Warning** dialog box, select **Install**.
@@ -81,8 +81,8 @@ lab:
 1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account you created in exercise 1, and then select **Next**.
 1. On the **Connect to AD DS** page, enter the following credentials, and then select **Next**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
 
 1. On the **Azure AD sign-in configuration** page, note that the new domain you added is in the list of Active Directory UPN Suffixes, but its status is listed as **Not verified**.
 
@@ -206,8 +206,8 @@ lab:
 1. On the **Enable single sign-on** page, select **Enter credentials**.
 1. In the **Forest credentials** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
 
 1. On the **Enable single sign-on** page, verify that there's a green check mark next to **Enter credentials**, and then select **Next**.
 1. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.
@@ -277,7 +277,7 @@ lab:
    Register-AzureADPasswordProtectionProxy -AccountUpn <Azure_AD_Global_Admin> -AuthenticateUsingDeviceCode
    ```
 
-1. As instructed, open another Microsoft Edge window, browse to **https://microsoft.com/devicelogin** and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
+1. As instructed, open another Microsoft Edge window, browse to `https://microsoft.com/devicelogin` and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
 1. When prompted, authenticate by using the Azure AD Global Administrator user account you created in exercise 1, and then select **Continue**.
 1. Switch back to the PowerShell Remoting session, enter the following command and press Enter to exit the PowerShell Remoting session to **SEA-SVR1**:
 
@@ -297,9 +297,9 @@ lab:
    Register-AzureADPasswordProtectionForest -AccountUpn <Azure_AD_Global_Admin> -AuthenticateUsingDeviceCode
    ```
 
-1. As instructed, open another Microsoft Edge window, browse to **https://microsoft.com/devicelogin** and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
-1. When prompted, authenticate by using the Azure AD Global Administrator user account you created in exercise 1, and then select **Continue**.
-1. Switch back to the PowerShell Remoting session, enter the following command, and then press Enter to exit the PowerShell Remoting session to **SEA-DC1**:
+2. As instructed, open another Microsoft Edge window, browse to `https://microsoft.com/devicelogin` and when prompted, enter the code included in the message displayed in the PowerShell Remoting session. 
+3. When prompted, authenticate by using the Azure AD Global Administrator user account you created in exercise 1, and then select **Continue**.
+4. Switch back to the PowerShell Remoting session, enter the following command, and then press Enter to exit the PowerShell Remoting session to **SEA-DC1**:
 
    ```powershell
    Exit-PSsession

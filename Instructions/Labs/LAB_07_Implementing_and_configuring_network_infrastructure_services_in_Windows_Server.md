@@ -30,9 +30,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. Select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
+   - Domain: `CONTOSO`
 
 For this lab, you'll use the available VM environment.
 
@@ -75,8 +75,8 @@ The main tasks for this exercise are as follows:
    
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\\Administrator`
+   - Password: `Pa55w.rd`
 
 1. In Windows Admin Center, add a connection to **sea-svr1.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**.
 1. In the **Tools** list, use **Roles & features** to install the DHCP role on **SEA-SVR1**.

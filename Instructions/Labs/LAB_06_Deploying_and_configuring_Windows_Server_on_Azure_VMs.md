@@ -38,9 +38,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 1. Select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
+   - Domain: `CONTOSO`
 
 For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
 
@@ -61,7 +61,7 @@ The main tasks for this exercise are as follows:
 In this task, you will connect to your Azure subscription and enable the enhanced security features of Microsoft Defender for Cloud.
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
-1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com), and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+1. On **SEA-ADM1**, start Microsoft Edge, go to the Azure portal at `https://portal.azure.com`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 
 >**Note**: Skip the remaining steps in this task and proceed directly to the next one if you have already enabled Microsoft Defender for Cloud in your Azure subscription.
 

@@ -37,9 +37,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 1. Select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
+   - Domain: `CONTOSO`
 
 For this lab, you'll use the available VM environment and an Azure AD tenant. Before you begin the lab, ensure that you have an Azure AD tenant and a user account with the Global Administrator role in that tenant.
 
@@ -69,7 +69,7 @@ The main tasks for this exercise are:
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the **Azure Active Directory** page, browse to the **All Users** page and create a user account with the following properties: 
 
-   - Username: **admin**
+   - Username: `admin`
 
    > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
 
@@ -99,7 +99,7 @@ The main tasks for this exercise are:
 
 #### Task 1: Install IdFix
 
-1. On **SEA-ADM1**, open Microsoft Edge, and then go to **https://github.com/microsoft/idfix**.
+1. On **SEA-ADM1**, open Microsoft Edge, and then go to `https://github.com/microsoft/idfix`.
 1. On the **Github** page, under **ClickOnce Launch**, select **launch**.
 1. In the **IdFix Privacy Statement** dialog box, review the disclaimer, and then select **OK**.
 
@@ -130,8 +130,8 @@ The main task for this exercise is:
 1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account you created in exercise 1.
 1. On the **Connect to AD DS** page, enter the following credentials:
 
-   - Username: **CONTOSO\\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\\Administrator`
+   - Password: `Pa55w.rd`
 
 1. On the **Azure AD sign-in configuration** page, verify that the new domain you added is in the list of Active Directory UPN Suffixes.
 
@@ -261,12 +261,12 @@ The main tasks for this exercise are:
 1. On the **Enable single sign-on** page, select **Enter credentials**.
 1. In the **Forest credentials** dialog box, authenticate using the following credentials:
 
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
 
-1. On the **Enable single sign-on** page, verify that there's a green check mark next to **Enter credentials**.
-1. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.
-1. After the configuration completes, close the **Microsoft Azure Active Directory Connect** window.
+2. On the **Enable single sign-on** page, verify that there's a green check mark next to **Enter credentials**.
+3. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.
+4. After the configuration completes, close the **Microsoft Azure Active Directory Connect** window.
 
 #### Task 4: Verify pass-through authentication in Azure
 

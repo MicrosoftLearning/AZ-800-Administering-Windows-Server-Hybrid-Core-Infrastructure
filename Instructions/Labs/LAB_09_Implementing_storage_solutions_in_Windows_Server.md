@@ -35,9 +35,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 1. Select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
-   - User name: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
+   - Domain: `CONTOSO`
 
 For this lab, you'll use the available VM environment.
 
@@ -112,17 +112,17 @@ The main tasks for this exercise are as follows:
 1. On **SEA-ADM1**, start Microsoft Edge and connect to the local instance of Windows Admin Center at `https://SEA-ADM1.contoso.com`. 
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\\Administrator`
+   - Password: `Pa55w.rd`
 
-1. In Windows Admin Center, add a connection to **sea-svr3.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**.
-1. While connected to **sea-svr3.contoso.com**, in the **Tools** list, use the **PowerShell** tool to run the following command which triggers deduplication:
+2. In Windows Admin Center, add a connection to **sea-svr3.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**.
+3. While connected to **sea-svr3.contoso.com**, in the **Tools** list, use the **PowerShell** tool to run the following command which triggers deduplication:
 
    ```powershell
    Start-DedupJob -Volume M: -Type Optimization –Memory 50
    ```
-1. Switch back to the console session to **SEA-SVR3**.
-1. On **SEA-SVR3**, at the **Windows PowerShell** prompt, run the following command to identify the available space on the volume being deduplicated:
+4. Switch back to the console session to **SEA-SVR3**.
+5. On **SEA-SVR3**, at the **Windows PowerShell** prompt, run the following command to identify the available space on the volume being deduplicated:
 
    ```powershell
    Get-PSDrive -Name M
@@ -130,17 +130,17 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Compare the previously displayed values with the current ones. 
 
-1. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
-1. Switch back to the console session to **SEA-ADM1**.
-1. On **SEA-ADM1**, in Windows Admin Center connected to **sea-svr3.contoso.com**, use the **PowerShell** tool to run the following commands that identify the status of the deduplication job:
+6. Wait for five to ten minutes to allow the deduplication job to complete and repeat the previous step.
+7. Switch back to the console session to **SEA-ADM1**.
+8. On **SEA-ADM1**, in Windows Admin Center connected to **sea-svr3.contoso.com**, use the **PowerShell** tool to run the following commands that identify the status of the deduplication job:
 
    ```powershell
    Get-DedupStatus –Volume M: | fl
    Get-DedupVolume –Volume M: |fl
    Get-DedupMetadata –Volume M: |fl
    ```
-1. On **SEA-ADM1**, refresh the Disks pane in **Server Manager** and display the properties of the **M:** volume.
-1. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
+9. On **SEA-ADM1**, refresh the Disks pane in **Server Manager** and display the properties of the **M:** volume.
+10. In the **Volume (M:\\) Properties** window, review the values for **Deduplication rate** and **Deduplication savings**.
 
 ## Lab exercise 2: Configuring iSCSI storage
 

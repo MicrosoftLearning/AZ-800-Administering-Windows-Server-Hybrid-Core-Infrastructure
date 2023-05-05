@@ -31,9 +31,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 1. Select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
-   - User name: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
+   - Domain: `CONTOSO`
 
 For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
 
@@ -57,7 +57,7 @@ The main tasks for this exercise are as follows:
 In this task, you will deploy three virtual machines into the same Azure region but into separate virtual networks. The first virtual network will serve as a hub, while the other two will form spokes. These resources will serve as the basis for the lab infrastructure.
 
 1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
-1. On **SEA-ADM1**, start Microsoft Edge, browse to the **[Azure portal](https://portal.azure.com)**, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal at `https://portal.azure.com`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 1. In the Azure portal, open a PowerShell session in the Cloud Shell pane.
 1. Upload the files **C:\\Labfiles\\Lab08\\L08-rg_template.json** and **C:\\Labfiles\\Lab08\\L08-rg_template.parameters.json** into the Cloud Shell home directory.
 1. From the Cloud Shell pane, run the following commands to create the first resource group that will be hosting the lab environment (replace the `<Azure_region>` placeholder with the name of an Azure region that you intend to use for the deployment):
@@ -105,7 +105,7 @@ In this task, you will deploy three virtual machines into the same Azure region 
 
 In this task, you will configure local peering between the virtual networks you deployed in the previous tasks to create a hub and spoke network topology.
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open another tab and browse to the **[Azure portal](https://portal.azure.com)**.
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open another tab and browse to the Azure portal at `https://portal.azure.com`.
 1. In the Azure portal, browse to the **az800l08-vnet0** virtual network page.
 1. From the **az800l08-vnet0** virtual network page, create a peering with the following settings (leave others with their default values):
 
@@ -391,7 +391,7 @@ In this task, you will validate Azure private DNS name resolution.
 
 In this task, you will configure external DNS name resolution by using Azure public DNS zones.
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open a new tab and browse to **https://www.godaddy.com/domains/domain-name-search**.
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, open a new tab and browse to `https://www.godaddy.com/domains/domain-name-search`.
 1. Use the domain name search to identify a domain name which is not currently in use.
 1. On **SEA-ADM1**, switch to the Microsoft Edge tab displaying the Azure portal and browse to the **DNS zones** page.
 1. Create a DNS zone with the following settings (leave others with their default values):

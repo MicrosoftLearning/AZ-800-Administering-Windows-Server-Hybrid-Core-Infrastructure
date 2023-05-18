@@ -76,7 +76,7 @@ In this task, you will connect to your Azure subscription and enable the enhance
    |---|---|
    |Subscription|the name of the Azure subscription you will be using in this lab.|
    |Resource group|the name of a new resource group **AZ800-L0601-RG**|
-   |Virtual machine name|**az800l06-vm0**|
+   |Virtual machine name|**az800L06-vm0**|
    |Region|Use the name of an Azure region in which you can provision Azure virtual machines|
    |Availability options|No infrastructure redundancy required|
    |Image|**Windows Server 2022 Datacenter: Azure Edition - Gen2**|
@@ -87,7 +87,7 @@ In this task, you will connect to your Azure subscription and enable the enhance
    |Public inbound ports|None|
    |Would you like to use an existing Windows Server license|No|
    |OS disk type|**Standard HDD**|
-   |Name|**az800l06-vnet**|
+   |Name|**az800L06-vnet**|
    |Address range|**10.60.0.0/20**|
    |Subnet name|**subnet0**|
    |Subnet range|**10.60.0.0/24**|

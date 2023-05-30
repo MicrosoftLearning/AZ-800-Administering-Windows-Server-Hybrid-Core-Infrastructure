@@ -176,6 +176,9 @@ lab:
 
    ```powershell
    Install-Module -Name pswsman
+   ```
+
+   ```powershell
    Disable-WSManCertVerification -All
    ```
 

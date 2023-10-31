@@ -34,7 +34,7 @@ In this task, you will use the Azure portal to create resource groups and create
    |---|---|
    |Subscription|the name of the Azure subscription you will be using in this lab.|
    |Resource group|the name of a new resource group **AZ800-L0601-RG**|
-   |Virtual machine name|**az800l06-vm0**|
+   |Virtual machine name|**az800L06-vm0**|
    |Region|Use the name of an Azure region in which you can provision Azure virtual machines|
    |Availability options|No infrastructure redundancy required|
    |Image|**Windows Server 2022 Datacenter: Azure Edition - Gen2**|
@@ -56,7 +56,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
    |Setting|Value|
    |---|---|
-   |Name|**az800l06-vnet**|
+   |Name|**az800L06-vnet**|
    |Address range|**10.60.0.0/20**|
    |Subnet name|**subnet0**|
    |Subnet range|**10.60.0.0/24**|
@@ -157,9 +157,9 @@ In this task, you will use the Azure portal to create resource groups and create
 
 1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Resource groups**.
 1. On the **Resource groups** page, select the **AZ800-L0601-RG** entry.
-1. On the **AZ800-L0601-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l06-vm0**.
-1. Within the list of resources, select the Azure VM **az800l06-vm0** entry. 
-1. On the **az800l06-vm0** page, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
+1. On the **AZ800-L0601-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800L06-vm0**.
+1. Within the list of resources, select the Azure VM **az800L06-vm0** entry. 
+1. On the **az800L06-vm0** page, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
 1. Browse back to the **AZ800-L0601-RG** page, and in the **Settings** section, select **Deployments**.
 1. On the **AZ800-L0601-RG \| Deployments** page, select the **Microsoft.Template** link.
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
@@ -196,13 +196,13 @@ In this task, you will use the Azure portal to create resource groups and create
    |---|---|
    |Subscription|the name of the Azure subscription you are using in this lab|
    |Resource group|**AZ800-L0601-RG**|
-   |Name|**az800l06-vm0-nsg1**|
-   |Region|the name of the Azure region into which you provisioned the Azure VM **az800l06-vm0**|
+   |Name|**az800L06-vm0-nsg1**|
+   |Region|the name of the Azure region into which you provisioned the Azure VM **az800L06-vm0**|
 
 1. On the **Create network security group** page, on the **Basics** tab, select **Review + create**, and then select **Create**.
-1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the newly created network security group **az800l06-vm0-nsg1**.
-1. On the **az800l06-vm0-nsg1** page, review the listing of the default inbound and outbound security rules, and then in the **Settings** section, select **Inbound security rules**.
-1. On the **az800l06-vm0-nsg1 \| Inbound security rules** page, select **+ Add**.
+1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the newly created network security group **az800L06-vm0-nsg1**.
+1. On the **az800L06-vm0-nsg1** page, review the listing of the default inbound and outbound security rules, and then in the **Settings** section, select **Inbound security rules**.
+1. On the **az800L06-vm0-nsg1 \| Inbound security rules** page, select **+ Add**.
 1. On the **Add inbound security rule** page, specify the following settings, leaving all others with their default values, and then select **Add**:
 
    |Setting|Value|
@@ -217,23 +217,30 @@ In this task, you will use the Azure portal to create resource groups and create
 
 #### Task 2: Configure Inbound HTTP access to an Azure VM
 
+1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Public IP address**.
+1. On the **Public IP address** page, select **+ Create**.
+1. On the **Basics** tab of the **Create public IP address** page, specify the following settings (leave others with their default values):
+
+   |Setting|Value|
+   |---|---|
+   |Subscription|the name of the Azure subscription you are using in this lab|
+   |Resource group|**AZ800-L0601-RG**|
+   |Name|**az800l06-vm0-pip1**|
+   |Region|the name of the Azure region into which you provisioned the Azure VM **az800l06-vm0**|
+   |SKU|**Standard**|
+
+1. On the **Create public IP address** page, on the **Basics** tab, select **Review + create**, and then select **Create**.
+1. Verify that the deployment completed successfully.
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
 1. On the **az800l06-vm0** page, select **Networking**.
 1. On the **az800l06-vm0 \| Networking** page, select the link designating the network interface attached to **az800l06-vm0**.
 1. On the page displaying the network interface properties, in the vertical menu on the left side, in the **Settings** section, select **Network security group**. 
 1. On the **Network security group** page, in the drop-down list, select **az800l06-vm0-nsg1**, and then select **Save**.
 1. Back on the page displaying the properties of the network interface, select **IP configurations**, and then select the **ipconfig1** entry.
-1. On the **ipconfig1** page, in the **Public IP address** section, select **Associate**, and then, below the **Public IP address** drop-down list, select **Create new**.
-1. In the **Add a public IP address** window, specify the following settings, and then select **OK**:
-
-   |Setting|Value|
-   |---|---|
-   |Name|**az800l06-vm0-pip1**|
-   |SKU|**Standard**|
-
-1. Back on the **ipconfig1** page, select **Save**.
+1. On the **ipconfig1** page, in the **Public IP address** section, select **Associate**, and then select **az800l06-vm0-pip1** from the **Public IP address** drop-down list.
+1. On the **ipconfig1** page, select **Save**.
 1. Browse back to the page displaying the network interface properties and select **Overview**. Note the value of the public IP address assigned to the interface.
-1. Open another browser tab, browse to that IP address, and verify that a webpage opens, displaying **Hello World from az800l06-vm0**.
+1. Open another browser tab, browse to that IP address, and verify that a webpage opens, displaying **Hello World from az800L06-vm0**.
 1. From the lab computer, start the Remote Desktop app, and try connecting to the same IP address. Verify that the connection fails.
 
    >**Note**: This is expected because the Azure VM is currently not accessible from the Internet via TCP port 3389. It is accessible only via TCP port 80.
@@ -242,15 +249,15 @@ In this task, you will use the Azure portal to create resource groups and create
 
 >**Note**: This task is necessary to trigger re-evaluation of the JIT status of the Azure VM. By default, this might take up to 24 hours.
 
-1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
-1. On the **az800l06-vm0** page, select **Configuration**. 
-1. On the **az800l06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Microsoft Defender for Cloud** link.
-1. On the **Just-in-time VM access** page, verify that the entry representing the **az800l06-vm0** Azure VM appears on the **Configured** tab.
+1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800L06-vm0**.
+1. On the **az800L06-vm0** page, select **Configuration**. 
+1. On the **az800L06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Microsoft Defender for Cloud** link.
+1. On the **Just-in-time VM access** page, verify that the entry representing the **az800L06-vm0** Azure VM appears on the **Configured** tab.
 
 #### Task 4: Connect to the Azure VM via JIT VM access
 
-1. Browse back to the **az800l06-vm0** page, select **Connect**, and then in the drop-down list, select **RDP**. 
-1. On the **az800l06-vm0 \| Connect** page, in the **Source IP** section, select **My IP**, and then select **Request access**.
+1. Browse back to the **az800L06-vm0** page, select **Connect**, and then in the drop-down list, select **RDP**. 
+1. On the **az800L06-vm0 \| Connect** page, in the **Source IP** section, select **My IP**, and then select **Request access**.
 1. Wait for the notification stating that your request has been approved, select **Download RDP File** and follow prompts to connect to the target Azure VM.
 1. When prompted for credentials, specify the following values, and then select **OK**:
 

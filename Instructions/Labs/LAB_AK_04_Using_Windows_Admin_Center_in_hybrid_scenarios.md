@@ -107,7 +107,7 @@ lab:
 1. On the **Sign in** page, provide the same username that you used to sign into your Azure subscription in the previous exercise, select **Next**, provide the corresponding password, and then select **Sign in**.
 1. When prompted **Are you trying to sign in to Windows Admin Center?**, select **Continue**.
 1. In Windows Admin Center, verify that the sign in was successful and close the newly opened tab of the Microsoft Edge window.
-1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Azure Active Directory application** is set to **Create new**, and then select **Connect**.
+1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Microsoft Entra application** is set to **Create new**, and then select **Connect**.
 1. In the listing of the steps of the registration procedure, select **Sign in**. This will open a pop-up window labeled **Permissions requested**.
 1. In the **Permissions requested** pop-up window, select **Consent on behalf of your organization**, and then select **Accept**.
 

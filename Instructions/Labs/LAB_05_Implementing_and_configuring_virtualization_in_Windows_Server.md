@@ -157,12 +157,12 @@ The main tasks for this exercise are as follows:
 1. In the **Windows PowerShell** console, run the following command to install the Docker Microsoft PackageManagement provider on **SEA-SVR1**:
 
    ```powershell
-   Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
+   Install-Module -Name DockerProvider -Repository PSGallery -Force
    ```
 1. In the **Windows PowerShell** console, run the following command to install the Docker runtime on **SEA-SVR1**:
 
    ```powershell
-   Install-Package -Name docker -ProviderName DockerMsftProvider
+   Install-Package -Name docker -ProviderName DockerProvider
    ```
 1. After the installation completes, run the following commands to restart **SEA-SVR1**:
 
@@ -176,7 +176,7 @@ The main tasks for this exercise are as follows:
 1. In the **Windows PowerShell** console, run the following command to verify the installed version of Docker:
 
    ```powershell
-   Get-Package -Name Docker -ProviderName DockerMsftProvider
+   Get-Package -Name Docker -ProviderName DockerProvider
    ```
 1. Run the following command to identify Docker images currently present on **SEA-SVR1**: 
 

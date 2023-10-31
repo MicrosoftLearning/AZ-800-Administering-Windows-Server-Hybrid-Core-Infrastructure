@@ -143,13 +143,13 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to install the Docker Microsoft PackageManagement provider on **SEA-SVR1**:
 
    ```powershell
-   Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
+   Install-Module -Name DockerProvider -Repository PSGallery -Force
    ```
 1. At the NuGet Provider prompt, press the **Y** key, and then press Enter.
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to install the Docker runtime on **SEA-SVR1**:
 
    ```powershell
-   Install-Package -Name docker -ProviderName DockerMsftProvider
+   Install-Package -Name docker -ProviderName DockerProvider
    ```
 1. When prompted to confirm, press the **A** key, and then press Enter.
 1. After the installation completes, enter the following commands, and then press Enter to restart **SEA-SVR1**:
@@ -164,7 +164,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to verify the installed version of Docker:
 
    ```powershell
-   Get-Package -Name Docker -ProviderName DockerMsftProvider
+   Get-Package -Name Docker -ProviderName DockerProvider
    ```
 1. Enter the following command, and then press Enter to identify Docker images currently present on **SEA-SVR1**: 
 

@@ -34,7 +34,7 @@ lab:
 
 1. In the **Password**, select the **Copy icon**, and record the password as you'll use it later in this lab.
 1. Select **Next: Properties >**.
-1. On the Properties tab, in the **Usage location** select **United State**, and then select **Next: Assignments >**.
+1. On the Properties tab, in the **Usage location** select **United States**, and then select **Next: Assignments >**.
 1. On the **Assignments** tab, select **+ Add role**, and in the list of **Directory roles**, select **Global administrator** and then select the **Select** button.
 1. On the **New user** page, select **Review + create**, and then select **Create**.
 
@@ -322,7 +322,7 @@ lab:
 
 ## Exercise 6: Cleaning up
 
-#### Task 1: Uninstall Microsoft Entra Connect
+#### Task 1: Uninstall Azure AD Connect
 
 1. On **SEA-ADM1**, on the **Start** menu, select **Control Panel**.
 1. In the **Control Panel** window, under **Programs**, select **Uninstall a program**.

@@ -9,6 +9,21 @@ lab:
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20integration%20between%20AD%20DS%20and%20Azure%20AD)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
+## Lab Setup
+
+1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal, and authenticate with your Azure credentials.
+1. In the Azure portal, browse to **Microsoft Entra ID**.
+1. In the overview, select **Manage Tenants** and then select **+ Create**.
+1. Microsoft Entra ID should be selected and then select **Next:Configuration**.
+1. In Organization name, enter a unique name, for example **Contoso Organization**.
+1. In Initial domain name, enter a unique name, for example **Contoso35501731**.
+1. Select **Review + Create** and then select **Create**.
+
+   > **Note**: Complete the Captcha, click Submit, and wait for the tenant creation to finish.
+
+1. In the notifications, select the created tenant in the message: **Tenant creation was successful. Click here to navigate to your new tenant:(tenant link here)**
+
 ## Exercise 1: Preparing Microsoft Entra ID for AD DS integration
 
 #### Task 1: Create a custom domain in Azure

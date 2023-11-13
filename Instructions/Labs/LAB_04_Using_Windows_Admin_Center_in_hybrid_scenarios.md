@@ -33,11 +33,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 1. Select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
+   - Domain: `CONTOSO`
 
-For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription, as well as with the Global Administrator role in the Azure Active Directory (Azure AD) tenant associated with that subscription.
+For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription, as well as with the Global Administrator role in the Microsoft Entra tenant associated with that subscription.
 
 ## Exercise 1: Provisioning Azure VMs running Windows Server
 
@@ -124,8 +124,8 @@ The main tasks for this exercise are as follows:
 
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\\Administrator`
+   - Password: `Pa55w.rd`
 
 1. From the Windows Admin Center page, attempt to add an Azure Network Adapter.
 1. When prompted, register Windows Admin Center to the Azure subscription you used in the previous exercise.

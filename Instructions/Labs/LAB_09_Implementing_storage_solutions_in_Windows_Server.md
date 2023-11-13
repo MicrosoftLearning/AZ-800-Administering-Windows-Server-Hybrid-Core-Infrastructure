@@ -35,9 +35,9 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 1. Select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
-   - User name: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
+   - Domain: `CONTOSO`
 
 For this lab, you'll use the available VM environment.
 
@@ -112,8 +112,8 @@ The main tasks for this exercise are as follows:
 1. On **SEA-ADM1**, start Microsoft Edge and connect to the local instance of Windows Admin Center at `https://SEA-ADM1.contoso.com`. 
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\\Administrator`
+   - Password: `Pa55w.rd`
 
 1. In Windows Admin Center, add a connection to **sea-svr3.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**.
 1. While connected to **sea-svr3.contoso.com**, in the **Tools** list, use the **PowerShell** tool to run the following command which triggers deduplication:

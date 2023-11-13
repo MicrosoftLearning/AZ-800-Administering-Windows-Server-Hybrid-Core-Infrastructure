@@ -27,11 +27,11 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 1. Select **SEA-ADM1**.
 1. Sign in using the following credentials:
 
-   - Username: **Administrator**
-   - Password: **Pa55w.rd**
-   - Domain: **CONTOSO**
+   - Username: `Administrator`
+   - Password: `Pa55w.rd`
+   - Domain: `CONTOSO`
 
-For this lab, you'll use the available VM environment and an Azure AD tenant. 
+For this lab, you'll use the available VM environment and an Microsoft Entra tenant.
 
 ## Exercise 1: Implementing and using remote server administration
 

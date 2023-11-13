@@ -82,15 +82,15 @@ lab:
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
    
-2. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
 
-3. On the **All connections** pane, select **+ Add**.
-4. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
-5. In the **Server name** text box, enter **sea-svr1.contoso.com**.
-6. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. On the **All connections** pane, select **+ Add**.
+1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
+1. In the **Server name** text box, enter **sea-svr1.contoso.com**.
+1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
    - Username: **CONTOSO\Administrator**
    - Password: **Pa55w.rd**
@@ -99,18 +99,18 @@ lab:
 
    > **Note**: To perform single sign-on, you would need to set up Kerberos constrained delegation.
 
-7. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Virtual machines**, select the **Summary** tab, and then review its content.
-8. Select the **Inventory** tab and verify that it contains SEA-VM1.
-9.  Select **SEA-VM1** and review its Properties pane.
-10. Select **Settings**, and then select **Disks**.
-11. Scroll to the bottom of the pane and select **+ Add disk**.
-12. Select **New Virtual Hard Disk**.
-13. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
-14. Select **Save disks settings**, and then select **Close**.
-15. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
-16. Scroll down and display the statistics for the running VM.
-17. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
-18. In the **Tools** list, select **Virtual switches** and identify the existing switches.
+1. On the **sea-svr1.contoso.com** page, in the **Tools** list, select **Virtual machines**, select the **Summary** tab, and then review its content.
+1. Select the **Inventory** tab and verify that it contains SEA-VM1.
+1.  Select **SEA-VM1** and review its Properties pane.
+1. Select **Settings**, and then select **Disks**.
+1. Scroll to the bottom of the pane and select **+ Add disk**.
+1. Select **New Virtual Hard Disk**.
+1. On the **New Virtual Hard Disk** pane, in the **Size (GB)** text box, type **5**, leave other settings with their default values, and then select **Create**.
+1. Select **Save disks settings**, and then select **Close**.
+1. Back on the **Properties** pane of **SEA-VM1**, select **Power**, and then select **Start** to start **SEA-VM1**.
+1. Scroll down and display the statistics for the running VM.
+1. Refresh the page, select **Power**, select **Shut down**, and then select **Yes** to confirm.
+1. In the **Tools** list, select **Virtual switches** and identify the existing switches.
 
 ### Exercise 1 results
 
@@ -143,13 +143,13 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to install the Docker Microsoft PackageManagement provider on **SEA-SVR1**:
 
    ```powershell
-   Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
+   Install-Module -Name DockerProvider -Repository PSGallery -Force
    ```
 1. At the NuGet Provider prompt, press the **Y** key, and then press Enter.
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to install the Docker runtime on **SEA-SVR1**:
 
    ```powershell
-   Install-Package -Name docker -ProviderName DockerMsftProvider
+   Install-Package -Name docker -ProviderName DockerProvider
    ```
 1. When prompted to confirm, press the **A** key, and then press Enter.
 1. After the installation completes, enter the following commands, and then press Enter to restart **SEA-SVR1**:
@@ -164,7 +164,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to verify the installed version of Docker:
 
    ```powershell
-   Get-Package -Name Docker -ProviderName DockerMsftProvider
+   Get-Package -Name Docker -ProviderName DockerProvider
    ```
 1. Enter the following command, and then press Enter to identify Docker images currently present on **SEA-SVR1**: 
 
@@ -203,7 +203,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
    > **Note**: Identify the IPv4 address of the Ethernet adapter named vEthernet (nat). This is the address of the new container. Next, identify the IPv4 address of the Ethernet adapter named **Ethernet**. This is the IP address of the host (**SEA-SVR1**) and is set to **172.16.10.12**.
 
-1. On **SEA-ADM1**, switch to the Microsoft Edge window, open another tab and go to **http://172.16.10.12**. Verify that the browser displays the default IIS page.
+1. On **SEA-ADM1**, switch to the Microsoft Edge window, open another tab and go to `http://172.16.10.12`. Verify that the browser displays the default IIS page.
 1. On **SEA-ADM1**, switch back to the PowerShell Remoting session to **SEA-SVR1**, and then, in the **Windows PowerShell** console, enter the following command, and then press Enter to list running containers:
 
    ```powershell

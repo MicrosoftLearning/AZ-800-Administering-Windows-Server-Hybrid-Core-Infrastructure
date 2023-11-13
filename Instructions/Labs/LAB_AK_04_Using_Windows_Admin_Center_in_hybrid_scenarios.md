@@ -14,7 +14,7 @@ lab:
 #### Task 1: Create an Azure resource group by using an Azure Resource Manager template
 
 1. Connect to **SEA-ADM1**, and if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
-1. On **SEA-ADM1**, start Microsoft Edge, go to the [Azure portal](https://portal.azure.com), and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+1. On **SEA-ADM1**, start Microsoft Edge, go to the Azure portal at `https://portal.azure.com`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon directly next to the search text box.
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
@@ -85,8 +85,8 @@ lab:
    
 1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
 
 1. On the **All connections** page, select the **sea-adm1.contoso.com** entry. 
 1. In Windows Admin Center, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
@@ -107,7 +107,7 @@ lab:
 1. On the **Sign in** page, provide the same username that you used to sign into your Azure subscription in the previous exercise, select **Next**, provide the corresponding password, and then select **Sign in**.
 1. When prompted **Are you trying to sign in to Windows Admin Center?**, select **Continue**.
 1. In Windows Admin Center, verify that the sign in was successful and close the newly opened tab of the Microsoft Edge window.
-1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Azure Active Directory application** is set to **Create new**, and then select **Connect**.
+1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Microsoft Entra application** is set to **Create new**, and then select **Connect**.
 1. In the listing of the steps of the registration procedure, select **Sign in**. This will open a pop-up window labeled **Permissions requested**.
 1. In the **Permissions requested** pop-up window, select **Consent on behalf of your organization**, and then select **Accept**.
 
@@ -176,6 +176,9 @@ lab:
 
    ```powershell
    Install-Module -Name pswsman
+   ```
+
+   ```powershell
    Disable-WSManCertVerification -All
    ```
 

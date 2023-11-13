@@ -38,20 +38,20 @@ lab:
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
-2. When prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. When prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
 
-3. Review the **New in this release** pop-up window and select **Close** in its upper-right corner.
-4. Review the **All connections** page and note that it includes the **sea-adm1.contoso.com** entry. 
-5. On the **All connections** page, select **+ Add**. 
-6. In the Add or create resources pane, on the **Servers** tile, select **Add**.
-7. In the **Server name** text box, enter **sea-dc1.contoso.com**.
-8. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. Review the **New in this release** pop-up window and select **Close** in its upper-right corner.
+1. Review the **All connections** page and note that it includes the **sea-adm1.contoso.com** entry. 
+1. On the **All connections** page, select **+ Add**. 
+1. In the Add or create resources pane, on the **Servers** tile, select **Add**.
+1. In the **Server name** text box, enter **sea-dc1.contoso.com**.
+1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
 
    > **Note**: After performing step 7, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
 
@@ -70,8 +70,8 @@ lab:
 1. On the **Server connections** page, select the **sea-dc1.contoso.com** link.
 1. Ensure that **Use another account for this connection** option is selected, select the **Use these credentials for all connections**, enter the following credentials, and then select **Continue**:
 
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+   - Username: `CONTOSO\Administrator`
+   - Password: `Pa55w.rd`
 
 1. To install the DNS PowerShell tools, in the left pane, in the list of **Tools**, select **DNS**, and then select **Install**. The tools will take less than a minute to install.
 1. Select the **Contoso.com** zone and review the list of its DNS records.

@@ -52,7 +52,7 @@ lab:
 
 ### Task 1: Create an Azure file share
 
-1. On **SEA-ADM1**, start Microsoft Edge, browse to the **[Azure portal](https://portal.azure.com)**, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
+1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal at `https://portal.azure.com`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the **Storage accounts**.
 1. On the **Storage accounts** page, select **+ Create**.
 1. On the **Basics** tab of the **Create a storage account** page, specify the following settings:
@@ -127,7 +127,7 @@ lab:
    >**Note:** Monitor the script execution. This should take about 3 minutes.
 
 1. When prompted with a **WARNING** message to sign in, copy the nine-character code in the warning message to the Clipboard.
-1. Switch to the Microsoft Edge window displaying the Azure portal, open a new tab by selecting **+**, and then, on the new tab, browse to **https://microsoft.com/devicelogin**.
+1. Switch to the Microsoft Edge window displaying the Azure portal, open a new tab by selecting **+**, and then, on the new tab, browse to `https://microsoft.com/devicelogin`.
 1. In Microsoft Edge, in the **Enter code** dialog box, paste the code you copied into Clipboard, and then, if needed, sign in with your Azure credentials, on the page displaying the message 
 **Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then close the Microsoft Edge tab you opened in the previous step.
 1. Switch to the **Windows PowerShell ISE** window and ensure that the script completed successfully. 
@@ -149,7 +149,7 @@ lab:
    >**Note:** Monitor the script execution. This should take about 3 minutes.
 
 1. When prompted with a **WARNING** message to sign in, copy the nine-character code in the warning message to the Clipboard.
-1. Switch to the Microsoft Edge window displaying the Azure portal, open a new tab by selecting **+**, and then, on the new tab, browse to **https://microsoft.com/devicelogin**.
+1. Switch to the Microsoft Edge window displaying the Azure portal, open a new tab by selecting **+**, and then, on the new tab, browse to `https://microsoft.com/devicelogin`.
 1. In Microsoft Edge, in the **Enter code** dialog box, paste the code you copied into Clipboard, and then, if needed, sign in with your Azure credentials, on the page displaying the message 
 **Are you trying to sign in to Microsoft Azure PowerShell?**, select **Continue**, and then close the Microsoft Edge tab you opened in the previous step.
 1. Switch to the **Windows PowerShell ISE** window and ensure that the script completed successfully. 

@@ -220,18 +220,18 @@ lab:
 1. In **Group Policy Modeling Wizard**, select **Next**.
 1. On the **Domain Controller Selection** page, accept the default settings, and then select **Next**.
 1. On the **User and Computer Selection** page, in the **User information** section, select **User**, and then, in the **User** text box, enter **CONTOSO\Ty** or use the **Browse** command button to locate the **Ty** user account.
-2. On the **User and Computer Selection** page, in the **Computer information** section, select **Computer**, and then, in the **Computer** text box, enter **CONTOSO\SEA-ADM1** or use the **Browse** command button to locate the **SEA-ADM1** computer.
-3. On the **User and Computer Selection** page, select **Next**.
-4. On the **Advanced Simulation Options** page, accept the default settings, and then select **Next**.
-5. On the **Alternate Active Directory Paths** page, note the user and computer locations, and then select **Next**.
-6. On the **User Security Groups** page, verify that the list of groups includes **CONTOSO\\SeattleBranchUsers**, and then select **Next**.
-7. On the **Computer Security Groups** page, select **Next**.
-8. On the **WMI Filters for Users** page, accept the default settings, and then select **Next**.
-9. On the **WMI Filters for Computers** page, accept the default settings, and then select **Next**.
-10. On the **Summary of Selections** page, select **Next**.
-11. Select **Finish** when prompted.
-12. In the details pane, select the **Details** tab, and then select **show all**.
-13. In the report, scroll down until you locate the **User Details** section, and then locate the **Control Panel/Personalization** section. Note that the **Screen saver timeout** settings are disabled and the winning GPO is set to Seattle Application Override GPO.
-14. Close the **Group Policy Management** console.
+1. On the **User and Computer Selection** page, in the **Computer information** section, select **Computer**, and then, in the **Computer** text box, enter **CONTOSO\SEA-ADM1** or use the **Browse** command button to locate the **SEA-ADM1** computer.
+1. On the **User and Computer Selection** page, select **Next**.
+1. On the **Advanced Simulation Options** page, accept the default settings, and then select **Next**.
+1. On the **Alternate Active Directory Paths** page, note the user and computer locations, and then select **Next**.
+1. On the **User Security Groups** page, verify that the list of groups includes **CONTOSO\\SeattleBranchUsers**, and then select **Next**.
+1. On the **Computer Security Groups** page, select **Next**.
+1. On the **WMI Filters for Users** page, accept the default settings, and then select **Next**.
+1. On the **WMI Filters for Computers** page, accept the default settings, and then select **Next**.
+1. On the **Summary of Selections** page, select **Next**.
+1. Select **Finish** when prompted.
+1. In the details pane, select the **Details** tab, and then select **show all**.
+1. In the report, scroll down until you locate the **User Details** section, and then locate the **Control Panel/Personalization** section. Note that the **Screen saver timeout** settings are disabled and the winning GPO is set to Seattle Application Override GPO.
+1. Close the **Group Policy Management** console.
 
 **Results**: After this exercise, you should have successfully created and configured GPOs.

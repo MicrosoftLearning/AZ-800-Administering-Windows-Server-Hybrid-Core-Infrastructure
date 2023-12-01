@@ -39,7 +39,7 @@ For this lab, you'll use the available VM environment and an Azure subscription.
 
 >**Note**: This lab, by default, requires a total of 6 vCPUs available in the Standard_Dsv3 series in the region you choose for deployment because it involves deployment of three Azure VMs of Standard_D2s_v3 SKU. If you are using a free Azure account, with the limit of 4 vCPUs, you can use a VM size that requires only one vCPU (such as Standard_B1s).
 
-### Exercise 1: Implement virtual network routing in Azure
+## Exercise 1: Implement virtual network routing in Azure
 
 ### Scenario
 
@@ -318,7 +318,7 @@ In this task, you will configure and test routing between the two spoke virtual 
     > **Note**: This is expected because the traffic between spoke virtual networks is now routed via the virtual machine located in the hub virtual network, which functions as a router.
 
 
-### Exercise 2: Implement DNS name resolution in Azure
+## Exercise 2: Implement DNS name resolution in Azure
 
 ### Scenario
 

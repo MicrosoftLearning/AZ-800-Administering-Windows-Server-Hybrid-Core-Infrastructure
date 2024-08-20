@@ -193,6 +193,15 @@ lab:
 
    >**Note**: Wait for the provisioning script to complete. This might take about 5 minutes.
 
+   >**Note**: If you get an error regarding the WSMan installation, follow the steps below to finish the setup and proceed with the lab:
+   - In the Azure portal, search for **Virtual Machines** and select the az800l04-vmwac VM
+   - On the left, click **Connect** and select **Download RDP file**.
+   - Open the file and connect using the credentials mentioned in steps 9 and 10.
+   - Once logged in, close all open windows, open an Edge browser and search for **Windows Admin Center**.
+   - Click the first return link and once on the page, select **Download Windows Admin Center**.
+   - Open the file, check the **I accept these terms** box, click **Next 5** times
+   - Click **Install** and then click **Finish**.
+
 1. Verify that the script completed successfully and note the final message providing the URL containing the fully qualified name of the Azure VM that hosts the Windows Admin Center installation.
 
    >**Note**: Record the fully qualified name of the Azure VM. You will need it later in this lab.
@@ -205,6 +214,8 @@ lab:
 1. On the **AZ800-L0401-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l04-vmwac**.
 1. In the list of resources, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, select **Networking**.
 1. On the **az800l04-vmwac | Networking** page, on the **Inbound port rules** tab, note the entries representing the inbound port rule allowing connectivity on TCP port 5986 and the inbound rule allowing connectivity on TCP port 443.
+
+>**Note**: If the inbound port rules don't display, navigate to the **Virtual machines** tab, open az800l04-vmwac, copy the **DNS Name** and paste it in a new browser tab in the https:// format. Examine the output.
 
 ## Exercise 4: Verifying functionality of the Windows Admin Center gateway in Azure
 

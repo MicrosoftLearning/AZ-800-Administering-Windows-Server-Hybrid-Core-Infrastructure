@@ -13,7 +13,7 @@ lab:
 
 ### Task 1: Deploy DFS
 
-1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and then, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, on the **Start** menu, select **Windows PowerShell**.
 1. In the **Windows PowerShell** console, enter the following, and then press Enter to install Distributed File System (DFS) management tools:
 

@@ -13,7 +13,7 @@ lab:
 
 #### Task 1: Deploy AD DS on a new Windows Server Core server
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1** and, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, select **Start**, and then select **Windows PowerShell (Admin)**.
 1. To install the AD DS server role, at the Windows PowerShell command prompt, enter the following command, and then press Enter:
 	
@@ -41,10 +41,10 @@ lab:
 1. Note the post-deployment configuration of **SEA-SVR1**, and then select the **Promote this server to a domain controller** link.
 1. In the **Active Directory Domain Services Configuration Wizard**, on the **Deployment Configuration** page, under **Select the deployment operation**, verify that **Add a domain controller to an existing domain** is selected.
 1. Ensure that the `Contoso.com` domain is specified, and then in the **Supply the credentials to perform this operation** section, select **Change**.
-1. In the **Credentials for deployment operation** dialog box, in the **User name** box, enter **CONTOSO\Administrator**, and then in the **Password** box, enter **Pa55w.rd**.
+1. In the **Credentials for deployment operation** dialog box, insert the credentials provided by the instructor.
 1. Select **OK**, and then select **Next**.
 1. On the **Domain Controller Options** page, ensure that the **Domain Name System (DNS) server** and **Global Catalog (GC)** checkboxes are selected. Ensure that the **Read-only domain controller (RODC)** checkbox is cleared.
-1. In the **Type the Directory Services Restore Mode (DSRM) password** section, enter and confirm the password **Pa55w.rd**, and then select **Next**.
+1. In the **Type the Directory Services Restore Mode (DSRM) password** section, enter and confirm the password provided by the instructor, and then select **Next**.
 1. On the **DNS Options** page, select **Next**.
 1. On the **Additional Options** page, select **Next**.
 1. On the **Paths** page, keep the default path settings for the **Database** folder, **Log files** folder, and **SYSVOL** folder, and then select **Next**.
@@ -70,7 +70,7 @@ lab:
    Invoke-Command –ComputerName SEA-SVR1 {Install-ADDSDomainController -NoGlobalCatalog:$false -CreateDnsDelegation:$false -Credential (Get-Credential) -CriticalReplicationOnly:$false -DatabasePath "C:\Windows\NTDS" -DomainName "Contoso.com" -InstallDns:$true -LogPath "C:\Windows\NTDS" -NoRebootOnCompletion:$false -SiteName "Default-First-Site-Name" -SysvolPath "C:\Windows\SYSVOL" -Force:$true}
    ```
 1. To invoke the command, press Enter.
-1. In the **Windows PowerShell Credential Request** dialog box, enter **CONTOSO\Administrator** in the **User name** box, enter **Pa55w.rd** in the **Password** box, and then select **OK**.
+1. In the **Windows PowerShell Credential Request** dialog box, enter the credentials provided by the instructor.
 1. When prompted for the password, in the **SafeModeAdministratorPassword** text box, enter **Pa55w.rd**, and then press Enter.
 1. When prompted for confirmation, in the **Confirm SafeModeAdministratorPassword** text box, enter **Pa55w.rd**, and then press Enter.
 1. Wait until the command runs and the **Status Success** message is returned. The **SEA-SVR1** virtual machine restarts.
@@ -173,7 +173,7 @@ lab:
 1. Right-click or access the context menu for **Start**, and then select **Run**.
 1. In the **Run** dialog box, in the **Open** text box, enter **regedit**, and then select **OK**. Note the error message stating **Registry editing has been disabled by your administrator**.
 1. In the **Registry Editor** dialog box, select **OK**.
-1. Sign out and then sign in back as **CONTOSO\Administrator** with the password **Pa55w.rd**.
+1. Sign out and then sign in back with the credentials provided by the instructor.
 
 #### Task 4: Create and link the required GPOs
 

@@ -28,11 +28,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
-1. Sign in using the following credentials:
-
-   - Username: `Administrator`
-   - Password: `Pa55w.rd`
-   - Domain: `CONTOSO`
+1. Sign in using the credentials provided by the instructor.
 
 For this lab, you'll use the available VM environment.
 
@@ -73,12 +69,9 @@ The main tasks for this exercise are as follows:
 
    >**Note**: If the link does not work, on **SEA-ADM1**, browse to the **WindowsAdminCenter.msi** file, open the context menu for it, and then select **Repair**. After the repair completes, refresh Microsoft Edge. 
    
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor, and then select **OK**.
 
-   - Username: `CONTOSO\\Administrator`
-   - Password: `Pa55w.rd`
-
-1. In Windows Admin Center, add a connection to **sea-svr1.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**.
+1. In Windows Admin Center, add a connection to **sea-svr1.contoso.com** and connect to it with the credentials provided by the instructor.
 1. In the **Tools** list, use **Roles & features** to install the DHCP role on **SEA-SVR1**.
 1. In the **Tools** list, browse to the **DHCP** tool and install the **DHCP PowerShell** tools. 
 

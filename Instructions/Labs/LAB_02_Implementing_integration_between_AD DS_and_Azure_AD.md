@@ -35,11 +35,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
-1. Sign in using the following credentials:
-
-   - Username: `Administrator`
-   - Password: `Pa55w.rd`
-   - Domain: `CONTOSO`
+1. Sign in using the credentials provided by the instructor.
 
 For this lab, you'll use the available VM environment and an Microsoft Entra tenant. Before you begin the lab, ensure that you have an Microsoft Entra tenant and a user account with the Global Administrator role in that tenant.
 
@@ -128,10 +124,7 @@ The main task for this exercise is:
 1. On the **Microsoft Entra Connect** page, select the **I agree to the license terms and privacy notice** checkbox, and then select **Continue**.
 1. On the **Express Settings** page, select **Use express settings**.
 1. On the **Connect to Microsoft Entra ID** page, enter the username and password of the Microsoft Entra ID Global Administrator user account you created in exercise 1.
-1. On the **Connect to AD DS** page, enter the following credentials:
-
-   - Username: `CONTOSO\\Administrator`
-   - Password: `Pa55w.rd`
+1. On the **Connect to AD DS** page, enter the credentials provided by the instructor.
 
 1. On the **Microsoft Entra ID sign-in configuration** page, verify that the new domain you added is in the list of Active Directory UPN Suffixes.
 
@@ -259,10 +252,7 @@ The main tasks for this exercise are:
 1. On the **User sign-in** page, select **Pass-through authentication**.
 1. Verify that the **Enable single sign-on** checkbox is selected.
 1. On the **Enable single sign-on** page, select **Enter credentials**.
-1. In the **Forest credentials** dialog box, authenticate using the following credentials:
-
-   - Username: `Administrator`
-   - Password: `Pa55w.rd`
+1. In the **Forest credentials** dialog box, authenticate using the credentials provided by the instructor.
 
 2. On the **Enable single sign-on** page, verify that there's a green check mark next to **Enter credentials**.
 3. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.

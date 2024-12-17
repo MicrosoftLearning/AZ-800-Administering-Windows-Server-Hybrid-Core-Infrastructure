@@ -13,7 +13,7 @@ lab:
 
 #### Task 1: Create a Hyper-V virtual switch
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1** and, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 1. In Server Manager, select **All Servers**.
 1. In the Servers list, select the **SEA-SVR1** entry, display its context menu, and then select **Hyper-V Manager**.
@@ -82,18 +82,12 @@ lab:
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
    
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
-
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+1. If prompted, in the **Windows Security** dialog box, enter with the credentials provided by the instructor, and then select **OK**.
 
 1. On the **All connections** pane, select **+ Add**.
 1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
 1. In the **Server name** text box, enter **sea-svr1.contoso.com**.
-1. Ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
-
-   - Username: **CONTOSO\Administrator**
-   - Password: **Pa55w.rd**
+1. Ensure that the **Use another account for this connection** option is selected, enter with the credentials provided by the instructor, and then select **Add with credentials**:
 
    > **Note**: After performing step 8, if an error message that says **You can add this server to your list of connections, but we can't confirm it's available.** appears, select **Add**. In the All Connections pane,  select **sea-svr1.contoso.com**, and then select **Manage as**. In the **Specify your credentials** dialog box, ensure that the **Use another account for this connection** option is selected, enter the Administrator credentials, and then select **Continue**.
 
@@ -120,7 +114,7 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 
 #### Task 1: Install Docker on Windows Server
 
-1. On **SEA-ADM1**, in the **Tools** listing for **SEA-SVR1**, select **PowerShell**. When prompted, type **Pa55w.rd** to authenticate using the **CONTOSO\Administrator** user account, and then press Enter. 
+1. On **SEA-ADM1**, in the **Tools** listing for **SEA-SVR1**, select **PowerShell**. When prompted, authenticate with the credentials provided by the instructor, and then press Enter. 
 
    > **Note**: This establishes a PowerShell Remoting connection to SEA-SVR1.
 

@@ -31,11 +31,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 > **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** VMs are hosting the installation of **SEA-DC1** and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
-1. Sign in using the following credentials:
-
-   - Username: `Administrator`
-   - Password: `Pa55w.rd`
-   - Domain: `CONTOSO`
+1. Sign in using the credentials provided by the instructor.
 
 For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription, as well as with the Global Administrator role in the Microsoft Entra tenant associated with that subscription.
 
@@ -122,10 +118,7 @@ The main tasks for this exercise are as follows:
 
    >**Note**: If the link does not work, on **SEA-ADM1**, browse to the **WindowsAdminCenter.msi** file, open the context menu for it, and then select **Repair**. After the repair completes, refresh Microsoft Edge. 
 
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
-
-   - Username: `CONTOSO\\Administrator`
-   - Password: `Pa55w.rd`
+1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor, and then select **OK**.
 
 1. From the Windows Admin Center page, attempt to add an Azure Network Adapter.
 1. When prompted, register Windows Admin Center to the Azure subscription you used in the previous exercise.
@@ -265,7 +258,7 @@ The main tasks for this exercise are as follows:
 #### Task 3: Connect to an Azure VM by using the Windows Admin Center gateway running in Azure VM
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the interface of the Windows Admin Center gateway running on the **az800l04-vmwac** Azure VM, add a connection to the Azure VM **az800l04-vm0** by using its name.
-1. When prompted, authenticate by using the **Student** username and **Pa55w.rd1234** password.
+1. When prompted, authenticate by using the credentials provided by the instructor.
 1. After successfully connecting to the VM, examine the Overview pane of the **az800l04-vmwac** Azure VM in Windows Admin Center.
 
 ## Exercise 5: Deprovisioning the Azure environment

@@ -11,7 +11,7 @@ lab:
 
 ## Lab Setup
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1** and, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal, and authenticate with your Azure credentials.
 1. In the Azure portal, browse to **Microsoft Entra ID**.
 1. In the overview, select **Manage Tenants** and then select **+ Create**.
@@ -28,7 +28,7 @@ lab:
 
 #### Task 1: Create a custom domain in Azure
 
-1. Connect to **SEA-ADM1** and, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1** and, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal, and authenticate with your Azure credentials.
 1. In the Azure portal, browse to **Microsoft Entra ID**.
 1. On the **Microsoft Entra ID** page, select **Custom domain names**.
@@ -99,11 +99,7 @@ lab:
 1. On the **Connect to Azure AD** page, enter the username and password of the Azure AD Global Administrator user account you created in exercise 1, and then select **Next**.
 1. In the Sign-in to your account page, sign-in with the newly created user, and then select **Next**.
 
-1. On the **Connect to AD DS** page, enter the following credentials, and then select **Next**:
-
-   - Username: `CONTOSO\Administrator`
-   - Password: `Pa55w.rd`
-
+1. On the **Connect to AD DS** page, enter the the credentials provided by the instructor.
 1. On the **Azure AD sign-in configuration** page, note that the new domain you added is in the list of Active Directory UPN Suffixes, but its status is listed as **Not verified**.
 
    > **Note**: The domain name provided does not have to be a verified domain. While you typically would verify a domain prior to installing Microsoft Entra Connect, this lab doesn't require that verification step.
@@ -216,10 +212,7 @@ lab:
 1. On the **User sign-in** page, select **Pass-through authentication**.
 1. Verify that the **Enable single sign-on** checkbox is selected, and then select **Next**.
 1. On the **Enable single sign-on** page, select **Enter credentials**.
-1. In the **Forest credentials** dialog box, enter the following credentials, and then select **OK**:
-
-   - Username: `Administrator`
-   - Password: `Pa55w.rd`
+1. In the **Forest credentials** dialog box, enter the credentials provided by the instructor, and then select **OK**.
 
 1. On the **Enable single sign-on** page, verify that there's a green check mark next to **Enter credentials**, and then select **Next**.
 1. On the **Ready to configure** page, review the list of actions to be performed, and then select **Configure**.

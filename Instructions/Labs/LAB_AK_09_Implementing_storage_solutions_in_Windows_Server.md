@@ -15,7 +15,7 @@ lab:
 
 #### Task 1: Install the Data Deduplication role service
 
-1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and then, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, select **Start**, and then select **Server Manager**.
 1. In Server Manager, select **Manage**, and then select **Add Roles and Features**.
 1. In the **Add Roles and Features Wizard**, select **Next** twice.
@@ -28,7 +28,7 @@ lab:
 1. In the **Network access** window, in the **Type a name and then click Add, or click the arrow to find someone** text box, type **Users** and click **Add**.
 1. In the **Network access** window, select **Share**, and once you are presented with the **Your folder is shared** window, select **Done**.
 1. Switch back to the **Server Manager** window, and then, on the **Add Roles and Features Wizard installation succeeded** page, select **Close**.
-1. Switch to the **SEA-SVR3** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Switch to the **SEA-SVR3** console session, and then, if needed, sign in with the credentials provided by the instructor.
 1. If presented with the **SConfig** menu, at **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
    
    > **Note**: To open Notepad from PowerShell, type **Notepad** and press enter.
@@ -92,20 +92,14 @@ lab:
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
-
-   - Username: `CONTOSO\Administrator`
-   - Password: `Pa55w.rd`
+1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor., and then select **OK**.
 
 1. On the All connections pane, select **+ Add**.
 1. On the Add or create resources pane, on the **Servers** tile, select **Add**.
 1. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
-1. If needed, ensure that the **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
+1. If needed, ensure that the **Use another account for this connection** option is selected, enter the credentials provided by the instructor, and then select **Add with credentials**.
 
-   - Username: `CONTOSO\Administrator`
-   - Password: `Pa55w.rd`
-
-1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
+1. On the **sea-svr3.contoso.com** page, in the **Tools** menu, select **PowerShell**, and then, when prompted, sign in with the credentials provided by the instructor.
 1. In the **Windows PowerShell** console, enter the following command and then press Enter to trigger deduplication:
 
    ```powershell
@@ -208,7 +202,7 @@ lab:
    - Disk size: **5 GB**, **Dynamically Expanding**
    - iSCSI target: **iSCSIFarm**
 
-1. Switch to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Switch to the **SEA-DC1** console session, and then, if needed, sign in with the credentials provided by the instructor.
 1. If presented with the **SConfig** menu, at the **Enter number to select an option**, enter **15** and press Enter to exit to a **PowerShell** console session.
 1. At the **Windows PowerShell** prompt, enter the following commands, and press Enter after each, to start the iSCSI Initiator service and display the iSCSI Initiator configuration:
 
@@ -449,10 +443,7 @@ lab:
 1. Browse to the All connections pane and select **+ Add**.
 1. In the **Add or create resources** pane, in the **Server clusters** pane, select **Add**.
 1. In the **Cluster name** text box, enter **S2DCluster.Contoso.com**.
-1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Connect with account**:
-
-   - Username: `CONTOSO\Administrator`
-   - Password: `Pa55w.rd`
+1. Ensure that **Use another account for this connection** option is selected, enter the credentials provided by the instructor, and then select **Connect with account**.
    
 1. Clear **Also add servers in the cluster** and select **Add**.
 1. Back on the **All connections** page, select **s2dcluster.contoso.com**.

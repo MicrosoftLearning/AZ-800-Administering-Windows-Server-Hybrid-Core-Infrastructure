@@ -29,11 +29,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 > **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1** and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
-1. Sign in using the following credentials:
-
-   - Username: `Administrator`
-   - Password: `Pa55w.rd`
-   - Domain: `CONTOSO`
+1. Sign in using the credentials provided by the instructor.
 
 For this lab, you'll use the available VM environment and an Azure subscription. Before you begin the lab, ensure that you have an Azure subscription and a user account with the Owner or Contributor role in that subscription.
 
@@ -56,7 +52,7 @@ The main tasks for this exercise are as follows:
 
 In this task, you will deploy three virtual machines into the same Azure region but into separate virtual networks. The first virtual network will serve as a hub, while the other two will form spokes. These resources will serve as the basis for the lab infrastructure.
 
-1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and then, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal at `https://portal.azure.com`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 1. In the Azure portal, open a PowerShell session in the Cloud Shell pane.
 1. Upload the files **C:\\Labfiles\\Lab08\\L08-rg_template.json** and **C:\\Labfiles\\Lab08\\L08-rg_template.parameters.json** into the Cloud Shell home directory.

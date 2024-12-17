@@ -30,11 +30,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1** and **SEA-ADM1**
 
 1. Select **SEA-ADM1**.
-1. Sign in using the following credentials:
-
-   - User name: `Administrator`
-   - Password: `Pa55w.rd`
-   - Domain: `CONTOSO`
+1. Sign in using the credentials provided by the instructor.
 
 For this lab, you'll use the available VM environment.
 
@@ -105,12 +101,9 @@ The main tasks for this exercise are as follows:
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
 
 1. On **SEA-ADM1**, start Microsoft Edge and connect to the local instance of Windows Admin Center at `https://SEA-ADM1.contoso.com`. 
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. If prompted, in the **Windows Security** dialog box, enter the credentials providd by the instructor, and then select **OK**.
 
-   - Username: **CONTOSO\\Administrator**
-   - Password: **Pa55w.rd**
-
-1. In Windows Admin Center, add a connection to **sea-svr1.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**. 
+1. In Windows Admin Center, add a connection to **sea-svr1.contoso.com** and connect to it with the credentials providd by the instructor.
 1. In the **Tools** list, select **Virtual Machines** and review the **Summary** pane.
 1. In the **Inventory** pane open **SEA-VM1** and review the **Setting**.
 1. Use Windows Admin Center to create a new disk, 5 GB in size.

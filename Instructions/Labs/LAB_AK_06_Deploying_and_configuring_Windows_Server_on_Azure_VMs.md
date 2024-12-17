@@ -15,7 +15,7 @@ lab:
 
 In this task, you will connect to your Azure subscription and enable enhanced security features of Microsoft Defender for Cloud.
 
-1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and then, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, start Microsoft Edge, go to the Azure portal at `https://portal.azure.com`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 
 >**Note**: Skip the remaining steps in this task and proceed directly to the next one if you have already enabled Microsoft Defender for Cloud in your Azure subscription.
@@ -106,24 +106,24 @@ In this task, you will use the Azure portal to create resource groups and create
    >**Note**: If you are using a tool that pastes the code in line by line, intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into the JSON file.
 
    ```json
-        {
-           "type": "Microsoft.Compute/virtualMachines/extensions",
-           "name": "[concat(parameters('virtualMachineName'), '/customScriptExtension')]",
-           "apiVersion": "2018-06-01",
-           "location": "[resourceGroup().location]",
-           "dependsOn": [
-               "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
-           ],
-           "properties": {
-               "publisher": "Microsoft.Compute",
-               "type": "CustomScriptExtension",
-               "typeHandlerVersion": "1.7",
-               "autoUpgradeMinorVersion": true,
-               "settings": {
-                   "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
-              }
-           }
-        },
+   {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "name": "[concat(parameters('virtualMachineName'), '/customScriptExtension')]",
+      "apiVersion": "2018-06-01",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+         "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
+      ],
+      "properties": {
+         "publisher": "Microsoft.Compute",
+         "type": "CustomScriptExtension",
+         "typeHandlerVersion": "1.7",
+         "autoUpgradeMinorVersion": true,
+         "settings": {
+               "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+         }
+      }
+   },
    ```
 
 1. Save the change and close the file.

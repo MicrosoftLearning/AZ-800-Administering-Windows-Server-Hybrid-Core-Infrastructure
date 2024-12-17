@@ -28,11 +28,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-ADM1**, and **AZ-800T00A-SEA-SVR1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, and **SEA-ADM1**. 
 
 1. Select **SEA-ADM1**.
-1. Sign in using the following credentials:
-
-   - Username: `Administrator`
-   - Password: `Pa55w.rd`
-   - Domain: `CONTOSO`
+1. Sign in using the credentials provided by the instructor.
 
 ## Exercise 1: Deploying a new domain controller on Server Core
 
@@ -63,7 +59,7 @@ The main tasks for this exercise are as follows:
 
    - Type: Additional domain controller for existing domain
    - Domain: `contoso.com`
-   - Credentials: **CONTOSO\\Administrator** with the password **Pa55w.rd**
+   - Insert the credentials provided by the instructor.
    - Directory Services Restore Mode (DSRM) password: **Pa55w.rd**
    - Do not remove the selections for DNS and the global catalog
 
@@ -88,10 +84,7 @@ The main tasks for this exercise are as follows:
    Invoke-Command –ComputerName SEA-SVR1 {Install-ADDSDomainController -NoGlobalCatalog:$false -CreateDnsDelegation:$false -Credential (Get-Credential) -CriticalReplicationOnly:$false -DatabasePath "C:\Windows\NTDS" -DomainName "Contoso.com" -InstallDns:$true -LogPath "C:\Windows\NTDS" -NoRebootOnCompletion:$false -SiteName "Default-First-Site-Name" -SysvolPath "C:\Windows\SYSVOL" -Force:$true}
    ```
 
-1. Provide the following credentials:
-
-   - Username: `CONTOSO\\Administrator`
-   - Password: `Pa55w.rd`
+1. Insert the credentials provided by the instructor.
 
 2. Set the **SafeModeAdministratorPassword** as **Pa55w.rd**.
 3. After **SEA-SVR1** restarts, on **SEA-ADM1**, switch to **Server Manager**, and then select the **AD DS** node. Note that **SEA-SVR1** has been added as a domain controller and that the warning notification has disappeared. You might have to select **Refresh**.
@@ -180,7 +173,7 @@ The main tasks for this exercise are as follows:
 1. Sign out, and then sign in as **CONTOSO\\Ty** with the password **Pa55w.rd**.
 1. Attempt to change the screen saver wait time and resume settings. Verify that Group Policy blocks these actions.
 1. Attempt to run Registry Editor. Verify that Group Policy blocks this action. 
-1. Sign out and then sign in as **CONTOSO\\Administrator** with the password **Pa55w.rd**.
+1. Sign out and then sign in with the credentials provided by the instructor.
 
 #### Task 4: Create and link the required GPOs
 

@@ -13,7 +13,7 @@ lab:
 
 #### Task 1: Install the DHCP role
 
-1. Connect to **SEA-ADM1**, and then, if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and then, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, select **Start**, and then select **Windows PowerShell (Admin)**.
 
    >**Note**: Perform the next two steps in case you have not already installed Windows Admin Center on **SEA-ADM1**.
@@ -37,18 +37,12 @@ lab:
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
-
-   - Username: `CONTOSO\Administrator`
-   - Password: `Pa55w.rd`
+1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor, and then select **OK**.
 
 1. In the All connections pane, select **+ Add**.
 1. In the Add or create resources pane, on the **Servers** tile, select **Add**.
 1. In the **Server name** text box, enter **sea-svr1.contoso.com**. 
-1. Ensure that **Use another account for this connection** option is selected, enter the following credentials, and then select **Add with credentials**:
-
-   - Username: `CONTOSO\Administrator`
-   - Password: `Pa55w.rd`
+1. Ensure that **Use another account for this connection** option is selected, enter the credentials provided by the instructor, and then select **Add with credentials**.
 
    > **Note**: To perform single sign-on, you would need to set up a Kerberos constrained delegation.
 
@@ -237,7 +231,7 @@ lab:
 #### Task 5: Configure DNS policies
 
 1. On **SEA-ADM1**, switch back to the Microsoft Edge window displaying the connection to **sea-svr1.contoso.com** in Windows Admin Center.
-1. In the **Tools** list, select **PowerShell**, and when prompted, sign in as the **CONTOSO\Administrator** user with **Pa55w.rd** as its password.
+1. In the **Tools** list, select **PowerShell**, and when prompted, sign with the credentials provided by the instructor.
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to create a head office subnet:
 
    ```powershell

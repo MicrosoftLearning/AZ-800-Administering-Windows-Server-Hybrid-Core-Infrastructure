@@ -13,7 +13,7 @@ lab:
 
 #### Task 1: Create an Azure resource group by using an Azure Resource Manager template
 
-1. Connect to **SEA-ADM1**, and if needed, sign in as **CONTOSO\Administrator** with a password of **Pa55w.rd**.
+1. Connect to **SEA-ADM1**, and if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, start Microsoft Edge, go to the Azure portal at `https://portal.azure.com`, and sign in by using the credentials of a user account with the Owner role in the subscription you'll be using in this lab.
 1. In the Azure portal, open the Cloud Shell pane by selecting the toolbar icon directly next to the search text box.
 1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
@@ -83,10 +83,7 @@ lab:
 
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**. 
    
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
-
-   - Username: `CONTOSO\Administrator`
-   - Password: `Pa55w.rd`
+1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor, and then select **OK**.
 
 1. On the **All connections** page, select the **sea-adm1.contoso.com** entry. 
 1. In Windows Admin Center, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.

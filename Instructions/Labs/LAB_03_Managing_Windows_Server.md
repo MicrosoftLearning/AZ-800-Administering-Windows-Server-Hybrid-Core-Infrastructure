@@ -25,11 +25,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-ADM1** must be running
 > **Note**: **AZ-800T00A-SEA-DC1** and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1** and **SEA-ADM1**.
 
 1. Select **SEA-ADM1**.
-1. Sign in using the following credentials:
-
-   - Username: `Administrator`
-   - Password: `Pa55w.rd`
-   - Domain: `CONTOSO`
+1. Sign in using the credentials provided by the instructor.
 
 For this lab, you'll use the available VM environment and an Microsoft Entra tenant.
 
@@ -68,10 +64,10 @@ The main tasks for this exercise are as follows:
 #### Task 2: Add servers for remote administration
 
 1. On **SEA-ADM1**, start Microsoft Edge, and then go to `https://SEA-ADM1.contoso.com`. 
-1. When prompted, sign in by using the **CONTOSO\\Administrator** username and **Pa55w.rd** password.
+1. When prompted, sign in by using the credentials provided by the instructor.
 1. Review the **All connections** page and note that it includes the **sea-adm1.contoso.com** entry. 
 1. In the All connections pane, add a connection to `sea-dc1.contoso.com`.
-1. When prompted, sign in by using the **CONTOSO\\Administrator** username and **Pa55w.rd** password.
+1. When prompted, sign in by using the credentials provided by the instructor.
 
    > **Note**: To perform single sign-on, you would need to set up Kerberos constrained delegation.
 
@@ -85,7 +81,7 @@ The main tasks for this exercise are as follows:
 
 1. Verify that the list of installed extensions includes the DNS (Preview) extension.
 1. On the top menu, next to **Settings**, select the drop-down arrow, and then select **Server Manager**.
-1. Within Windows Admin Center, connect to `sea-dc1.contoso.com`, and if needed, sign in by using the **CONTOSO\\Administrator** username and **Pa55w.rd** password.
+1. Within Windows Admin Center, connect to `sea-dc1.contoso.com`, and if needed, sign in by using the credentials provided by the instructor.
 1. Connect to the DNS server on `sea-dc1.contoso.com` and install the DNS PowerShell tools.
 1. Select the **Contoso.com** zone and review the list of its DNS records.
 

@@ -33,11 +33,7 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-
 > **Note**: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, **AZ-800T00A-SEA-SVR2**, **AZ-800T00A-SEA-SVR3**, and **AZ-800T00A-SEA-ADM1** virtual machines are hosting the installation of **SEA-DC1**, **SEA-SVR1**, **SEA-SVR2**, **SEA-SVR3**, and **SEA-ADM1**, respectively.
 
 1. Select **SEA-ADM1**.
-1. Sign in using the following credentials:
-
-   - Username: `Administrator`
-   - Password: `Pa55w.rd`
-   - Domain: `CONTOSO`
+1. Sign in using the credentials provided by the instructor.
 
 For this lab, you'll use the available VM environment.
 
@@ -57,7 +53,7 @@ The main tasks for this exercise are as follows:
 
 1. On **SEA-ADM1**, use **Server Manager** to install the Data Deduplication role service on **SEA-SVR3**.
 1. On **SEA-ADM1**, share the **C:\Labfiles** folder with the **Read** permissions granted to the **Users** group.
-1. Switch to the **SEA-SVR3** console session, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+1. Switch to the **SEA-SVR3** console session, and then, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-SVR3**, start a **Windows PowerShell** session, and then, in the **Windows PowerShell** console, run the following commands to create a volume formatted with ReFS and with the drive letter **M** assigned to it:
 
    ```powershell
@@ -110,12 +106,9 @@ The main tasks for this exercise are as follows:
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
 
 1. On **SEA-ADM1**, start Microsoft Edge and connect to the local instance of Windows Admin Center at `https://SEA-ADM1.contoso.com`. 
-1. If prompted, in the **Windows Security** dialog box, enter the following credentials, and then select **OK**:
+1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor, and then select **OK**.
 
-   - Username: `CONTOSO\\Administrator`
-   - Password: `Pa55w.rd`
-
-1. In Windows Admin Center, add a connection to **sea-svr3.contoso.com** and connect to it as **CONTOSO\\Administrator** with the password of **Pa55w.rd**.
+1. In Windows Admin Center, add a connection to **sea-svr3.contoso.com** and connect to it with the credentials provided by the instructor.
 1. While connected to **sea-svr3.contoso.com**, in the **Tools** list, use the **PowerShell** tool to run the following command which triggers deduplication:
 
    ```powershell
@@ -216,7 +209,7 @@ The main tasks for this exercise are as follows:
    - Disk size: **5 GB**, **Dynamically Expanding**
    - iSCSI target: **iSCSIFarm**
 
-1. Switch to the **SEA-DC1** console session, and then, if needed, sign in as **CONTOSO\\Administrator** with a password of **Pa55w.rd**.
+1. Switch to the **SEA-DC1** console session, and then, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-SVR3**, start a **Windows PowerShell** session, and then, in the **Windows PowerShell** console, run the following commands to start the iSCSI Initiator service and display the iSCSI Initiator configuration:
 
    ```powershell

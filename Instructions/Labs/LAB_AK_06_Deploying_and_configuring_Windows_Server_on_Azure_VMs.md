@@ -87,17 +87,17 @@ In this task, you will use the Azure portal to create resource groups and create
 1. In the Azure portal, on the **Create a virtual machine** page, select **Download a template for automation**.
 1. On the **Template** page, select **Download**.
 1. Select the ellipsis button next to the **template.zip**, and then in the pop-up menu, select **Show in folder**. This will automatically open File Explorer displaying the content of the **Downloads** folder.
-1. In File Explorer, copy **template.zip** to the **C:\\Labfiles\\Lab06** folder on **SEA-ADM1** (create a new folder if needed).
+1. In File Explorer, copy **template.zip**, go to the directory  **C:\\** and create a new folder named **Lab06files**, enter the folder and paste the **template.zip** file.
 1. From the **Template** page, browse back to the **Create a virtual machine** page, and close it without completing the deployment.
 
 ## Exercise 2: Modifying ARM templates to include VM extension-based configuration
 
 #### Task 1: Review the ARM template and parameters files for Azure VM deployment
 
-1. On **SEA-ADM1**, start File Explorer, and then browse to the **C:\\Labfiles\\Lab06** folder.
+1. On **SEA-ADM1**, start File Explorer, and then browse to the **C:\\Lab06files** folder.
 1. Extract the content of the **template.zip** file into the same folder.
 1. Open the **template.json** file in Notepad, and review its content. Keep the Notepad window open.
-1. From File Explorer, open the **C:\\Labfiles\\Lab06\\parameters.json** file in Notepad and review its content.
+1. From File Explorer, open the **C:\\Lab06files\\parameters.json** file in Notepad and review its content.
 1. Close the Notepad window displaying the **parameters.json** file.
 
 #### Task 2: Add an Azure VM extension section to the existing template
@@ -106,25 +106,26 @@ In this task, you will use the Azure portal to create resource groups and create
    >**Note**: If you are using a tool that pastes the code in line by line, intellisense may add extra brackets causing validation errors. You may want to paste the code into notepad first and then paste it into the JSON file.
 
    ```json
-   {
-      "type": "Microsoft.Compute/virtualMachines/extensions",
-      "name": "[concat(parameters('virtualMachineName'), '/customScriptExtension')]",
-      "apiVersion": "2018-06-01",
-      "location": "[resourceGroup().location]",
-      "dependsOn": [
-         "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
-      ],
-      "properties": {
-         "publisher": "Microsoft.Compute",
-         "type": "CustomScriptExtension",
-         "typeHandlerVersion": "1.7",
-         "autoUpgradeMinorVersion": true,
-         "settings": {
-               "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+      {
+         "type": "Microsoft.Compute/virtualMachines/extensions",
+         "name": "[concat(parameters('virtualMachineName'), '/customScriptExtension')]",
+         "apiVersion": "2018-06-01",
+         "location": "[resourceGroup().location]",
+         "dependsOn": [
+            "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
+         ],
+         "properties": {
+            "publisher": "Microsoft.Compute",
+            "type": "CustomScriptExtension",
+            "typeHandlerVersion": "1.7",
+            "autoUpgradeMinorVersion": true,
+            "settings": {
+                  "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+            }
          }
-      }
-   },
+      },
    ```
+   >Note: Make sure the code snippet is aligned with the rest of the scipt.
 
 1. Save the change and close the file.
 
@@ -159,7 +160,7 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Resource groups** page, select the **AZ800-L0601-RG** entry.
 1. On the **AZ800-L0601-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800L06-vm0**.
 1. Within the list of resources, select the Azure VM **az800L06-vm0** entry. 
-1. On the **az800L06-vm0** page, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
+1. On the **az800L06-vm0** page, under the Settings tab, select **Extensions + applications**, and on the list of extensions, verify that the **customScriptExtension** has been provisioned successfully.
 1. Browse back to the **AZ800-L0601-RG** page, and in the **Settings** section, select **Deployments**.
 1. On the **AZ800-L0601-RG \| Deployments** page, select the **Microsoft.Template** link.
 1. On the **Microsoft.Template \| Overview** page, select **Template**, and note that this is the same template you used for deployment.
@@ -217,7 +218,7 @@ In this task, you will use the Azure portal to create resource groups and create
 
 #### Task 2: Configure Inbound HTTP access to an Azure VM
 
-1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Public IP address**.
+1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Public IP addresses**.
 1. On the **Public IP address** page, select **+ Create**.
 1. On the **Basics** tab of the **Create public IP address** page, specify the following settings (leave others with their default values):
 
@@ -232,12 +233,12 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Create public IP address** page, on the **Basics** tab, select **Review + create**, and then select **Create**.
 1. Verify that the deployment completed successfully.
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800l06-vm0**.
-1. On the **az800l06-vm0** page, select **Networking**.
-1. On the **az800l06-vm0 \| Networking** page, select the link designating the network interface attached to **az800l06-vm0**.
+1. On the **az800l06-vm0** page, under the **Networking** menu, select **Network settings**.
+1. On the **az800l06-vm0 \| Network settings** page, select the link designating the network interface attached to **az800l06-vm0**.
 1. On the page displaying the network interface properties, in the vertical menu on the left side, in the **Settings** section, select **Network security group**. 
 1. On the **Network security group** page, in the drop-down list, select **az800l06-vm0-nsg1**, and then select **Save**.
 1. Back on the page displaying the properties of the network interface, select **IP configurations**, and then select the **ipconfig1** entry.
-1. On the **ipconfig1** page, in the **Public IP address** section, select **Associate**, and then select **az800l06-vm0-pip1** from the **Public IP address** drop-down list.
+1. On the **ipconfig1** page, in the **Public IP address** section, select **Associate public IP address** box, and then select **az800l06-vm0-pip1** from the **Public IP address** drop-down list.
 1. On the **ipconfig1** page, select **Save**.
 1. Browse back to the page displaying the network interface properties and select **Overview**. Note the value of the public IP address assigned to the interface.
 1. Open another browser tab, browse to that IP address, and verify that a webpage opens, displaying **Hello World from az800L06-vm0**.
@@ -250,7 +251,7 @@ In this task, you will use the Azure portal to create resource groups and create
 >**Note**: This task is necessary to trigger re-evaluation of the JIT status of the Azure VM. By default, this might take up to 24 hours.
 
 1. In the Azure portal, browse back to the **AZ800-L0601-RG** page, and then in the list of resources, select the entry representing the Azure VM **az800L06-vm0**.
-1. On the **az800L06-vm0** page, select **Configuration**. 
+1. On the **az800L06-vm0** page, under the settings section, select **Configuration**. 
 1. On the **az800L06-vm0 \| Configuration** page, select **Enable just-in-time** VM access and select the **Open Microsoft Defender for Cloud** link.
 1. On the **Just-in-time VM access** page, verify that the entry representing the **az800L06-vm0** Azure VM appears on the **Configured** tab.
 

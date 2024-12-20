@@ -70,7 +70,7 @@ lab:
 
 1. Accept the default values for all other settings, select **Review**, and then select **Create**.
 1. After the storage account is created, on the **Deployment** page, select **Go to resource**.
-1. On the **storage account** page, select **File shares**, and then select **+ File share**.
+1. On the **storage account** page, select **Storage browser**, select **File shares** menu and then select **+ File share**.
 1. On the **New file share** tab, enter **share1** in the **Name** text box, and then select **Create**.
 
 ### Task 2: Use an Azure file share
@@ -78,8 +78,9 @@ lab:
 1. On **SEA-ADM1**, in the Azure portal, in the details pane, select **share1**.
 1. In the details pane, select **Upload**.
 1. On the **Upload files** tab, browse to **C:\\Labfiles\\Lab10\\File1.txt**, select **Upload**, and when the upload is complete, close the **Upload files** tab.
-1. On the **share1** page, select **Snapshots**, select **Add snapshot**, and then select **OK**.
-1. On the **share1** page, select **Overview**, select **Connect**, select **Show Script**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
+1. Browse back to the **File shares** menu, select the elipsis of **share1** and then, on the list displayed, select **View snapshots**.
+1. On the **File share snapshots** page, select **Add snapshot** and click **Ok**.
+1. Browse back to the **File shares** menu, select the box representing **share1** and select **Connect**, select **Show Script**, use the **Copy to clipboard** button to copy the script, and then close the **Connect** tab.
 1. On **SEA-ADM1**, switch to the **Windows PowerShell ISE** window, open another tab in the script pane, and paste the copied script into it.
 1. Review the content of the script, and then execute it by selecting the **Run Script** icon in the toolbar or by pressing F5. 
 

@@ -125,7 +125,7 @@ In this task, you will use the Azure portal to create resource groups and create
          }
       },
    ```
-   >Note: Make sure the code snippet is aligned with the rest of the scipt.
+   >Note: Make sure the code snippet is aligned with the rest of the script.
 
 1. Save the change and close the file.
 

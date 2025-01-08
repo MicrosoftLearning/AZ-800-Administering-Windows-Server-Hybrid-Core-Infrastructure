@@ -106,6 +106,7 @@ lab:
 1. In Windows Admin Center, verify that the sign in was successful and close the newly opened tab of the Microsoft Edge window.
 1. In the **Get started with Azure in Windows Admin Center** pane, ensure that **Microsoft Entra application** is set to **Create new**, and then select **Connect**.
 1. In the listing of the steps of the registration procedure, select **Sign in**. This will open a pop-up window labeled **Permissions requested**.
+   >Note: If you get an error message when signing in, try refreshing the page in previous step.
 1. In the **Permissions requested** pop-up window, select **Consent on behalf of your organization**, and then select **Accept**.
 
 #### Task 2: Create an Azure Network Adapter

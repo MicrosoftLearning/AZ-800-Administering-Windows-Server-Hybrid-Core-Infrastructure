@@ -54,7 +54,7 @@ lab:
 
 1. In the Azure portal, close the Cloud Shell pane.
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the **az800l04-vnet** virtual network.
-1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ ubnet**.
+1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ subnet**.
 1. On the **Add subnet** page, settings pane, specify the following settings, and then select **Add** (leave others with their default values):
 
    |Setting|Value|

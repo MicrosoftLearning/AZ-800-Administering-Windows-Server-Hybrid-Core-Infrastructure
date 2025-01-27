@@ -38,23 +38,29 @@ lab:
 
 #### Task 2: Create an Azure VM by using an Azure Resource Manager template
 
-1. From the Cloud Shell pane, upload an Azure Resource Manager template **C:\\Labfiles\\Lab04\\L04-rg_template.json** and the corresponding Azure Resource Manager parameter file **C:\\Labfiles\\Lab04\\L04-rg_template.parameters.json**.
+1. From the Cloud Shell pane, upload an Azure Resource Manager template **C:\\Labfiles\\Lab04\\L04-rg_template.json**.
 1. From the Cloud Shell pane, run the following command to deploy an Azure VM running Windows Server that you'll be using in this lab:
 
    ```powershell
    New-AzResourceGroupDeployment `
      -Name az800l04rgDeployment `
      -ResourceGroupName $rgName `
-     -TemplateFile $HOME/L04-rg_template.json `
-     -TemplateParameterFile $HOME/L04-rg_template.parameters.json
+     -TemplateFile $HOME/L04-rg_template.json
    ```
+
+1. When prompted, insert the credentials provided by the instructor.
 
    >**Note**: Wait for the deployment to complete before you proceed to the next exercise. The deployment should take about 5 minutes.
 
 1. In the Azure portal, close the Cloud Shell pane.
 1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select the **az800l04-vnet** virtual network.
-1. On the **az800l04-vnet** page, select **Subnets**, and then, on the **Subnets** page, select **+ Gateway subnet**.
-1. On the **Add subnet** page, set the **Subnet address range** to **10.4.3.224/27**, and then select **Save** to create the **GatewaySubnet**.
+1. On the **az800l04-vnet** page, under **Settings** section, select **Subnets**, and then, on the **Subnets** page, select **+ ubnet**.
+1. On the **Add subnet** page, settings pane, specify the following settings, and then select **Add** (leave others with their default values):
+
+   |Setting|Value|
+   |---|---|
+   |Subnet purpose|**Virtual Network Gateway**|
+   |Starting address|**10.4.3.224/27**|
 
 ## Exercise 2: Implementing hybrid connectivity by using the Azure Network Adapter
 
@@ -67,15 +73,16 @@ lab:
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to download the latest version of Windows Admin Center:
 	
    ```powershell
-   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
+   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.exe"
    ```
-1. Enter the following command, and then press Enter to install Windows Admin Center:
-	
-   ```powershell
-   Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
-   ```
-
-   > **Note**: Wait until the installation completes. This should take about 2 minutes.
+1. Open a file explorer, navigate to the **Downloads** folder, and run the **WindowsAdminCenter.exe** file. This will start the **Windows Admin Center (v2) Installer** wizard.
+1. On the **Welcome to the Windows Admin Center setup wizard** page, select **Next**.
+1. On the **License Terms and Privacy Statement** page, **accept the terms** and select **Next**.
+1. On the **Select installation mode** page, ensure **Express setup** is selected, and select **Next**.
+1. On the **Select TLS certificate** page, ensure **Generate a self-signed certificate (expires in 60 days)** is selected, and select **Next**.
+1. On the **Automatic updates** page, select **Notify me of available updates without downloading or installing them**, and select **Next**.
+1. On the **Send diagnostic data to Microsoft** page, ensure **Required diagnostic data** is selected, and select **Next**.
+1. Select **Install**, and when the installation is complete, ensure the **Start Windows Admin Center: `https://SEA-ADM1.contoso.com:443`** box is selected, and select **Finish**.
 
 1. On **SEA-ADM1**, start Microsoft Edge, and then browse to `https://SEA-ADM1.contoso.com`.
 
@@ -111,24 +118,7 @@ lab:
 
 #### Task 2: Create an Azure Network Adapter
 
-1. On **SEA-ADM1**, back in the Microsoft Edge window displaying Windows Admin Center, browse to the **sea-adm1.contoso.com** page, and then select **Networks**.
-1. In Windows Admin Center, on the **Networks** page, from the **Actions** menu, select the **+ Add Azure Network Adapter (Preview)** entry again.
-1. In the **Add Azure Network Adapter** settings pane, specify the following settings, and then select **Create** (leave others with their default values):
-
-   |Setting|Value|
-   |---|---|
-   |Subscription|The name of the Azure subscription you are using in this lab|
-   |Location|eastus|
-   |Virtual network|az800l04-vnet|
-   |Gateway subnet|10.4.3.224/27|
-   |Gateway SKU|VpnGw1|
-   |Client Address Space|192.168.0.0/24|
-   |Authentication Certificate|Auto-generated Self-signed root and client Certificate|
-
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual network gateways**.
-1. On the **Virtual network gateways** page, select **Refresh** and verify that the new entry with the name starting with **WAC-Created-vpngw-ID_NO** appears in the list of virtual network gateways.
-
->**Note**: The provisioning of the Azure virtual network gateway can take up to 45 minutes. Do not wait for the provisioning to complete but instead proceed to the next exercise.
+>**Note**: Due to recent changes in the WAC console, this step is currently unavailable to execute.
 
 ## Exercise 3: Deploying Windows Admin Center gateway in Azure
 
@@ -186,42 +176,41 @@ lab:
    ./Deploy-WACAzVM.ps1 @scriptParams
    ```
 
-1. When prompted to provide the name for the local Administrator account, enter **Student**
-1. When prompted to provide the password for the local Administrator account, enter **Pa55w.rd1234**
+1. When prompted to provide the name for the local Administrator account, enter the **username** provided by the instructor.
+1. When prompted to provide the password for the local Administrator account, enter the **password** provided by the instructor
 
    >**Note**: Wait for the provisioning script to complete. This might take about 5 minutes.
-
-   >**Note**: If you get an error regarding the WSMan installation, follow the steps below to finish the setup and proceed with the lab:
-   - In the Azure portal, search for **Virtual Machines** and select the az800l04-vmwac VM
-   - On the left, click **Connect** and select **Download RDP file**.
-   - Open the file and connect using the credentials mentioned in steps 9 and 10.
-   - Once logged in, close all open windows, open an Edge browser and search for **Windows Admin Center**.
-   - Click the first return link and once on the page, select **Download Windows Admin Center**.
-   - Open the file, check the **I accept these terms** box, click **Next 5** times
-   - Click **Install** and then click **Finish**.
-
-1. Verify that the script completed successfully and note the final message providing the URL containing the fully qualified name of the Azure VM that hosts the Windows Admin Center installation.
-
-   >**Note**: Record the fully qualified name of the Azure VM. You will need it later in this lab.
-
+   
 1. Close the Cloud Shell pane.
+1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Virtual Machines**, and then, on the **Virtual Machines** page, select the **az800l04-vmwac** entry.
+1. Under the **Connect** section, select **Connect** and then select **Download RDP file**.
+1. When prompted, insert the credentials provided by the instructor.
+1. Within the Remote Desktop session to **az800l04-vmwac** vm, select **Start**, and then select **Windows PowerShell (Admin)**.
 
-#### Task 2: Review results of the script provisioning
+1. In the **Windows PowerShell** console, enter the following command, and then press Enter to download the latest version of Windows Admin Center:
+	
+   ```powershell
+   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.exe"
+   ```
+1. Open a file explorer, navigate to the **Downloads** folder, and run the **WindowsAdminCenter.exe** file. This will start the **Windows Admin Center (v2) Installer** wizard.
+1. On the **Welcome to the Windows Admin Center setup wizard** page, select **Next**.
+1. On the **License Terms and Privacy Statement** page, **accept the terms** and select **Next**.
+1. On the **Select installation mode** page, ensure **Express setup** is selected, and select **Next**.
+1. On the **Select TLS certificate** page, ensure **Generate a self-signed certificate (expires in 60 days)** is selected, and select **Next**.
+1. On the **Automatic updates** page, select **Notify me of available updates without downloading or installing them**, and select **Next**.
+1. On the **Send diagnostic data to Microsoft** page, ensure **Required diagnostic data** is selected, and select **Next**.
+1. Select **Install**, and when the installation is complete, ensure the **Start Windows Admin Center: `https://az800l04-vmwac:443`** box is selected, and select **Finish**.
 
-1. In the Azure portal, in the **Search resources, services, and docs** text box in the toolbar, search for and select **Resource groups**, and then, on the **Resource groups** page, select the **AZ800-L0401-RG** entry.
-1. On the **AZ800-L0401-RG** page, on the **Overview** page, review the list of resources, including the Azure VM **az800l04-vmwac**.
-1. In the list of resources, select the Azure VM **az800l04-vmwac** entry, and then, on the **az800l04-vmwac** page, select **Networking**.
-1. On the **az800l04-vmwac | Networking** page, on the **Inbound port rules** tab, note the entries representing the inbound port rule allowing connectivity on TCP port 5986 and the inbound rule allowing connectivity on TCP port 443.
-
->**Note**: If the inbound port rules don't display, navigate to the **Virtual machines** tab, open az800l04-vmwac, copy the **DNS Name** and paste it in a new browser tab in the https:// format. Examine the output.
+  >**Note**: The installation may take up to 5 minutes.
 
 ## Exercise 4: Verifying functionality of the Windows Admin Center gateway in Azure
 
 #### Task 1: Connect to the Windows Admin Center gateway running in Azure VM
 
-1. On **SEA-ADM1**, start Microsoft Edge and go to the URL containing the fully qualified name of the target Azure VM hosting the Windows Admin Center installation you identified in the previous exercise.
+1. On **SEA-ADM1**, on the **az800l04-vmwac** page, select the **Overview** entry on the left menu and copy the **DNS Name**.
+1. On **SEA-ADM1**, start Microsoft Edge and paste the **DNS Name** in the `https://` format.
 1. In Microsoft Edge window, disregard the message **Your connection isn't private**, select **Advanced**, and then select the link starting with the text **Continue to**.
-1. When prompted, in the **Sign in to access this site** dialog box, sign in with the **Student** username and **Pa55w.rd1234** password.
+1. When prompted, in the **Sign in to access this site** dialog box, sign in with the credentials provided by the instructor.
 1. On the **All connections** page of Windows Admin Center, select **az800l04-vmwac [Gateway]**.
 1. Examine the Overview pane of Windows Admin Center.
 
@@ -254,7 +243,7 @@ lab:
 1. On the **All connections** page, select **+ Add**.
 1. On the **Add or create resources** page, in the **Servers** section, select **Add**.
 1. In the **Server name** text box, enter **az800l04-vm0**.
-1. Select the **Use another account for this connection** option, provide the **Student** username and **Pa55w.rd1234** password, and then select **Add with Credentials**.
+1. Select the **Use another account for this connection** option, provide the credentials provided by the instructor, and then select **Add with Credentials**.
 1. In the list of connections, select **az800l04-vm0**
 1. After successfully connecting to the Azure VM, examine the Overview pane of the **az800l04-vmwac** Azure VM in Windows Admin Center.
 

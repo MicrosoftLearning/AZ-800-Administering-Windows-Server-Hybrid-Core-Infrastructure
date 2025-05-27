@@ -7,8 +7,6 @@ lab:
 
 # Lab answer key: Implementing and configuring virtualization in Windows Server
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20and%20configuring%20virtualization%20in%20Windows%20Server)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
-
 ### Exercise 1: Creating and configuring VMs
 
 #### Task 1: Create a Hyper-V virtual switch

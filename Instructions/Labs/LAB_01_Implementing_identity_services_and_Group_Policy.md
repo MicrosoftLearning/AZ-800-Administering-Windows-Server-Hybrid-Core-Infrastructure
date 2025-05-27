@@ -10,6 +10,10 @@ lab:
 
 You are working as an administrator at Contoso Ltd. The company is expanding its business with several new locations. The Active Directory Domain Services (AD DS) Administration team is currently evaluating methods available in Windows Server for a non-interactive, remote domain controller deployment. The team is also searching for a way to automate certain AD DS administrative tasks. Additionally, the team wants to establish configuration management based on Group Policy Objects (GPO).
 
+## Interactive lab simulations
+
+>**Note**: The lab simulations that were previously provided have been retired.
+
 ## Objectives
 
 After completing this lab, you’ll be able to:

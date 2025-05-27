@@ -14,8 +14,6 @@ Additionally, you want to make sure that your approach addresses the Information
 
 Your goal is to implement pass-through authentication between on-premises AD DS and Microsoft Entra ID.
 
-**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-800%20Lab%20Simulation%20-%20Implementing%20integration%20between%20AD%20DS%20and%20Azure%20AD)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
-
 ## Objectives
 
 After completing this lab, you'll be able to:

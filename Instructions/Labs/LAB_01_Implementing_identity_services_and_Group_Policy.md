@@ -13,7 +13,7 @@ You are working as an administrator at Contoso Ltd. The company is expanding its
 ## Interactive lab simulations
 
 >**Note**: The lab simulations that were previously provided have been retired.
----
+
 
 ## Objectives
 

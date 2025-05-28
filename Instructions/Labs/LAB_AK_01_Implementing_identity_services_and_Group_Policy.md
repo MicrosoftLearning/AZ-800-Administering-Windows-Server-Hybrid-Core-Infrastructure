@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Implementing identity services and Group Policy
 
+>**Note**: The lab simulations that were previously provided have been retired.
+
 ## Exercise 1: Deploying a new domain controller on Server Core
 
 #### Task 1: Deploy AD DS on a new Windows Server Core server

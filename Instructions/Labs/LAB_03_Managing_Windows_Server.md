@@ -47,14 +47,17 @@ The main tasks for this exercise are as follows:
 1. From the **Windows PowerShell** console, run the following command to download the latest version of Windows Admin Center:
 	
    ```powershell
-   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
+   $parameters = @{
+	     Source = "https://aka.ms/WACdownload"
+	     Destination = ".\WindowsAdminCenter.exe"
+	}
+	Start-BitsTransfer @parameters
    ```
 1. Enter the following command and then press Enter to install Windows Admin Center:
 	
    ```powershell
-   Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
+  	Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
-
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
 
    > **Note**: After installation completes, you may encounter the error message 'ERR_Connection_Refused'. If this occurs, restart SEA-ADM1 to correct the issue.
@@ -73,11 +76,9 @@ The main tasks for this exercise are as follows:
 
 1. On **SEA-ADM1**, in the upper-right corner, select the **Settings** icon (the cog wheel).
 1. Review the available extensions.
-1. Install the **Security (Preview)** extension. The extension will install and Windows Admin Center will refresh.
+1. Install the **DNS** extension. The extension will install and Windows Admin Center will refresh.
 
-   > **Note**: If the **Security (Preview)** extension is not available, choose another Microsoft extension.
-
-1. Verify that the list of installed extensions includes the DNS (Preview) extension.
+1. Verify that the list of installed extensions includes the DNS extension.
 1. On the top menu, next to **Settings**, select the drop-down arrow, and then select **Server Manager**.
 1. Within Windows Admin Center, connect to `sea-dc1.contoso.com`, and if needed, sign in by using the credentials provided by the instructor.
 1. Connect to the DNS server on `sea-dc1.contoso.com` and install the DNS PowerShell tools.

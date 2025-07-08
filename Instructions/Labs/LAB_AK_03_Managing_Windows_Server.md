@@ -47,6 +47,9 @@ lab:
 1. On the **All connections** page, select **+ Add**. 
 1. In the Add or create resources pane, on the **Servers** tile, select **Add**.
 1. In the **Server name** text box, enter **sea-dc1.contoso.com**.
+1. 1. When prompted, sign in by using the credentials provided by the instructor.
+
+   > **Note**: To perform single sign-on, you would need to set up Kerberos constrained delegation.
 
 #### Task 3: Configure Windows Admin Center extensions
 

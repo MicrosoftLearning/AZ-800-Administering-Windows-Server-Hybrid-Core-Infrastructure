@@ -74,11 +74,11 @@
       "apiVersion": "[variables('networkAPIVersion')]",
       "location": "[resourceGroup().location]",
       "sku": {
-       "name": "Basic"
+       "name": "Standard"
       },
       "properties": {
         "publicIPAddressVersion": "IPv4",
-        "publicIPAllocationMethod": "Dynamic",
+        "publicIPAllocationMethod": "Static",
         "idleTimeoutInMinutes": 4
       }
     },

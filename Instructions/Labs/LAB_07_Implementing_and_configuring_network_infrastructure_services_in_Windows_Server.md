@@ -53,12 +53,16 @@ The main tasks for this exercise are as follows:
 1. In the **Windows PowerShell** console, run the following command to download the latest version of Windows Admin Center:
 	
    ```powershell
-   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
+   $parameters = @{
+     Source = "https://aka.ms/WACdownload"
+     Destination = ".\WindowsAdminCenter.exe"
+   }
+   Start-BitsTransfer @parameters
    ```
 1. Run the following command to install Windows Admin Center:
 	
    ```powershell
-   Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
+   Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
 
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
@@ -68,7 +72,11 @@ The main tasks for this exercise are as follows:
    >**Note**: If the link does not work, on **SEA-ADM1**, browse to the **WindowsAdminCenter.msi** file, open the context menu for it, and then select **Repair**. After the repair completes, refresh Microsoft Edge. 
    
 1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor, and then select **OK**.
-
+1. Review all tabs on the **Configure your Windows Admin Center Settings and environment** pop-up window, including the **Extensions** tab and select **Complete** to close the window.
+1. On **SEA-ADM1**, in the upper-right corner of the Microsoft Edge window displaying Windows Admin Center, select the **Settings** icon (the cog wheel).
+1. In the left pane, select **Extensions**. Review the available extensions.
+1. Select the **DHCP** and **DNS** extensions, and then select **Install** if not installed already. The extension will install and Windows Admin Center will refresh.
+1. In the details pane, select **Installed extensions** and verify that the list includes the extensions you just installed.
 1. In Windows Admin Center, add a connection to **sea-svr1.contoso.com** and connect to it with the credentials provided by the instructor.
 1. In the **Tools** list, use **Roles & features** to install the DHCP role on **SEA-SVR1**.
 1. In the **Tools** list, browse to the **DHCP** tool and install the **DHCP PowerShell** tools. 
@@ -221,7 +229,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Verify that the name resolves to the IP address **172.30.99.100** that was configured in the **HeadOfficePolicy**.
 
-1. Change the IP address assigned to **SEA-ADM1** from **172.16.10.11** to an IP address (**172.16.11.11**) that is not within the IP address range of the **HeadOfficeSubnet**.
+1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.10.11**) to an IP address **172.16.11.11** that is not within the IP address range of the **HeadOfficeSubnet**, use a subnet mask of **255.255.0.0** and a DNS server IP of **172.60.10.12** and then select **OK**.
 1. In the **Windows PowerShell** console, run the following command to test the DNS policy:
 
     ```powershell

@@ -19,12 +19,16 @@ lab:
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to download the latest version of Windows Admin Center:
 	
    ```powershell
-   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
+   $parameters = @{
+     Source = "https://aka.ms/WACdownload"
+     Destination = ".\WindowsAdminCenter.exe"
+   }
+   Start-BitsTransfer @parameters
    ```
 1. Enter the following command, and then press Enter to install Windows Admin Center:
 	
    ```powershell
-   Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
+   Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
 
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
@@ -36,7 +40,11 @@ lab:
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
 1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor, and then select **OK**.
-
+1. Review all tabs on the **Configure your Windows Admin Center Settings and environment** pop-up window, including the **Extensions** tab and select **Complete** to close the window.
+1. On **SEA-ADM1**, in the upper-right corner of the Microsoft Edge window displaying Windows Admin Center, select the **Settings** icon (the cog wheel).
+1. In the left pane, select **Extensions**. Review the available extensions.
+1. Select the **DHCP** and **DNS** extensions, and then select **Install** if not installed already. The extension will install and Windows Admin Center will refresh.
+1. In the details pane, select **Installed extensions** and verify that the list includes the extensions you just installed.
 1. In the All connections pane, select **+ Add**.
 1. In the Add or create resources pane, on the **Servers** tile, select **Add**.
 1. In the **Server name** text box, enter **sea-svr1.contoso.com**. 
@@ -269,7 +277,7 @@ lab:
 1. On **SEA-ADM1**, switch back to the **Ethernet Status** window.
 1. In the **Ethernet Status** window, select **Properties**.
 1. In the **Ethernet Properties** dialog box, select **Internet Protocol Version 4 (TCP/IPv4)**, and then select **Properties**.
-1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.10.11**) to an IP address **172.16.11.11** that is not within the IP address range of the **HeadOfficeSubnet**, and then select **OK**.
+1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.10.11**) to an IP address **172.16.11.11** that is not within the IP address range of the **HeadOfficeSubnet**, use a subnet mask of **255.255.0.0** and a DNS server IP of **172.60.10.12** and then select **OK**.
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** console.
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to test the resolution of the `testapp.treyresearch.net` DNS record:
 

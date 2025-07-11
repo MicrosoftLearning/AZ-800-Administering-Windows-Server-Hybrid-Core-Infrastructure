@@ -86,6 +86,9 @@ lab:
    
 1. If prompted, in the **Windows Security** dialog box, enter with the credentials provided by the instructor, and then select **OK**.
 
+1. Review all tabs on the **Configure your Windows Admin Center Settings and environment** pop-up window, including the **Extensions** tab and select **Complete** to close the window.
+1. Review the **New in this release** pop-up window and select **Close** in its upper-right corner.
+
 1. On the **All connections** pane, select **+ Add**.
 1. On the **Add or create resources** pane, on the **Servers** tile, select **Add**.
 1. In the **Server name** text box, enter **sea-svr1.contoso.com**.

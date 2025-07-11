@@ -88,12 +88,16 @@ The main tasks for this exercise are as follows:
 1. In the **Windows PowerShell** console, run the following command, and then press Enter to download the latest version of Windows Admin Center:
 	
    ```powershell
-   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
+   $parameters = @{
+     Source = "https://aka.ms/WACdownload"
+     Destination = ".\WindowsAdminCenter.exe"
+     }
+   Start-BitsTransfer @parameters
    ```
 1. Enter the following command, and then press Enter to install Windows Admin Center:
 	
    ```powershell
-   Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
+   Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
 
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
@@ -127,35 +131,21 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Install Docker on Windows Server
 
-1. On **SEA-ADM1**, in Windows Admin Center, while connected to **sea-svr1.contoso.com**, use the **Tools** menu to establish a PowerShell Remoting session to that server. 
+1. On **SEA-ADM1**, in the **Tools** listing for **SEA-SVR1**, select **PowerShell**. When prompted, authenticate with the credentials provided by the instructor, and then press Enter. 
+
+   > **Note**: This establishes a PowerShell Remoting connection to SEA-SVR1.
 
    > **Note**: The Powershell connection in Windows Admin Center may be relatively slow due to nested virtualization used in the lab, so an alternate method is to run `Enter-PSSession -ComputerName SEA-SVR1` from a Windows Powershell console on **SEA-ADM1**.
 
-1. In the PowerShell console, run the following commands to force the use of TLS 1.2 and install the PowerShellGet module: 
+1. In the **Windows PowerShell** console, enter the following commands, and then press Enter to install the Docker CE (Community Edition) on **SEA-SVR1**:
 
    ```powershell
-   [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-   Install-PackageProvider -Name NuGet -Force
-   Install-Module PowerShellGet -RequiredVersion 2.2.4 -SkipPublisherCheck
-   ```
-1. After the installation completes, run the following command to restart **SEA-SVR1**:
+   Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1" -o install-docker-ce.ps1
 
-   ```powershell
-   Restart-Computer -Force
+   .\install-docker-ce.ps1
    ```
-1. After **SEA-SVR1** restarts, use the **PowerShell** tool again to establish a new PowerShell Remoting session to **SEA-SVR1**.
-
-1. In the **Windows PowerShell** console, run the following command to install the Docker Microsoft PackageManagement provider on **SEA-SVR1**:
-
-   ```powershell
-   Install-Module -Name DockerProvider -Repository PSGallery -Force
-   ```
-1. In the **Windows PowerShell** console, run the following command to install the Docker runtime on **SEA-SVR1**:
-
-   ```powershell
-   Install-Package -Name docker -ProviderName DockerProvider
-   ```
-1. After the installation completes, run the following commands to restart **SEA-SVR1**:
+ 
+1. After the installation completes, enter the following command, and then press Enter to restart **SEA-SVR1**:
 
    ```powershell
    Restart-Computer -Force
@@ -163,13 +153,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Install and run a Windows container
 
-1. After **SEA-SVR1** restarts, use the **PowerShell** tool again to establish a new PowerShell Remoting session to **SEA-SVR1**.
-1. In the **Windows PowerShell** console, run the following command to verify the installed version of Docker:
 
-   ```powershell
-   Get-Package -Name Docker -ProviderName DockerProvider
-   ```
-1. Run the following command to identify Docker images currently present on **SEA-SVR1**: 
+1. After **SEA-SVR1** restarts, use the PowerShell tool again to establish a new PowerShell Remoting session to **SEA-SVR1**.
+
+1. In the **Windows PowerShell** console, enter the following command, and then press Enter to identify Docker images currently present on **SEA-SVR1**: 
 
    ```powershell
    docker images
@@ -177,57 +164,88 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Verify that there are no images in the local repository store.
 
-1. Run the following command to download a Nano Server image containing an Internet Information Services (IIS) installation:
+1. Enter the following command, and then press Enter to download a Nano Server image:
 
    ```powershell
-   docker pull nanoserver/iis
+   docker pull mcr.microsoft.com/windows/nanoserver:ltsc2022
    ```
 
    > **Note**: The time it takes to complete the download will depend on the available bandwidth of the network connection from the lab VM to the Microsoft container registry.
 
-1. Run the following command to verify that the Docker image has been successfully downloaded:
+1. Enter the following command, and then press Enter to verify that the Docker image has been successfully downloaded:
 
    ```powershell
    docker images
    ```
-1. Run the following command to launch a container based on the downloaded image:
+
+1. Enter the following command, and then press Enter to launch a container based on the downloaded image:
 
    ```powershell
-   docker run --isolation=hyperv -d -t --name nano -p 80:80 nanoserver/iis 
+   docker run -it mcr.microsoft.com/windows/nanoserver:ltsc2022 cmd.exe 
    ```
 
-   > **Note**: The docker command starts a container in the Hyper-V isolation mode (which addresses any host operating system incompatibility issues) as a background service (`-d`) and configures networking such that port 80 of the container host maps to port 80 of the container. 
+   > **Note**: The docker command starts a container and connects you to the command line interface of the container. 
 
-1. Run the following command to retrieve the IP address information of the container host:
+1. Enter the following command, and then press Enter to retrieve the IP address information of the container host:
 
    ```powershell
-   ipconfig
+   hostname
    ```
+    > **Note**: Verify this is the hostname of the container instance, not **SEA-SVR1**.
 
-   > **Note**: Identify the IPv4 address of the Ethernet adapter named vEthernet (nat). This is the address of the new container. Next, identify the IPv4 address of the Ethernet adapter named **Ethernet**. This is the IP address of the host (**SEA-SVR1**) and is set to **172.16.10.12**.
-
-1. On **SEA-ADM1**, switch to the Microsoft Edge window, open another tab and go to **http://172.16.10.12**. Verify that the browser displays the default IIS page.
-1. On **SEA-ADM1**, switch back to the PowerShell Remoting session to **SEA-SVR1** and, in the **Windows PowerShell** console, run the following command to list running containers:
+1. Enter the following command, and then press Enter to create a text file in the container:
 
    ```powershell
-   docker ps
+   echo "Hello World!" > C:\Users\Public\Hello.txt
    ```
-   > **Note**: This command provides information on the container that is currently running on **SEA-SVR1**. Record the container ID because you will use it to stop the container. 
 
-1. Run the following command to stop the running container (replace the `<ContainerID>` placeholder with the container ID you identified in the previous step):
-
-   ```powershell
-   docker stop <ContainerID>
-   ```
-1. Run the following command to verify that the container has stopped:
+1. Enter the following command, and then press Enter to exit the command line interface of the container and return to the PowerShell prompt on **SEA-SVR1**:
 
    ```powershell
-   docker ps
+   exit
    ```
+
+1. Enter the following command, and then press Enter get the container ID for the container you just exited by running the docker ps command:
+
+   ```powershell
+   docker ps -a
+   ```
+   > **Note**: The `-a` switch lists all containers, including those that are not currently running.
+
+1. Create a new helloworld image that includes the changes in the first container you ran. To do so, run the docker commit command, replacing \<containerID\> with the ID of your container:
+
+   ```powershell
+   docker commit <containerID> helloworld
+   ```
+
+1. You now have a custom image that contains the Hello.txt file. You can use the docker images command to see the new image.
+
+   ```powershell
+   docker images
+   ```
+
+1. Run the new container by using the docker run command with the --rm option. When you use this option, Docker automatically removes the container when the command, cmd.exe in this case, stops.
+
+   ```powershell
+   docker run --rm helloworld cmd.exe /s /c type C:\Users\Public\Hello.txt
+   ```
+   > **Note**: This command line outputs the content of the file you created earlier and stops the container again.
+
+1. Enter the following command, and then press Enter to launch a new container instance of the original image and check if the file you created is present:
+
+   ```powershell
+   docker run --rm mcr.microsoft.com/windows/nanoserver:ltsc2022 cmd.exe /s /c type C:\Users\Public\Hello.txt
+   ```
+   > **Note**: The original image was not modified by adding a file and reverted back to its original state after stopping.
 
 #### Task 3: Use Windows Admin Center to manage containers
 
-1. On **SEA-ADM1**, in Windows Admin Center, in the **Tools** menu of **sea-svr1.contoso.com**, select **Containers**. When prompted to close the **PowerShell** session, select **Continue**.
+1. On **SEA-ADM1**, in the Windows Admin Center, go to the settings icon in the top left corner, and then select **Extensions**.
+
+1. In the **Extensions** pane, verify the **Containers** extension is installed and updated under **Installed Extension**. If the extension is not installed, add it from the **Available Extensions** pane.
+
+1. On **SEA-ADM1**, in the Windows Admin Center, in the Tools menu of **sea-svr1.contoso.com**, select **Containers**. When prompted to close the **PowerShell** session, select **Continue**.
+
 1. In the Containers pane, browse through the **Overview**, **Containers**, **Images**, **Networks**, and **Volumes** tabs.
 
 ### Exercise 2 results

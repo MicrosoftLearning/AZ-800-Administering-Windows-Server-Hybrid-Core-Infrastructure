@@ -90,6 +90,9 @@ lab:
    
 1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor, and then select **OK**.
 
+1. Review all tabs on the **Configure your Windows Admin Center Settings and environment** pop-up window, including the **Extensions** tab and select **Complete** to close the window.
+1. Review the **New in this release** pop-up window and select **Close** in its upper-right corner.
+
 1. On the **All connections** page, select the **sea-adm1.contoso.com** entry. 
 1. In Windows Admin Center, select **Networks**, and then select **+ Add Azure Network Adapter (Preview)**.
 

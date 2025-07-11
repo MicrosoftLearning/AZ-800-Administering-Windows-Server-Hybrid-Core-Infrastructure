@@ -170,10 +170,9 @@ In this task, you will use the Azure portal to create resource groups and create
 1. In the Azure portal, on the toolbar, in the **Search resources, services, and docs** text box, search for and select **Microsoft Defender for Cloud**.
 1. On the **Overview** page of Microsoft Defender for Cloud, on the vertical menu on the left side, in the **Management** section, select **Environment settings**. 
 1. On the **Environment settings** page, select the entry representing your Azure subscription.
-2. On the **Settings \| Defender plans** page, verify that the tile **Enable all Microsoft Defender for Cloud plans** is selected and, on the top side, select **Settings & monitoring**.
-3. On the **Settings & monitoring** page, in the list of extensions, to the right side of the **Log Analytics agent/Azure Monitor agent** entry, select the **Edit configuration** link.
-4. On the **Auto-provisioning configuration**, in the **Workspace selection** ensure that the **Default workspace(s)** entry is selected, select **Apply**, and back on the **Settings & monitoring** page, select **Continue**.
-5. On the **Settings \| Defender plans** page, select **Save**.
+1. On the **Settings \| Defender plans** page, verify that the tile **Enable all Microsoft Defender for Cloud plans** is selected. Skip the **Defender for APIs** plan when prompted. On the top side, select **Settings & monitoring**.
+1. On the **Settings & monitoring** page, review the additional available options.
+1. On the **Settings \| Defender plans** page, select **Save**.
 
 #### Task 2: Review the Just-in-time VM access settings
 
@@ -181,7 +180,7 @@ In this task, you will use the Azure portal to create resource groups and create
 1. On the **Microsoft Defender for Cloud \| Workload protections** page, select **Just-in-time VM access**.
 1. On the **Just-in-time VM access** page, review the **Configured**, **Not Configured**, and **Unsupported** tabs.
 
-   >**Note**: It might take up to 24 hours for the newly deployed VM to appear on the **Unsupported** tab. Rather than wait, continue to the next exercise.
+   >**Note**: It might take up to 24 hours for the newly deployed VM to appear on the **Unsupported** tab. The reason this VM is unsupported at this point is that Just-in-time VM access requires a Network Security Group. Rather than wait, continue to the next exercise.
 
 ## Exercise 5: Configuring Windows Server security in Azure VMs
 

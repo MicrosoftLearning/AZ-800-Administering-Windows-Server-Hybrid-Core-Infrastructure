@@ -74,12 +74,16 @@ lab:
 1. In the **Windows PowerShell** console, enter the following command and then press Enter to download the latest version of Windows Admin Center:
 	
    ```powershell
-   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
+   $parameters = @{
+     Source = "https://aka.ms/WACdownload"
+     Destination = ".\WindowsAdminCenter.exe"
+     }
+   Start-BitsTransfer @parameters
    ```
 1. Enter the following command and then press Enter to install Windows Admin Center:
 	
    ```powershell
-   Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
+   Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
 
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
@@ -91,7 +95,7 @@ lab:
    >**Note**: If you get **NET::ERR_CERT_DATE_INVALID** error, select **Advanced** on the Edge browser page, at the bottom of page select **Continue to sea-adm1-contoso.com (unsafe)**.
 
 1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor., and then select **OK**.
-
+1. Review all tabs on the **Configure your Windows Admin Center Settings and environment** pop-up window, including the **Extensions** tab and select **Complete** to close the window.
 1. On the All connections pane, select **+ Add**.
 1. On the Add or create resources pane, on the **Servers** tile, select **Add**.
 1. In the **Server name** text box, enter **sea-svr3.contoso.com**. 
@@ -445,7 +449,8 @@ lab:
    
 1. Clear **Also add servers in the cluster** and select **Add**.
 1. Back on the **All connections** page, select **s2dcluster.contoso.com**.
-1. Verify that when the page loads, the Dashboard pane has an alert indicating that **SEA-SVR3** is not reachable. 
+1. Verify that when the page loads, the Dashboard pane has an alert indicating that **SEA-SVR3** is not reachable.
+   > **Note**: If there is no alert on the overview page, scroll to **Cluster resources** on the menu on the left and select **Servers** to see the status of the cluster member servers.
 1. Switch to the console session to **SEA-SVR3** and start it. 
 
    > **Note**: It may take a few minutes for the alert to be automatically removed.

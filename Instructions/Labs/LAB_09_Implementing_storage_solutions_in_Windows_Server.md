@@ -93,19 +93,23 @@ The main tasks for this exercise are as follows:
 1. In the **Windows PowerShell** console, run the following command to download the latest version of Windows Admin Center:
 	
    ```powershell
-   Start-BitsTransfer -Source https://aka.ms/WACDownload -Destination "$env:USERPROFILE\Downloads\WindowsAdminCenter.msi"
+   $parameters = @{
+     Source = "https://aka.ms/WACdownload"
+     Destination = ".\WindowsAdminCenter.exe"
+     }
+   Start-BitsTransfer @parameters
    ```
 1. Run the following command to install Windows Admin Center:
 	
    ```powershell
-   Start-Process msiexec.exe -Wait -ArgumentList "/i $env:USERPROFILE\Downloads\WindowsAdminCenter.msi /qn /L*v log.txt REGISTRY_REDIRECT_PORT_80=1 SME_PORT=443 SSL_CERTIFICATE_OPTION=generate"
+   Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
 
    > **Note**: Wait until the installation completes. This should take about 2 minutes.
 
 1. On **SEA-ADM1**, start Microsoft Edge and connect to the local instance of Windows Admin Center at `https://SEA-ADM1.contoso.com`. 
 1. If prompted, in the **Windows Security** dialog box, enter the credentials provided by the instructor, and then select **OK**.
-
+1. Review all tabs on the **Configure your Windows Admin Center Settings and environment** pop-up window, including the **Extensions** tab and select **Complete** to close the window.
 1. In Windows Admin Center, add a connection to **sea-svr3.contoso.com** and connect to it with the credentials provided by the instructor.
 1. While connected to **sea-svr3.contoso.com**, in the **Tools** list, use the **PowerShell** tool to run the following command which triggers deduplication:
 
@@ -418,7 +422,8 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Don't add the cluster nodes since they are already available in Windows Admin Center. 
 
-1. In Windows Admin Center, on the cluster's Dashboard pane, identify the alert indicating that **SEA-SVR3** is not reachable. 
+1. In Windows Admin Center, on the cluster's Dashboard pane, identify the alert indicating that **SEA-SVR3** is not reachable.
+   > **Note**: If there is no alert on the overview page, scroll to **Cluster resources** on the menu on the left and select **Servers** to see the status of the cluster member servers.
 1. Switch to the console session to **SEA-SVR3** and start it. 
 1. Verify that the alert is automatically removed after a few minutes.
 1. Refresh the browser page displaying Windows Admin Center and verify that all servers are healthy.

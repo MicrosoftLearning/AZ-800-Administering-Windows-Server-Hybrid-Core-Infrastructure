@@ -377,27 +377,31 @@ The main tasks for this exercise are:
 #### Task 2: Disable directory synchronization in Azure
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** window.
-1. In the **Windows PowerShell** console, run the following command to install the Microsoft Online module for Microsoft Entra ID:
+1. In the **Windows PowerShell** console, run the following command to install the Microsoft Graph PowerShell SDK:
 
    ```powershell
-   Install-Module -Name MSOnline
+   Install-Module -Name Microsoft.Graph -Force
    ```
-1. Run the following command to provide the credentials to Azure:
+1. Run the following command to connect to Microsoft Entra ID with the required permissions:
 
    ```powershell
-   $msolcred=Get-Credential
+   Connect-MgGraph -Scopes "Organization.ReadWrite.All"
    ```
-1. When prompted, in the **Windows PowerShell credential request** dialog box, enter the credentials of the user account you created in exercise 1.
-1. Run the following command to connect to Azure:
+1. When prompted, sign in with the credentials of the Global Administrator user account you created in exercise 1.
+1. Run the following commands to disable directory synchronization in Azure:
 
    ```powershell
-   Connect-MsolService -Credential $msolcred
+   $OrgID = (Get-MgOrganization).Id
+   $params = @{ onPremisesSyncEnabled = $false }
+   Update-MgOrganization -OrganizationId $OrgID -BodyParameter $params
    ```
-1. Run the following command to disable directory synchronization in Azure:
+1. Run the following command to verify that directory synchronization has been disabled:
 
    ```powershell
-   Set-MsolDirSyncEnabled -EnableDirSync $false
+   Get-MgOrganization | Select-Object DisplayName, OnPremisesSyncEnabled
    ```
+
+   > **Note**: The **OnPremisesSyncEnabled** property should now be **False**. It may take up to 72 hours for all synchronized users to be fully converted to cloud-only accounts.
 
 ### Prepare for the next module
 

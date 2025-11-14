@@ -347,27 +347,30 @@ lab:
 #### Task 2: Disable directory synchronization in Azure
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** console window.
-1. In the **Windows PowerShell** console, enter the following command and press Enter to install the Microsoft Online module for Microsoft Entra ID:
+1. In the **Windows PowerShell** console, enter the following command and press Enter to install the Microsoft Graph PowerShell SDK:
 
    ```powershell
-   Install-Module -Name MSOnline
+   Install-Module -Name Microsoft.Graph -Force
    ```
 1. When prompted to install the NuGet provider, enter **Y**, and then press Enter.
 1. When prompted to install the modules from an untrusted repository, enter **A**, and then press Enter.
-1. In the **Windows PowerShell** console, enter the following command, and then press Enter to store Azure AD credentials in a variable:
+1. In the **Windows PowerShell** console, enter the following command and press Enter to connect to Microsoft Entra ID with the required permissions:
 
    ```powershell
-   $msolCred = Get-Credential
+   Connect-MgGraph -Scopes "Organization.ReadWrite.All"
    ```
-1. In the **Windows PowerShell credential request** dialog box, enter the credentials of the Azure AD Global Administrator user account you created in exercise 1, and then select **OK**.
-1. In the **Windows PowerShell** console, enter the following command, and then press Enter to authenticate to the Microsoft Entra tenant:
+1. When prompted, sign in with the credentials of the Microsoft Entra ID Global Administrator user account you created in exercise 1.
+1. In the **Windows PowerShell** console, enter the following commands and press Enter to disable directory synchronization:
 
    ```powershell
-   Connect-MsolService -Credential $msolCred
+   $OrgID = (Get-MgOrganization).Id
+   $params = @{ onPremisesSyncEnabled = $false }
+   Update-MgOrganization -OrganizationId $OrgID -BodyParameter $params
    ```
-1. Enter the following command and press Enter to disable directory synchronization:
+1. In the **Windows PowerShell** console, enter the following command and press Enter to verify that directory synchronization has been disabled:
 
    ```powershell
-   Set-MsolDirSyncEnabled -EnableDirSync $false
+   Get-MgOrganization | Select-Object DisplayName, OnPremisesSyncEnabled
    ```
-1. When prompted to confirm, enter **Y**, and then press Enter.
+
+   > **Note**: The **OnPremisesSyncEnabled** property should now be **False**. It may take up to 72 hours for all synchronized users to be fully converted to cloud-only accounts.

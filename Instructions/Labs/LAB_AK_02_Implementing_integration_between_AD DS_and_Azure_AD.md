@@ -29,7 +29,7 @@ lab:
 1. Connect to **SEA-ADM1** and, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal, and authenticate with your Azure credentials.
 1. In the Azure portal, browse to **Microsoft Entra ID**.
-1. On the **Microsoft Entra ID** page, select **Custom domain names**.
+1. On the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, and then select **Custom domain names**.
 1. On the **Custom domain names** page, select **Add custom domain**.
 1. In the **Custom domain name** pane, in the **Custom domain name** text box, enter `contoso.com`, and then select **Add domain**.
 1. On the **contoso.com** custom domain name page, review the Domain Name System (DNS) record types that you would use to verify the domain.
@@ -43,7 +43,7 @@ lab:
 1. On the **All Users** page, select **+ New User**, from drop-down list select **Create new user**.
 1. On the **Create new user** page, under **Identity**, in the **User principal name** and **Display name** text boxes, enter **admin**.
 
-   > **Note**: Ensure the domain name drop-down menu for the **User principal nam** lists the default domain name ending with `onmicrosoft.com`.
+   > **Note**: Ensure the domain name drop-down menu for the **User principal nam** lists the default domain name ending with `onmicrosoft.com`. Record the complete username (for example, admin@contoso35501731.onmicrosoft.com) as you will need it to sign in later in this lab.
 
 1. In the **Password**, select the **Copy icon**, and record the password as you'll use it later in this lab.
 1. Select **Next: Properties >**.
@@ -87,7 +87,7 @@ lab:
    > **Note**: When you download the Microsoft Entra Connect application, the application still displays the older name, Azure AD Connect.
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to **Microsoft Entra ID**.
-1. On the **Microsoft Entra ID** page, select **Microsoft Entra Connect**.
+1. On the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, scroll down and select **Microsoft Entra Connect**.
 1. On the **Microsoft Entra Connect | Get started** page, select **Connect Sync**.
 1. On the **Microsoft Entra Connect | Connect Sync** page, select **Download Microsoft Entra Connect**.
 1. On the newly opened page, under **Azure AD Connect V2**, select **Download**.
@@ -168,10 +168,13 @@ lab:
 #### Task 1: Enable self-service password reset in Azure
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to the **Microsoft Entra ID** page.
-1. On the **Microsoft Entra ID** page, select **Licenses**.
-1. On the **Licenses** page, select **All products**.
+1. On the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, scroll down and select **Licenses**.
+1. On the **Licenses** page, expand the **Manage** section in the left navigation pane, scroll down and select **All products**.
 1. On the **All products** page, select **+ Try/Buy**.
 1. On the **Activate** page, under **Microsoft Entra ID P2**, select **Free trial**, and then select **Activate**.
+
+   > **Note**: If you encounter issues activating the Microsoft Entra ID P2 free trial and receive error messages prompting you to set up a payment option, this may be due to organizational requirements for the tenant. In such cases, you can continue with the lab exercises that don't specifically require the P2 license features, or contact your administrator for assistance.
+
 1. Browse to the **All products** page and select **Microsoft Entra ID P2**.
 1. On the **Microsoft Entra ID P2 \| Licensed users** page, select **+ Assign**.
 1. On the **Assign license** page, select **+ Add users and groups**.

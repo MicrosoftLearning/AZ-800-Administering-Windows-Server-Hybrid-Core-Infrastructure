@@ -54,7 +54,7 @@ The main tasks for this exercise are:
 1. On **SEA-ADM1**, start Microsoft Edge, and then go to the Azure portal.
 1. Use the credentials that you instructor provides to sign in to the Azure portal.
 1. In the Azure portal, browse to **Microsoft Entra ID**.
-1. On the **Microsoft Entra ID** page, select **Custom domain names**, and then add `contoso.com`.
+1. On the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, select **Custom domain names**, and then add `contoso.com`.
 1. Review the DNS record types that you would use to verify the domain, and then close the pane without verifying the domain name.
 
    > **Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
@@ -65,7 +65,7 @@ The main tasks for this exercise are:
 
    - Username: `admin`
 
-   > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
+   > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`. Record the complete username (for example, admin@contoso35501731.onmicrosoft.com) as you will need it to sign in later in this lab.
 
    - Name: **admin**
    - Role: **Global administrator**
@@ -116,7 +116,7 @@ The main task for this exercise is:
 
 #### Task 1: Install and configure Microsoft Entra Connect
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, from the **Microsoft Entra ID** page, browse to the **Microsoft Entra Connect** page.
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, from the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, scroll down and select **Microsoft Entra Connect**, and then browse to the **Microsoft Entra Connect** page.
 1. From the **Microsoft Entra Connect** page, select **Download**.
 1. Download Microsoft Entra Connect installation binaries and start the installation.
 1. On the **Microsoft Entra Connect** page, select the **I agree to the license terms and privacy notice** checkbox, and then select **Continue**.
@@ -221,8 +221,14 @@ The main tasks for this exercise are:
 
 #### Task 1: Enable self-service password reset in Azure
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to the Microsoft Entra ID **Licenses** page and activate the **Microsoft Entra ID P2** free trial. 
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to the Microsoft Entra ID page, expand the **Manage** section in the left navigation pane, scroll down and select **Licenses**, and then activate the **Microsoft Entra ID P2** free trial.
+   
+   > **Note**: If you encounter issues activating the Microsoft Entra ID P2 free trial and receive error messages prompting you to set up a payment option, this may be due to organizational requirements for the tenant. In such cases, you can continue with the lab exercises that don't specifically require the P2 license features, or contact your administrator for assistance.
+   
 1. Assign an Microsoft Entra ID P2 license to the Microsoft Entra ID Global Administrator user account you created in exercise 1.
+   
+   > **Note**: To assign licenses, on the **Licenses** page, expand the **Manage** section in the left navigation pane, scroll down and select **All products**.
+   
 1. In the Azure portal, browse to the Microsoft Entra ID **Password reset** page.
 1. On the **Password reset** page, note that you can select the scope of users to which to apply the configuration.
 

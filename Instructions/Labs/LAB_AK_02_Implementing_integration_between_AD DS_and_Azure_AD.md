@@ -22,6 +22,8 @@ lab:
 
 1. In the notifications, select the created tenant in the message: **Tenant creation was successful. Click here to navigate to your new tenant:(tenant link here)**
 
+   > **Important**: After creating a new Microsoft Entra tenant, you must wait for directory synchronization to be fully initialized before installing Microsoft Entra Connect. This process typically takes 10-30 minutes. If you proceed immediately to Exercise 3 and attempt to install Microsoft Entra Connect, you may encounter the error: "Directory synchronization is enabled for this directory, but has not yet taken effect. Please wait until directory synchronization is ready." If this occurs, wait at least 15-30 minutes before attempting to install Microsoft Entra Connect again. You can proceed with Exercises 1 and 2 while waiting.
+
 ## Exercise 1: Preparing Microsoft Entra ID for AD DS integration
 
 #### Task 1: Create a custom domain in Azure
@@ -81,6 +83,8 @@ lab:
 1. Close the IdFix tool.
 
 ## Exercise 3: Downloading, installing, and configuring Microsoft Entra Connect
+
+   > **Important**: If you created a new Microsoft Entra tenant in the Lab Setup section, ensure that at least 15-30 minutes have passed since tenant creation before proceeding with this exercise. Directory synchronization must be fully initialized in the new tenant. If you encounter the error "Directory synchronization is enabled for this directory, but has not yet taken effect. Please wait until directory synchronization is ready" during the Microsoft Entra Connect installation, wait an additional 15-30 minutes and try again.
 
 #### Task 1: Install and configure Microsoft Entra Connect
 

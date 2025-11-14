@@ -37,6 +37,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 For this lab, you'll use the available VM environment and an Microsoft Entra tenant. Before you begin the lab, ensure that you have an Microsoft Entra tenant and a user account with the Global Administrator role in that tenant.
 
+> **Important**: If you are creating a new Microsoft Entra tenant for this lab, please note that directory synchronization must be fully initialized before you can install Microsoft Entra Connect in Exercise 3. This initialization process typically takes 10-30 minutes after tenant creation. You can proceed with Exercises 1 and 2 while waiting for the directory synchronization to become ready. If you encounter the error "Directory synchronization is enabled for this directory, but has not yet taken effect" when installing Microsoft Entra Connect, wait an additional 15-30 minutes before trying again.
+
 ## Exercise 1: Preparing Microsoft Entra ID for AD DS integration
 
 ### Scenario
@@ -109,6 +111,8 @@ The main tasks for this exercise are:
 ### Scenario
 
 Exercise scenario: You're now ready to implement the integration by downloading Microsoft Entra Connect, installing it on **SEA-ADM1**, and configuring its settings to match the integration objective.
+
+> **Important**: Before proceeding with this exercise, ensure that sufficient time (at least 15-30 minutes) has passed since creating your Microsoft Entra tenant (if you created a new one). Directory synchronization must be fully initialized before installing Microsoft Entra Connect. If you encounter the error "Directory synchronization is enabled for this directory, but has not yet taken effect. Please wait until directory synchronization is ready," you need to wait longer before attempting the installation again.
 
 The main task for this exercise is:
 

@@ -156,6 +156,8 @@ The main tasks for this exercise are as follows:
 
 1. After **SEA-SVR1** restarts, use the PowerShell tool again to establish a new PowerShell Remoting session to **SEA-SVR1**.
 
+   > **Note**: For the remaining steps in this task, you will need to run interactive Docker commands that require a TTY-capable terminal. The PowerShell console in Windows Admin Center does not support TTY. Therefore, it is recommended to use the alternative method: open **Windows PowerShell** as Administrator on **SEA-ADM1** and run `Enter-PSSession -ComputerName SEA-SVR1` to establish a PowerShell Remoting session.
+
 1. In the **Windows PowerShell** console, enter the following command, and then press Enter to identify Docker images currently present on **SEA-SVR1**: 
 
    ```powershell

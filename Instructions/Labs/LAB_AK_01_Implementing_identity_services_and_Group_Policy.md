@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Implementing identity services and Group Policy
 
+This lab should take approximately **45** minutes to complete.
+
 >**Note**: The lab simulations that were previously provided have been retired.
 
 ## Exercise 1: Deploying a new domain controller on Server Core

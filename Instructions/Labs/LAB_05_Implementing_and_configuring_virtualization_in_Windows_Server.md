@@ -6,6 +6,8 @@ lab:
 
 # Lab: Implementing and configuring virtualization in Windows Server
 
+This lab should take approximately **60** minutes to complete.
+
 ## Scenario
 
 Contoso is a global engineering and manufacturing company with its head office in Seattle, USA. An IT office and data center are in Seattle to support the Seattle location and other locations. Contoso recently deployed a Windows Server server and client infrastructure. 
@@ -18,8 +20,6 @@ After completing this lab, you'll be able to:
 
 - Create and configure VMs.
 - Install and configure containers.
-
-## Estimated time: 60 minutes
 
 ## Lab Setup
 

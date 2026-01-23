@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Implementing Azure File Sync
 
+This lab should take approximately **60** minutes to complete.
+
 ## Exercise 1: Implementing Distributed File System (DFS) Replication in your on-premises environment
 
 ### Task 1: Deploy DFS

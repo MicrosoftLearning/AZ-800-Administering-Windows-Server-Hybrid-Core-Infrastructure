@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Using Windows Admin Center in hybrid scenarios
 
+This lab should take approximately **90** minutes to complete.
+
 ## Exercise 1: Provisioning Azure VMs running Windows Server
 
 #### Task 1: Create an Azure resource group by using an Azure Resource Manager template

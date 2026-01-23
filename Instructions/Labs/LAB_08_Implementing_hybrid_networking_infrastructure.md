@@ -6,6 +6,8 @@ lab:
 
 # Lab: Implementing hybrid networking infrastructure
 
+This lab should take approximately **60** minutes to complete.
+
 ## Scenario
 
 You were tasked with building a test environment in Azure, consisting of Microsoft Azure virtual machines deployed into separate virtual networks configured in the hub and spoke topology. This testing must include implementing connectivity between spokes by using user-defined routes that force traffic to flow via the hub. You also need to implement DNS name resolution for Azure virtual machines between virtual networks by using Azure private DNS zones and evaluate the use of Azure DNS zones for external name resolution.
@@ -17,8 +19,6 @@ After completing this lab, you'll be able to:
 - Implement virtual network routing in Azure
 - Implement DNS name resolution in Azure
 - Deprovision the Azure environment
-
-## Estimated time: 60 minutes
 
 ## Lab setup
 

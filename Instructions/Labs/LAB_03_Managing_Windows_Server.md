@@ -6,6 +6,8 @@ lab:
 
 # Lab: Managing Windows Server
 
+This lab should take approximately **45** minutes to complete.
+
 ## Scenario
 
 Contoso, Ltd. wants to implement several new servers in their environment, and they have decided to use Server Core. They also want to implement Windows Admin Center for remote management of both these servers and other servers in the organization.
@@ -13,8 +15,6 @@ Contoso, Ltd. wants to implement several new servers in their environment, and t
 ## Objectives
 
 - Implement and configure Windows Admin Center
-
-## Estimated time: 45 minutes
 
 ## Lab setup
 

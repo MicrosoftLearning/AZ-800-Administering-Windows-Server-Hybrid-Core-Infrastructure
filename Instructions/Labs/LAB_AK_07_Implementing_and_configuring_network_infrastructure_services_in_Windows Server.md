@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Implementing and configuring network infrastructure services in Windows Server
 
+This lab should take approximately **60** minutes to complete.
+
 ## Exercise 1: Deploying and configuring DHCP
 
 #### Task 1: Install the DHCP role

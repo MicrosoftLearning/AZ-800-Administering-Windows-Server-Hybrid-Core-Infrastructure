@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Managing Windows Server
 
+This lab should take approximately **45** minutes to complete.
+
 ## Exercise 1: Implementing and using remote server administration
 
 #### Task 1: Install Windows Admin Center

@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Implementing and configuring virtualization in Windows Server
 
+This lab should take approximately **60** minutes to complete.
+
 ### Exercise 1: Creating and configuring VMs
 
 #### Task 1: Create a Hyper-V virtual switch

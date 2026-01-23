@@ -6,6 +6,8 @@ lab:
 
 # Lab: Deploying and configuring Windows Server on Azure VMs
 
+This lab should take approximately **90** minutes to complete.
+
 ## Scenario
 
 You need to address concerns regarding your current infrastructure. You have an outdated operational model, a limited use of automation, and Information Security team concerns regarding additional controls that should be applied to Azure VMs running Windows Server-based workloads. You have decided to develop and implement an automated deployment and configuration process for Azure VMs running Windows Server.
@@ -24,8 +26,6 @@ After completing this lab, you'll be able to:
 - Configure administrative access to Azure VMs running Windows Server.
 - Configure Windows Server security in Azure VMs.
 - Deprovision the Azure environment.
-
-## Estimated time: 90 minutes
 
 ## Lab setup
 

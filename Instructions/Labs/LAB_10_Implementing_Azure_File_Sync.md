@@ -6,6 +6,8 @@ lab:
 
 # Lab: Implementing Azure File Sync
 
+This lab should take approximately **60** minutes to complete.
+
 ## Scenario
 
 To address concerns regarding Distributed File System (DFS) Replication between Contoso's London headquarters and its Seattle–based branch office, you decide to test Azure File Sync as an alternative replication mechanism between two on-premises file shares.
@@ -19,8 +21,6 @@ After completing this lab, you'll be able to:
 - Replace DFS Replication with Azure File Sync-based replication.
 - Verify replication and enable cloud tiering.
 - Troubleshoot replication conflicts.
-
-## Estimated time: 60 minutes
 
 ## Lab setup
 

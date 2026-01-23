@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Implementing hybrid networking infrastructure
 
+This lab should take approximately **60** minutes to complete.
+
 ### Exercise 1: Implement virtual network routing in Azure
 
 #### Task 1: Provision lab infrastructure resources

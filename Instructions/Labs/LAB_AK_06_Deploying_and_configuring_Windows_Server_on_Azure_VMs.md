@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Deploying and configuring Windows Server on Azure VMs
 
+This lab should take approximately **90** minutes to complete.
+
 ## Exercise 1: Authoring Azure Resource Manager (ARM) templates for Azure VM deployment
 
 #### Task 1: Connect to your Azure subscription and enable enhanced security of Microsoft Defender for Cloud

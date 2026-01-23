@@ -37,6 +37,8 @@ Virtual machines: **AZ-800T00A-SEA-DC1**, **AZ-800T00A-SEA-SVR1**, and **AZ-800T
 
 For this lab, you'll use the available VM environment and an Microsoft Entra tenant. Before you begin the lab, ensure that you have an Microsoft Entra tenant and a user account with the Global Administrator role in that tenant.
 
+> **Important**: If you are creating a new Microsoft Entra tenant for this lab, please note that directory synchronization must be fully initialized before you can install Microsoft Entra Connect in Exercise 3. This initialization process typically takes 10-30 minutes after tenant creation. You can proceed with Exercises 1 and 2 while waiting for the directory synchronization to become ready. If you encounter the error "Directory synchronization is enabled for this directory, but has not yet taken effect" when installing Microsoft Entra Connect, wait an additional 15-30 minutes before trying again.
+
 ## Exercise 1: Preparing Microsoft Entra ID for AD DS integration
 
 ### Scenario
@@ -54,7 +56,7 @@ The main tasks for this exercise are:
 1. On **SEA-ADM1**, start Microsoft Edge, and then go to the Azure portal.
 1. Use the credentials that you instructor provides to sign in to the Azure portal.
 1. In the Azure portal, browse to **Microsoft Entra ID**.
-1. On the **Microsoft Entra ID** page, select **Custom domain names**, and then add `contoso.com`.
+1. On the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, select **Custom domain names**, and then add `contoso.com`.
 1. Review the DNS record types that you would use to verify the domain, and then close the pane without verifying the domain name.
 
    > **Note**: While, in general, you would use DNS records to verify a domain, this lab doesn't require the use of a verified domain.
@@ -65,7 +67,7 @@ The main tasks for this exercise are:
 
    - Username: `admin`
 
-   > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`.
+   > **Note**: Ensure the domain name drop-down menu for the **User name** lists the default domain name ending with `onmicrosoft.com`. Record the complete username (for example, admin@contoso35501731.onmicrosoft.com) as you will need it to sign in later in this lab.
 
    - Name: **admin**
    - Role: **Global administrator**
@@ -110,13 +112,15 @@ The main tasks for this exercise are:
 
 Exercise scenario: You're now ready to implement the integration by downloading Microsoft Entra Connect, installing it on **SEA-ADM1**, and configuring its settings to match the integration objective.
 
+> **Important**: Before proceeding with this exercise, ensure that sufficient time (at least 15-30 minutes) has passed since creating your Microsoft Entra tenant (if you created a new one). Directory synchronization must be fully initialized before installing Microsoft Entra Connect. If you encounter the error "Directory synchronization is enabled for this directory, but has not yet taken effect. Please wait until directory synchronization is ready," you need to wait longer before attempting the installation again.
+
 The main task for this exercise is:
 
 1. Install and configure Microsoft Entra Connect.
 
 #### Task 1: Install and configure Microsoft Entra Connect
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, from the **Microsoft Entra ID** page, browse to the **Microsoft Entra Connect** page.
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, from the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, scroll down and select **Microsoft Entra Connect**, and then browse to the **Microsoft Entra Connect** page.
 1. From the **Microsoft Entra Connect** page, select **Download**.
 1. Download Microsoft Entra Connect installation binaries and start the installation.
 1. On the **Microsoft Entra Connect** page, select the **I agree to the license terms and privacy notice** checkbox, and then select **Continue**.
@@ -221,8 +225,14 @@ The main tasks for this exercise are:
 
 #### Task 1: Enable self-service password reset in Azure
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to the Microsoft Entra ID **Licenses** page and activate the **Microsoft Entra ID P2** free trial. 
+1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to the Microsoft Entra ID page, expand the **Manage** section in the left navigation pane, scroll down and select **Licenses**, and then activate the **Microsoft Entra ID P2** free trial.
+   
+   > **Note**: If you encounter issues activating the Microsoft Entra ID P2 free trial and receive error messages prompting you to set up a payment option, this may be due to organizational requirements for the tenant. In such cases, you can continue with the lab exercises that don't specifically require the P2 license features, or contact your administrator for assistance.
+   
 1. Assign an Microsoft Entra ID P2 license to the Microsoft Entra ID Global Administrator user account you created in exercise 1.
+   
+   > **Note**: To assign licenses, on the **Licenses** page, expand the **Manage** section in the left navigation pane, scroll down and select **All products**.
+   
 1. In the Azure portal, browse to the Microsoft Entra ID **Password reset** page.
 1. On the **Password reset** page, note that you can select the scope of users to which to apply the configuration.
 
@@ -367,27 +377,31 @@ The main tasks for this exercise are:
 #### Task 2: Disable directory synchronization in Azure
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** window.
-1. In the **Windows PowerShell** console, run the following command to install the Microsoft Online module for Microsoft Entra ID:
+1. In the **Windows PowerShell** console, run the following command to install the Microsoft Graph PowerShell SDK:
 
    ```powershell
-   Install-Module -Name MSOnline
+   Install-Module -Name Microsoft.Graph -Force
    ```
-1. Run the following command to provide the credentials to Azure:
+1. Run the following command to connect to Microsoft Entra ID with the required permissions:
 
    ```powershell
-   $msolcred=Get-Credential
+   Connect-MgGraph -Scopes "Organization.ReadWrite.All"
    ```
-1. When prompted, in the **Windows PowerShell credential request** dialog box, enter the credentials of the user account you created in exercise 1.
-1. Run the following command to connect to Azure:
+1. When prompted, sign in with the credentials of the Global Administrator user account you created in exercise 1.
+1. Run the following commands to disable directory synchronization in Azure:
 
    ```powershell
-   Connect-MsolService -Credential $msolcred
+   $OrgID = (Get-MgOrganization).Id
+   $params = @{ onPremisesSyncEnabled = $false }
+   Update-MgOrganization -OrganizationId $OrgID -BodyParameter $params
    ```
-1. Run the following command to disable directory synchronization in Azure:
+1. Run the following command to verify that directory synchronization has been disabled:
 
    ```powershell
-   Set-MsolDirSyncEnabled -EnableDirSync $false
+   Get-MgOrganization | Select-Object DisplayName, OnPremisesSyncEnabled
    ```
+
+   > **Note**: The **OnPremisesSyncEnabled** property should now be **False**. It may take up to 72 hours for all synchronized users to be fully converted to cloud-only accounts.
 
 ### Prepare for the next module
 

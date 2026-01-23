@@ -24,6 +24,8 @@ This lab should take approximately **60** minutes to complete.
 
 1. In the notifications, select the created tenant in the message: **Tenant creation was successful. Click here to navigate to your new tenant:(tenant link here)**
 
+   > **Important**: After creating a new Microsoft Entra tenant, you must wait for directory synchronization to be fully initialized before installing Microsoft Entra Connect. This process typically takes 10-30 minutes. If you proceed immediately to Exercise 3 and attempt to install Microsoft Entra Connect, you may encounter the error: "Directory synchronization is enabled for this directory, but has not yet taken effect. Please wait until directory synchronization is ready." If this occurs, wait at least 15-30 minutes before attempting to install Microsoft Entra Connect again. You can proceed with Exercises 1 and 2 while waiting.
+
 ## Exercise 1: Preparing Microsoft Entra ID for AD DS integration
 
 #### Task 1: Create a custom domain in Azure
@@ -31,7 +33,7 @@ This lab should take approximately **60** minutes to complete.
 1. Connect to **SEA-ADM1** and, if needed, sign in with the credentials provided by the instructor.
 1. On **SEA-ADM1**, start Microsoft Edge, browse to the Azure portal, and authenticate with your Azure credentials.
 1. In the Azure portal, browse to **Microsoft Entra ID**.
-1. On the **Microsoft Entra ID** page, select **Custom domain names**.
+1. On the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, and then select **Custom domain names**.
 1. On the **Custom domain names** page, select **Add custom domain**.
 1. In the **Custom domain name** pane, in the **Custom domain name** text box, enter `contoso.com`, and then select **Add domain**.
 1. On the **contoso.com** custom domain name page, review the Domain Name System (DNS) record types that you would use to verify the domain.
@@ -45,7 +47,7 @@ This lab should take approximately **60** minutes to complete.
 1. On the **All Users** page, select **+ New User**, from drop-down list select **Create new user**.
 1. On the **Create new user** page, under **Identity**, in the **User principal name** and **Display name** text boxes, enter **admin**.
 
-   > **Note**: Ensure the domain name drop-down menu for the **User principal nam** lists the default domain name ending with `onmicrosoft.com`.
+   > **Note**: Ensure the domain name drop-down menu for the **User principal nam** lists the default domain name ending with `onmicrosoft.com`. Record the complete username (for example, admin@contoso35501731.onmicrosoft.com) as you will need it to sign in later in this lab.
 
 1. In the **Password**, select the **Copy icon**, and record the password as you'll use it later in this lab.
 1. Select **Next: Properties >**.
@@ -84,12 +86,14 @@ This lab should take approximately **60** minutes to complete.
 
 ## Exercise 3: Downloading, installing, and configuring Microsoft Entra Connect
 
+   > **Important**: If you created a new Microsoft Entra tenant in the Lab Setup section, ensure that at least 15-30 minutes have passed since tenant creation before proceeding with this exercise. Directory synchronization must be fully initialized in the new tenant. If you encounter the error "Directory synchronization is enabled for this directory, but has not yet taken effect. Please wait until directory synchronization is ready" during the Microsoft Entra Connect installation, wait an additional 15-30 minutes and try again.
+
 #### Task 1: Install and configure Microsoft Entra Connect
 
    > **Note**: When you download the Microsoft Entra Connect application, the application still displays the older name, Azure AD Connect.
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to **Microsoft Entra ID**.
-1. On the **Microsoft Entra ID** page, select **Microsoft Entra Connect**.
+1. On the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, scroll down and select **Microsoft Entra Connect**.
 1. On the **Microsoft Entra Connect | Get started** page, select **Connect Sync**.
 1. On the **Microsoft Entra Connect | Connect Sync** page, select **Download Microsoft Entra Connect**.
 1. On the newly opened page, under **Azure AD Connect V2**, select **Download**.
@@ -170,10 +174,13 @@ This lab should take approximately **60** minutes to complete.
 #### Task 1: Enable self-service password reset in Azure
 
 1. On **SEA-ADM1**, in the Microsoft Edge window displaying the Azure portal, browse to the **Microsoft Entra ID** page.
-1. On the **Microsoft Entra ID** page, select **Licenses**.
-1. On the **Licenses** page, select **All products**.
+1. On the **Microsoft Entra ID** page, expand the **Manage** section in the left navigation pane, scroll down and select **Licenses**.
+1. On the **Licenses** page, expand the **Manage** section in the left navigation pane, scroll down and select **All products**.
 1. On the **All products** page, select **+ Try/Buy**.
 1. On the **Activate** page, under **Microsoft Entra ID P2**, select **Free trial**, and then select **Activate**.
+
+   > **Note**: If you encounter issues activating the Microsoft Entra ID P2 free trial and receive error messages prompting you to set up a payment option, this may be due to organizational requirements for the tenant. In such cases, you can continue with the lab exercises that don't specifically require the P2 license features, or contact your administrator for assistance.
+
 1. Browse to the **All products** page and select **Microsoft Entra ID P2**.
 1. On the **Microsoft Entra ID P2 \| Licensed users** page, select **+ Assign**.
 1. On the **Assign license** page, select **+ Add users and groups**.
@@ -342,27 +349,30 @@ This lab should take approximately **60** minutes to complete.
 #### Task 2: Disable directory synchronization in Azure
 
 1. On **SEA-ADM1**, switch to the **Windows PowerShell** console window.
-1. In the **Windows PowerShell** console, enter the following command and press Enter to install the Microsoft Online module for Microsoft Entra ID:
+1. In the **Windows PowerShell** console, enter the following command and press Enter to install the Microsoft Graph PowerShell SDK:
 
    ```powershell
-   Install-Module -Name MSOnline
+   Install-Module -Name Microsoft.Graph -Force
    ```
 1. When prompted to install the NuGet provider, enter **Y**, and then press Enter.
 1. When prompted to install the modules from an untrusted repository, enter **A**, and then press Enter.
-1. In the **Windows PowerShell** console, enter the following command, and then press Enter to store Azure AD credentials in a variable:
+1. In the **Windows PowerShell** console, enter the following command and press Enter to connect to Microsoft Entra ID with the required permissions:
 
    ```powershell
-   $msolCred = Get-Credential
+   Connect-MgGraph -Scopes "Organization.ReadWrite.All"
    ```
-1. In the **Windows PowerShell credential request** dialog box, enter the credentials of the Azure AD Global Administrator user account you created in exercise 1, and then select **OK**.
-1. In the **Windows PowerShell** console, enter the following command, and then press Enter to authenticate to the Microsoft Entra tenant:
+1. When prompted, sign in with the credentials of the Microsoft Entra ID Global Administrator user account you created in exercise 1.
+1. In the **Windows PowerShell** console, enter the following commands and press Enter to disable directory synchronization:
 
    ```powershell
-   Connect-MsolService -Credential $msolCred
+   $OrgID = (Get-MgOrganization).Id
+   $params = @{ onPremisesSyncEnabled = $false }
+   Update-MgOrganization -OrganizationId $OrgID -BodyParameter $params
    ```
-1. Enter the following command and press Enter to disable directory synchronization:
+1. In the **Windows PowerShell** console, enter the following command and press Enter to verify that directory synchronization has been disabled:
 
    ```powershell
-   Set-MsolDirSyncEnabled -EnableDirSync $false
+   Get-MgOrganization | Select-Object DisplayName, OnPremisesSyncEnabled
    ```
-1. When prompted to confirm, enter **Y**, and then press Enter.
+
+   > **Note**: The **OnPremisesSyncEnabled** property should now be **False**. It may take up to 72 hours for all synchronized users to be fully converted to cloud-only accounts.

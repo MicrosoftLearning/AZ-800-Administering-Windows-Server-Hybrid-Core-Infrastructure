@@ -6,6 +6,8 @@ lab:
 
 # Lab: Implementing and configuring network infrastructure services in Windows Server
 
+This lab should take approximately **60** minutes to complete.
+
 ## Scenario
 
 Contoso, Ltd. is a large organization with complex requirements for network services. To help meet these requirements, you will deploy and configure DHCP so that it is highly available to ensure service availability. You will also set up DNS so that Trey Research, a department within Contoso, can have its own DNS server in the testing area. Finally, you will provide remote access to Windows Admin Center and secure it with Web Application Proxy.
@@ -16,8 +18,6 @@ After completing this lab, you'll be able to:
 
 - Deploy and configure DHCP.
 - Deploy and configure DNS.
-
-## Estimated time: 60 minutes
 
 ## Lab Setup
 

@@ -6,6 +6,8 @@ lab:
 
 # Lab: Using Windows Admin Center in hybrid scenarios
 
+This lab should take approximately **90** minutes to complete.
+
 ## Scenario
 
 To address concerns regarding the consistent operational and management model, regardless of the location of managed systems, you'll test the capabilities of Windows Admin Center in the hybrid environment containing different versions of the Windows Server operating system running on-premises and in Microsoft Azure virtual machines (VMs).
@@ -19,8 +21,6 @@ After completing this lab, you'll be able to:
 - Test hybrid connectivity by using Azure Network Adapter.
 - Deploy Windows Admin Center gateway in Azure.
 - Verify functionality of Windows Admin Center gateway in Azure.
-
-## Estimated time: 90 minutes
 
 ## Lab setup
 

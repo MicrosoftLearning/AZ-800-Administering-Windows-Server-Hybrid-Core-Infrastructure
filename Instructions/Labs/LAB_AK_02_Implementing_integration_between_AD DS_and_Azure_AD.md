@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Implementing integration between AD DS and Microsoft Entra ID
 
+This lab should take approximately **60** minutes to complete.
+
 ## Lab Setup
 
 1. Connect to **SEA-ADM1** and, if needed, sign in with the credentials provided by the instructor.

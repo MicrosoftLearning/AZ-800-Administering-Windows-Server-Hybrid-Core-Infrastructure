@@ -7,6 +7,8 @@ lab:
 
 # Lab answer key: Implementing storage solutions in Windows Server
 
+This lab should take approximately **90** minutes to complete.
+
 > **Note**: Be sure to revert the virtual machines (VMs) between each exercise. Due to most of the VMs being Windows Server 2019 Server Core, the time it takes to revert and restart is faster than attempting to undo changes made to the storage environment in the exercises.
 
 ## Exercise 1: Implementing Data Deduplication

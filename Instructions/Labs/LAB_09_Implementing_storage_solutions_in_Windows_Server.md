@@ -6,6 +6,8 @@ lab:
 
 # Lab: Implementing storage solutions in Windows Server
 
+This lab should take approximately **90** minutes to complete.
+
 ## Scenario
 
 At Contoso, Ltd., you need to implement the Storage Spaces feature on the Windows Server servers to simplify storage access and provide redundancy at the storage level. Management wants you to test Data Deduplication to save storage. They also want you to implement Internet Small Computer System Interface (iSCSI) storage to provide a simpler solution for deploying storage in the organization. Additionally, the organization is exploring options for making storage highly available and researching the requirements that it must meet for high availability. You want to test the feasibility of using highly available storage, specifically Storage Spaces Direct.
@@ -18,8 +20,6 @@ After completing this lab, you'll be able to:
 - Configure iSCSI storage.
 - Configure Storage Spaces.
 - Implement Storage Spaces Direct.
-
-## Estimated time: 90 minutes
 
 ## Lab setup
 

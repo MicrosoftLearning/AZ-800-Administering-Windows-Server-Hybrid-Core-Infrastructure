@@ -6,6 +6,8 @@ lab:
 
 # Lab: Implementing integration between AD DS and Microsoft Entra ID
 
+This lab should take approximately **60** minutes to complete.
+
 ## Scenario
 
 To address concerns regarding management and monitoring overhead resulting from using Microsoft Entra ID to authenticate and authorize access to Azure resources, you decide to test integration between on-premises Active Directory Domain Services (AD DS) and Microsoft Entra ID to verify that this will address business concerns about managing multiple user accounts by using a mix of on-premises and cloud resources.
@@ -23,8 +25,6 @@ After completing this lab, you'll be able to:
 - Install and configure Microsoft Entra Connect.
 - Verify integration between AD DS and Microsoft Entra ID by testing the synchronization process.
 - Implementing Microsoft Entra ID integration features in Active Directory, including Microsoft Entra ID Password Protection for Windows Server Active Directory and SSPR with password writeback.
-
-## Estimated time: 60 minutes
 
 ## Lab setup
 

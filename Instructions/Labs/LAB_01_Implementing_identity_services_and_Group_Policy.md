@@ -6,6 +6,8 @@ lab:
 
 # Lab: Implementing identity services and Group Policy
 
+This lab should take approximately **45** minutes to complete.
+
 ## Scenario
 
 You are working as an administrator at Contoso Ltd. The company is expanding its business with several new locations. The Active Directory Domain Services (AD DS) Administration team is currently evaluating methods available in Windows Server for a non-interactive, remote domain controller deployment. The team is also searching for a way to automate certain AD DS administrative tasks. Additionally, the team wants to establish configuration management based on Group Policy Objects (GPO).
@@ -21,8 +23,6 @@ After completing this lab, you’ll be able to:
 
 - Deploy a new domain controller on Server Core.
 - Configure Group Policy.
-
-## Estimated time: 45 minutes
 
 ## Lab setup
 

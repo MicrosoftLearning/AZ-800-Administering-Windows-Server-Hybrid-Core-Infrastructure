@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
-    module: 'Module 6: Deploying and Configuring Azure VMs'
+  title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
+  module: 'Module 6: Deploying and Configuring Azure VMs'
+  description: This lab should take approximately **90** minutes to complete.
+  duration: 90 minutes
+  level: 500
+  islab: true
+  primarytopics:
+  - Azure
+  - Windows
+  - Windows Server
 ---
 
 # Lab: Deploying and configuring Windows Server on Azure VMs

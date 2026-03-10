@@ -1,8 +1,15 @@
 ---
 lab:
-    title: 'Lab: Managing Windows Server'
-    type: 'Answer Key'
-    module: 'Module 3: Windows Server administration'
+  title: 'Lab: Managing Windows Server'
+  type: Answer Key
+  module: 'Module 3: Windows Server administration'
+  description: This lab should take approximately **45** minutes to complete.
+  duration: 45 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Windows
+  - Windows Server
 ---
 
 # Lab answer key: Managing Windows Server

@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Lab: Implementing hybrid networking infrastructure'
-    module: 'Module 8: Implementing Windows Server IaaS VM networking'
+  title: 'Lab: Implementing hybrid networking infrastructure'
+  module: 'Module 8: Implementing Windows Server IaaS VM networking'
+  description: This lab should take approximately **60** minutes to complete.
+  duration: 60 minutes
+  level: 400
+  islab: true
 ---
 
 # Lab: Implementing hybrid networking infrastructure

@@ -1,8 +1,14 @@
 ---
 lab:
-    title: 'Lab: Implementing Azure File Sync'
-    type: 'Answer Key'
-    module: 'Module 10: Implementing a hybrid file server infrastructure'
+  title: 'Lab: Implementing Azure File Sync'
+  type: Answer Key
+  module: 'Module 10: Implementing a hybrid file server infrastructure'
+  description: This lab should take approximately **60** minutes to complete.
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Azure
 ---
 
 # Lab answer key: Implementing Azure File Sync

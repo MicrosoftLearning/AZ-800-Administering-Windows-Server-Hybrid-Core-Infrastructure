@@ -1,8 +1,15 @@
 ---
 lab:
-    title: 'Lab: Implementing storage solutions in Windows Server'
-    type: 'Answer Key'
-    module: 'Module 9: File servers and storage management in Windows Server'
+  title: 'Lab: Implementing storage solutions in Windows Server'
+  type: Answer Key
+  module: 'Module 9: File servers and storage management in Windows Server'
+  description: This lab should take approximately **90** minutes to complete.
+  duration: 90 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Windows
+  - Windows Server
 ---
 
 # Lab answer key: Implementing storage solutions in Windows Server

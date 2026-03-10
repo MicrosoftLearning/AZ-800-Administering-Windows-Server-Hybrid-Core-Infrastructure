@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Lab: Implementing identity services and Group Policy'
-    module: 'Module 1: Identity services in Windows Server'
+  title: 'Lab: Implementing identity services and Group Policy'
+  module: 'Module 1: Identity services in Windows Server'
+  description: This lab should take approximately **45** minutes to complete.
+  duration: 45 minutes
+  level: 400
+  islab: true
 ---
 
 # Lab: Implementing identity services and Group Policy

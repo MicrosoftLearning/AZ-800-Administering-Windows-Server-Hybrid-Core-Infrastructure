@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab: Implementing and configuring virtualization in Windows Server'
-    module: 'Module 5: Hyper-V virtualization in Windows Server'
+  title: 'Lab: Implementing and configuring virtualization in Windows Server'
+  module: 'Module 5: Hyper-V virtualization in Windows Server'
+  description: This lab should take approximately **60** minutes to complete.
+  duration: 60 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Windows
+  - Windows Server
 ---
 
 # Lab: Implementing and configuring virtualization in Windows Server

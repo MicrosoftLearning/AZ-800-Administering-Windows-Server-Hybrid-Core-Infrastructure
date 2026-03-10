@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Lab: Using Windows Admin Center in hybrid scenarios'
-    module: 'Module 4: Facilitating hybrid management'
+  title: 'Lab: Using Windows Admin Center in hybrid scenarios'
+  module: 'Module 4: Facilitating hybrid management'
+  description: This lab should take approximately **90** minutes to complete.
+  duration: 90 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Windows
 ---
 
 # Lab: Using Windows Admin Center in hybrid scenarios

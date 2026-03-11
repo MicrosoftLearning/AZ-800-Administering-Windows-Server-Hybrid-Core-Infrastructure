@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab: Implementing and configuring network infrastructure services in Windows Server'
-    module: 'Module 7: Network Infrastructure services in Windows Server'
+  title: 'Lab: Implementing and configuring network infrastructure services in Windows Server'
+  module: 'Module 7: Network Infrastructure services in Windows Server'
+  description: The Trey Research subdivision of Contoso has a separate office with only about 50 users. They have been manually configuring IP addresses on all of their computers and want to begin using DHCP instead. You will install DHCP on SEA-SVR1 with a scope for the Trey Research site. Additionally, you will configure DHCP Failover by using the new DHCP server for high availability with SEA-DC1.
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Windows
+    - Windows Server
 ---
 
 # Lab: Implementing and configuring network infrastructure services in Windows Server

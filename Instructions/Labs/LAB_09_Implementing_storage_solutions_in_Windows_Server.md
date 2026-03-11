@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab: Implementing storage solutions in Windows Server'
-    module: 'Module 9: File servers and storage management in Windows Server'
+  title: 'Lab: Implementing storage solutions in Windows Server'
+  module: 'Module 9: File servers and storage management in Windows Server'
+  description: 'After completing this lab, you will have:'
+  duration: 90 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Windows
+    - Windows Server
 ---
 
 # Lab: Implementing storage solutions in Windows Server

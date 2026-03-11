@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab: Implementing integration between AD DS and Microsoft Entra ID'
-    module: 'Module 2: Implementing Identity in Hybrid Scenarios'
+  title: 'Lab: Implementing integration between AD DS and Microsoft Entra ID'
+  module: 'Module 2: Implementing Identity in Hybrid Scenarios'
+  description: 'Exercise scenario: You''re now ready to implement the integration by downloading Microsoft Entra Connect, installing it on SEA-ADM1, and configuring its settings to match the integration objective.'
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Entra
+    - Microsoft Entra ID
 ---
 
 # Lab: Implementing integration between AD DS and Microsoft Entra ID

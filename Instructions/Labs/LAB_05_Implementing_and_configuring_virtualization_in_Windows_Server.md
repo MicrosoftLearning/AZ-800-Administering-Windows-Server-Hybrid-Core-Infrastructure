@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Lab: Implementing and configuring virtualization in Windows Server'
-    module: 'Module 5: Hyper-V virtualization in Windows Server'
+  title: 'Lab: Implementing and configuring virtualization in Windows Server'
+  module: 'Module 5: Hyper-V virtualization in Windows Server'
+  description: In this exercise, you will use Hyper-V Manager and Windows Admin Center to create and configure a virtual machine. You will start with creating a private virtual network switch. Next, you decide to create a differencing drive of a base image that has already been prepared with the operating system to be installed on the VM. Finally, you will create a generation 1 VM that uses the differencing drive and private switch that you have prepared for the proof of concept.
+  duration: 60 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Windows
+    - Windows Server
 ---
 
 # Lab: Implementing and configuring virtualization in Windows Server

@@ -1,7 +1,16 @@
 ---
 lab:
-    title: 'Lab: Using Windows Admin Center in hybrid scenarios'
-    module: 'Module 4: Facilitating hybrid management'
+  title: 'Lab: Using Windows Admin Center in hybrid scenarios'
+  module: 'Module 4: Facilitating hybrid management'
+  description: You need to evaluate the ability to manage Azure VMs running Windows Server OS by using Windows Admin Center. To accomplish this, you'll first install a Windows Admin Center gateway in the Azure virtual network you implemented in the first exercise of this lab.
+  duration: 90 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Virtual Network
+    - Windows
+    - Windows Server
 ---
 
 # Lab: Using Windows Admin Center in hybrid scenarios

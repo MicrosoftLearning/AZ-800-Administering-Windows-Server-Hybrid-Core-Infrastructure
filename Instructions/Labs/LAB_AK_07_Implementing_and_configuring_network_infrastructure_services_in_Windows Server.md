@@ -1,8 +1,15 @@
 ---
 lab:
-    title: 'Lab: Implementing and configuring network infrastructure services in Windows Server'
-    type: 'Answer Key'
-    module: 'Module 7: Network Infrastructure services in Windows Server'
+  title: 'Lab: Implementing and configuring network infrastructure services in Windows Server'
+  type: Answer Key
+  module: 'Module 7: Network Infrastructure services in Windows Server'
+  description: Depending on your network performance, it may take upto 5 minutes for the DHCP server to appear.
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Windows
+    - Windows Server
 ---
 
 # Lab answer key: Implementing and configuring network infrastructure services in Windows Server

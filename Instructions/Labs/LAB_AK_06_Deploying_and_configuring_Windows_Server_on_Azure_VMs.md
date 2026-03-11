@@ -1,8 +1,17 @@
 ---
 lab:
-    title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
-    type: 'Answer Key'
-    module: 'Module 6: Deploying and Configuring Azure VMs'
+  title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
+  type: Answer Key
+  module: 'Module 6: Deploying and Configuring Azure VMs'
+  description: In this task, you will use the Azure portal to create resource groups and create a disk in the resource group.
+  duration: 90 minutes
+  level: 500
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Portal
+    - Windows
+    - Windows Server
 ---
 
 # Lab answer key: Deploying and configuring Windows Server on Azure VMs

@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Lab: Implementing hybrid networking infrastructure'
-    module: 'Module 8: Implementing Windows Server IaaS VM networking'
+  title: 'Lab: Implementing hybrid networking infrastructure'
+  module: 'Module 8: Implementing Windows Server IaaS VM networking'
+  description: In this task, you will deploy three virtual machines into the same Azure region but into separate virtual networks. The first virtual network will serve as a hub, while the other two will form spokes. These resources will serve as the basis for the lab infrastructure.
+  duration: 60 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
 ---
 
 # Lab: Implementing hybrid networking infrastructure

@@ -1,8 +1,15 @@
 ---
 lab:
-    title: 'Lab: Implementing and configuring virtualization in Windows Server'
-    type: 'Answer Key'
-    module: 'Module 5: Hyper-V virtualization in Windows Server'
+  title: 'Lab: Implementing and configuring virtualization in Windows Server'
+  type: Answer Key
+  module: 'Module 5: Hyper-V virtualization in Windows Server'
+  description: After this exercise, you should have used Hyper-V Manager and Windows Admin Center to create a virtual switch, a virtual hard disk, a virtual machine, and then manage the virtual machine.
+  duration: 60 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Windows
+    - Windows Server
 ---
 
 # Lab answer key: Implementing and configuring virtualization in Windows Server

@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Lab: Implementing Azure File Sync'
-    module: 'Module 10: Implementing a hybrid file server infrastructure'
+  title: 'Lab: Implementing Azure File Sync'
+  module: 'Module 10: Implementing a hybrid file server infrastructure'
+  description: After completing this exercise, you will have created a File Sync group. You also have created the cloud endpoint mapped on SEA-ADM1 so that you can inspect the Azure file share content.
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
 ---
 
 # Lab: Implementing Azure File Sync

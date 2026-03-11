@@ -1,8 +1,15 @@
 ---
 lab:
-    title: 'Lab: Implementing integration between AD DS and Microsoft Entra ID'
-    type: 'Answer Key'
-    module: 'Module 2: Implementing Identity in Hybrid Scenarios'
+  title: 'Lab: Implementing integration between AD DS and Microsoft Entra ID'
+  type: Answer Key
+  module: 'Module 2: Implementing Identity in Hybrid Scenarios'
+  description: This lab should take approximately 60 minutes to complete.
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Entra
+    - Microsoft Entra ID
 ---
 
 # Lab answer key: Implementing integration between AD DS and Microsoft Entra ID

@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
-    module: 'Module 6: Deploying and Configuring Azure VMs'
+  title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
+  module: 'Module 6: Deploying and Configuring Azure VMs'
+  description: After completing this lab, you will have deployed and configured Azure VMs running Windows Server in the manner that satisfies the Contoso, Ltd. manageability and security requirements.
+  duration: 90 minutes
+  level: 500
+  islab: true
+  primarytopics:
+    - Azure
+    - Windows
+    - Windows Server
 ---
 
 # Lab: Deploying and configuring Windows Server on Azure VMs

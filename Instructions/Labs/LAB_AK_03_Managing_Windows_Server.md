@@ -1,8 +1,15 @@
 ---
 lab:
-    title: 'Lab: Managing Windows Server'
-    type: 'Answer Key'
-    module: 'Module 3: Windows Server administration'
+  title: 'Lab: Managing Windows Server'
+  type: Answer Key
+  module: 'Module 3: Windows Server administration'
+  description: After completing this exercise, you will have installed Windows Admin Center and connected it to the servers in your lab environment. You performed a number of remote management tasks including installing a feature as well as enabling and testing Remote Desktop connectivity. Finally, you used PowerShell Remoting to check the status of a service and then to start it.
+  duration: 45 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Windows
+    - Windows Server
 ---
 
 # Lab answer key: Managing Windows Server

@@ -3,15 +3,15 @@ lab:
   title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
   type: Answer Key
   module: 'Module 6: Deploying and Configuring Azure VMs'
-  description: In this task, you will use the Azure portal to create resource groups and create a disk in the resource group.
+  description: 'In this lab, you author and modify ARM templates to deploy Windows Server virtual machines in Azure. You configure administrative access and security settings on deployed VMs, and then deprovision Azure resources.'
   duration: 90 minutes
-  level: 500
+  level: 400
   islab: true
   primarytopics:
-    - Azure
-    - Azure Portal
-    - Windows
+    - Azure Resource Manager
+    - Azure Virtual Machines
     - Windows Server
+    - Infrastructure as Code
 ---
 
 # Lab answer key: Deploying and configuring Windows Server on Azure VMs
@@ -299,3 +299,6 @@ In this task, you will use the Azure portal to create resource groups and create
    Get-AzResourceGroup -Name 'AZ800-L06*' | Remove-AzResourceGroup -Force -AsJob
    ```
    >**Note**: The command executes asynchronously (as determined by the *-AsJob* parameter). So, while you will be able to run another PowerShell command immediately after within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+
+

@@ -2,12 +2,15 @@
 lab:
   title: 'Lab: Implementing hybrid networking infrastructure'
   module: 'Module 8: Implementing Windows Server IaaS VM networking'
-  description: In this task, you will deploy three virtual machines into the same Azure region but into separate virtual networks. The first virtual network will serve as a hub, while the other two will form spokes. These resources will serve as the basis for the lab infrastructure.
+  description: 'In this lab, you deploy a hub-and-spoke virtual network topology in Azure by using multiple virtual networks and virtual machines. You configure Azure routing and DNS name resolution to validate hybrid networking behavior, then clean up deployed resources.'
   duration: 60 minutes
   level: 400
   islab: true
   primarytopics:
-    - Azure
+    - Azure Virtual Network
+    - Azure Routing
+    - Azure DNS
+    - Hybrid Networking
 ---
 
 # Lab: Implementing hybrid networking infrastructure
@@ -470,3 +473,6 @@ After completing this lab, you will have:
 - Configured routing in the hub and spoke topology.
 - Configured Azure DNS for internal name resolution.
 - Configured Azure DNS for external name resolution.
+
+
+

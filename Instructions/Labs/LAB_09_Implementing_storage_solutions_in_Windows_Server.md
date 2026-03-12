@@ -2,13 +2,16 @@
 lab:
   title: 'Lab: Implementing storage solutions in Windows Server'
   module: 'Module 9: File servers and storage management in Windows Server'
-  description: 'After completing this lab, you will have:'
+  description: 'In this lab, you implement core Windows Server storage solutions including Data Deduplication, iSCSI, and Storage Spaces. You also configure and validate Storage Spaces Direct to provide resilient software-defined storage.'
   duration: 90 minutes
   level: 400
   islab: true
   primarytopics:
-    - Windows
-    - Windows Server
+    - Storage Spaces Direct
+    - Storage Spaces
+    - iSCSI
+    - Data Deduplication
+    - Windows Server Storage
 ---
 
 # Lab: Implementing storage solutions in Windows Server
@@ -443,3 +446,6 @@ After completing this lab, you will have:
 - Installed and configured iSCSI storage.
 - Configured redundant Storage Spaces.
 - Tested the implementation of Storage Spaces Direct.
+
+
+

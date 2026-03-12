@@ -2,13 +2,15 @@
 lab:
   title: 'Lab: Implementing and configuring network infrastructure services in Windows Server'
   module: 'Module 7: Network Infrastructure services in Windows Server'
-  description: The Trey Research subdivision of Contoso has a separate office with only about 50 users. They have been manually configuring IP addresses on all of their computers and want to begin using DHCP instead. You will install DHCP on SEA-SVR1 with a scope for the Trey Research site. Additionally, you will configure DHCP Failover by using the new DHCP server for high availability with SEA-DC1.
+  description: 'In this lab, you deploy and configure DHCP scopes and failover for high availability in a branch scenario. You also implement and validate DNS configuration to support core network infrastructure services.'
   duration: 60 minutes
   level: 300
   islab: true
   primarytopics:
-    - Windows
+    - DHCP
+    - DNS
     - Windows Server
+    - Network Infrastructure
 ---
 
 # Lab: Implementing and configuring network infrastructure services in Windows Server
@@ -245,3 +247,6 @@ The main tasks for this exercise are as follows:
    > **Note**: Verify that the name resolves to **172.30.99.234**. This is expected, because the IP address of **SEA-ADM1** is no longer within the **HeadOfficeSubnet**. DNS queries originating from the **HeadOfficeSubnet** of **(172.16.10.0/24)** targeting `testapp.treyresearch.net` resolve to **172.30.99.100**. DNS queries from outside of this subnet targeting `testapp.treyresearch.net` resolve to **172.30.99.234**.
 
 1. Change the IP address of **SEA-ADM1** back to its original value.
+
+
+

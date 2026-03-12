@@ -3,13 +3,15 @@ lab:
   title: 'Lab: Implementing integration between AD DS and Microsoft Entra ID'
   type: Answer Key
   module: 'Module 2: Implementing Identity in Hybrid Scenarios'
-  description: This lab should take approximately 60 minutes to complete.
+  description: 'In this lab, you prepare both Microsoft Entra ID and on-premises AD DS for hybrid identity. You install and configure Microsoft Entra Connect, validate synchronization, and enable integration features such as password protection and self-service password reset writeback.'
   duration: 60 minutes
-  level: 300
+  level: 400
   islab: true
   primarytopics:
-    - Microsoft Entra
     - Microsoft Entra ID
+    - Windows Server Active Directory
+    - Microsoft Entra Connect
+    - Hybrid Identity
 ---
 
 # Lab answer key: Implementing integration between AD DS and Microsoft Entra ID
@@ -383,3 +385,6 @@ This lab should take approximately **60** minutes to complete.
    ```
 
    > **Note**: The **OnPremisesSyncEnabled** property should now be **False**. It may take up to 72 hours for all synchronized users to be fully converted to cloud-only accounts.
+
+
+

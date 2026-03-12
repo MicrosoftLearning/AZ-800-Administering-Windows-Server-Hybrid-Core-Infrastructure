@@ -2,14 +2,15 @@
 lab:
   title: 'Lab: Implementing identity services and Group Policy'
   module: 'Module 1: Identity services in Windows Server'
-  description: You are working as an administrator at Contoso Ltd. The company is expanding its business with several new locations. The Active Directory Domain Services (AD DS) Administration team is currently evaluating methods available in Windows Server for a non-interactive, remote domain controller deployment. The team is also searching for a way to automate certain AD DS administrative tasks. Additionally, the team wants to establish configuration management based on Group Policy Objects (GPO).
+  description: 'In this lab, you deploy an additional domain controller on a Windows Server Core computer by using remote management and PowerShell. You then create and manage Active Directory objects and configure Group Policy settings to apply centralized configuration.'
   duration: 45 minutes
-  level: 400
+  level: 300
   islab: true
   primarytopics:
-    - Windows
-    - Active Directory
     - Windows Server
+    - Windows Server Active Directory
+    - Group Policy
+    - PowerShell
 ---
 
 # Lab: Implementing identity services and Group Policy
@@ -217,3 +218,6 @@ The main tasks for this exercise are as follows:
 ### Results
 
 After this exercise, you should have successfully created and configured GPOs.
+
+
+

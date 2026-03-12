@@ -2,14 +2,15 @@
 lab:
   title: 'Lab: Deploying and configuring Windows Server on Azure VMs'
   module: 'Module 6: Deploying and Configuring Azure VMs'
-  description: After completing this lab, you will have deployed and configured Azure VMs running Windows Server in the manner that satisfies the Contoso, Ltd. manageability and security requirements.
+  description: 'In this lab, you author and modify ARM templates to deploy Windows Server virtual machines in Azure. You configure administrative access and security settings on deployed VMs, and then deprovision Azure resources.'
   duration: 90 minutes
-  level: 500
+  level: 400
   islab: true
   primarytopics:
-    - Azure
-    - Windows
+    - Azure Resource Manager
+    - Azure Virtual Machines
     - Windows Server
+    - Infrastructure as Code
 ---
 
 # Lab: Deploying and configuring Windows Server on Azure VMs
@@ -315,3 +316,6 @@ The main tasks for this exercise are as follows:
 ## Results
 
 After completing this lab, you will have deployed and configured Azure VMs running Windows Server in the manner that satisfies the Contoso, Ltd. manageability and security requirements.
+
+
+

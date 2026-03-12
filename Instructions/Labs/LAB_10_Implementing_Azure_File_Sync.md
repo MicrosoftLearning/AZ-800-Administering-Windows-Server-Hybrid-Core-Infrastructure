@@ -2,11 +2,14 @@
 lab:
   title: 'Lab: Implementing Azure File Sync'
   module: 'Module 10: Implementing a hybrid file server infrastructure'
-  description: After completing this exercise, you will have created a File Sync group. You also have created the cloud endpoint mapped on SEA-ADM1 so that you can inspect the Azure file share content.
+  description: 'In this lab, you implement DFS Replication in an on-premises environment and create an Azure File Sync sync group. You migrate replication workflows to Azure File Sync, verify synchronization and cloud tiering, and troubleshoot conflict scenarios.'
   duration: 60 minutes
-  level: 300
+  level: 400
   islab: true
   primarytopics:
+    - Azure File Sync
+    - DFS Replication
+    - Windows Server File Services
     - Azure
 ---
 
@@ -259,3 +262,6 @@ Exercise scenario: To minimize Azure-related charges, you will clean up the Azur
 ### Results
 
 After completing this exercise, you'll have cleaned up the Azure resources that were created in the lab.
+
+
+

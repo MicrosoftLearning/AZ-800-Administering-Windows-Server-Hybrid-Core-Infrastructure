@@ -3,11 +3,14 @@ lab:
   title: 'Lab: Implementing Azure File Sync'
   type: Answer Key
   module: 'Module 10: Implementing a hybrid file server infrastructure'
-  description: This lab should take approximately 60 minutes to complete.
+  description: 'In this lab, you implement DFS Replication in an on-premises environment and create an Azure File Sync sync group. You migrate replication workflows to Azure File Sync, verify synchronization and cloud tiering, and troubleshoot conflict scenarios.'
   duration: 60 minutes
-  level: 300
+  level: 400
   islab: true
   primarytopics:
+    - Azure File Sync
+    - DFS Replication
+    - Windows Server File Services
     - Azure
 ---
 
@@ -256,3 +259,6 @@ This lab should take approximately **60** minutes to complete.
 1. In the Delete Resources pane, select **Delete**, enter **yes** in a text box, and then select **Delete**.
 1. In the navigation pane, select **Resource groups**.
 1. In the details pane, select **AZ800-L1001-RG**, select **Delete resource group**, enter **AZ800-L1001-RG**, and then select **Delete**.
+
+
+

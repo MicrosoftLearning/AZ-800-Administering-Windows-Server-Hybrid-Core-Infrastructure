@@ -1,8 +1,17 @@
 ---
 lab:
-    title: 'Lab: Implementing Windows Server IaaS VM networking'
-    type: 'Answer Key'
-    module: 'Module 8: Implementing Windows Server IaaS VM networking'
+  title: 'Lab: Implementing Windows Server IaaS VM networking'
+  type: Answer Key
+  module: 'Module 8: Implementing Windows Server IaaS VM networking'
+  description: 'In this lab, you deploy a hub-and-spoke virtual network topology in Azure by using multiple virtual networks and virtual machines. You configure Azure routing and DNS name resolution to validate hybrid networking behavior, then clean up deployed resources.'
+  duration: 60 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure Virtual Network
+    - Azure Routing
+    - Azure DNS
+    - Hybrid Networking
 ---
 
 # Lab answer key: Implementing hybrid networking infrastructure
@@ -429,3 +438,6 @@ This lab should take approximately **60** minutes to complete.
    ```
 
    >**Note**: The command executes asynchronously (as determined by the *-AsJob* parameter), so while you'll be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+
+

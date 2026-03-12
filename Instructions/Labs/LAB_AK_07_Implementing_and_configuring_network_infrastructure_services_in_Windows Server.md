@@ -1,8 +1,17 @@
 ---
 lab:
-    title: 'Lab: Implementing and configuring network infrastructure services in Windows Server'
-    type: 'Answer Key'
-    module: 'Module 7: Network Infrastructure services in Windows Server'
+  title: 'Lab: Implementing and configuring network infrastructure services in Windows Server'
+  type: Answer Key
+  module: 'Module 7: Network Infrastructure services in Windows Server'
+  description: 'In this lab, you deploy and configure DHCP scopes and failover for high availability in a branch scenario. You also implement and validate DNS configuration to support core network infrastructure services.'
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - DHCP
+    - DNS
+    - Windows Server
+    - Network Infrastructure
 ---
 
 # Lab answer key: Implementing and configuring network infrastructure services in Windows Server
@@ -296,3 +305,6 @@ This lab should take approximately **60** minutes to complete.
 1. In the **Internet Protocol Version 4 (TCP/IPv4) Properties** dialog box, change the currently assigned IP address (**172.16.11.11**) to its original value (**172.16.10.11**) and select **OK**.
 1. Select **Close** twice.
 1. Close all open windows.
+
+
+

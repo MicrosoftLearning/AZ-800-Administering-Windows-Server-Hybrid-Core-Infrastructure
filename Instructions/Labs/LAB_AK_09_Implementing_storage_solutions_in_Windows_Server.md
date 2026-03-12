@@ -1,8 +1,18 @@
 ---
 lab:
-    title: 'Lab: Implementing storage solutions in Windows Server'
-    type: 'Answer Key'
-    module: 'Module 9: File servers and storage management in Windows Server'
+  title: 'Lab: Implementing storage solutions in Windows Server'
+  type: Answer Key
+  module: 'Module 9: File servers and storage management in Windows Server'
+  description: 'In this lab, you implement core Windows Server storage solutions including Data Deduplication, iSCSI, and Storage Spaces. You also configure and validate Storage Spaces Direct to provide resilient software-defined storage.'
+  duration: 90 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Storage Spaces Direct
+    - Storage Spaces
+    - iSCSI
+    - Data Deduplication
+    - Windows Server Storage
 ---
 
 # Lab answer key: Implementing storage solutions in Windows Server
@@ -458,3 +468,6 @@ This lab should take approximately **90** minutes to complete.
    > **Note**: It may take a few minutes for the alert to be automatically removed.
 
 1. Refresh the browser page displaying Windows Admin Center and verify that all servers are healthy.
+
+
+

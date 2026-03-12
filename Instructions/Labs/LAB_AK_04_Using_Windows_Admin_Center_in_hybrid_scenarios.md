@@ -1,8 +1,18 @@
 ---
 lab:
-    title: 'Lab: Using Windows Admin Center in hybrid scenarios'
-    type: 'Answer Key'
-    module: 'Module 4: Facilitating hybrid management'
+  title: 'Lab: Using Windows Admin Center in hybrid scenarios'
+  type: Answer Key
+  module: 'Module 4: Facilitating hybrid management'
+  description: 'In this lab, you deploy a Windows Admin Center gateway in Azure and connect it to on-premises resources. You test hybrid connectivity with Azure Network Adapter and verify remote management for Azure-based Windows Server systems.'
+  duration: 90 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Windows Admin Center
+    - Azure
+    - Azure Virtual Network
+    - Hybrid Management
+    - Windows Server
 ---
 
 # Lab answer key: Using Windows Admin Center in hybrid scenarios
@@ -272,3 +282,6 @@ This lab should take approximately **90** minutes to complete.
    ```
 
    >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you'll be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
+
+
+

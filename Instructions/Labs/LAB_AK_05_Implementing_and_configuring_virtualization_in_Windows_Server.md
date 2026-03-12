@@ -1,8 +1,17 @@
 ---
 lab:
-    title: 'Lab: Implementing and configuring virtualization in Windows Server'
-    type: 'Answer Key'
-    module: 'Module 5: Hyper-V virtualization in Windows Server'
+  title: 'Lab: Implementing and configuring virtualization in Windows Server'
+  type: Answer Key
+  module: 'Module 5: Hyper-V virtualization in Windows Server'
+  description: 'In this lab, you create and configure Hyper-V virtual machines, including virtual switches and virtual hard disks. You also deploy and manage Windows containers to practice host virtualization and container-based workloads.'
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Hyper-V
+    - Windows Containers
+    - Windows Server
+    - Virtualization
 ---
 
 # Lab answer key: Implementing and configuring virtualization in Windows Server
@@ -243,3 +252,6 @@ After this exercise, you should have used Hyper-V Manager and Windows Admin Cent
 ### Exercise 2 results
 
 After this exercise, you should have installed Docker on Windows Server, downloaded a Windows container image containing web services, and verified its functionality.
+
+
+

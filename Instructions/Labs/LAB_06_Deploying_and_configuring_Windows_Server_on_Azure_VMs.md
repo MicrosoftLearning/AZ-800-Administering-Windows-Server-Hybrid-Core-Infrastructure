@@ -84,7 +84,7 @@ In this task, you will connect to your Azure subscription and enable the enhance
    |Availability options|No infrastructure redundancy required|
    |Image|**Windows Server 2022 Datacenter: Azure Edition - Gen2**|
    |Azure Spot instance|No|
-   |Size|**Standard_D2s_v3**|
+   |Size|**Standard_D2s_v5**|
    |Username|**Student**|
    |Password|**Pa55w.rd1234**|
    |Public inbound ports|None|
@@ -99,6 +99,9 @@ In this task, you will connect to your Azure subscription and enable the enhance
    |Accelerated networking|Off|
    |Place this virtual machine behind an existing load balancing solution?|No|
    |Boot diagnostics|**Enable with managed storage account (recommended)**|
+
+   > [!NOTE]
+   > Use **Standard_D2s_v5** first. If the size is unavailable or Azure lacks capacity in the selected region, use **Standard_D2s_v6**. If that size is also unavailable, use **Standard_D2s_v7**.
 
 1. When you reach the **Review + Create** tab of the **Create a virtual machine** page, proceed to task 3.
 

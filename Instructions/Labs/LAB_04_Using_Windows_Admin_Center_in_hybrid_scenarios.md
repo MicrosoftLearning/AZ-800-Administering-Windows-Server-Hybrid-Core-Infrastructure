@@ -76,16 +76,20 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Create an Azure VM by using an Azure Resource Manager template
 
-1. From the Cloud Shell pane, upload an Azure Resource Manager template **C:\\Labfiles\\Lab04\\L04-rg_template.json** and the corresponding Azure Resource Manager parameter file **C:\\Labfiles\\Lab04\\L04-rg_template.parameters.json**.
+1. From the Cloud Shell pane, upload the Azure Resource Manager template **C:\\Labfiles\\Lab04\\L04-rg_template.json**.
 1. From the Cloud Shell pane, run the following command to deploy an Azure VM running Windows Server, which you'll be using in this lab:
 
    ```powershell
    New-AzResourceGroupDeployment `
      -Name az800l04rgDeployment `
      -ResourceGroupName $rgName `
-     -TemplateFile $HOME/L04-rg_template.json `
-     -TemplateParameterFile $HOME/L04-rg_template.parameters.json
+       -TemplateFile $HOME/L04-rg_template.json
    ```
+
+1. When prompted, enter the credentials provided by the instructor.
+
+    > [!NOTE]
+    > The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, delete **AZ800-L0401-RG**, repeat Task 1 to recreate it, and rerun the deployment command with `-vmSize Standard_D2s_v6`. If that deployment fails for the same reason, delete and recreate the resource group, then retry with `-vmSize Standard_D2s_v7`.
 
    >**Note**: Wait for the deployment to complete before you proceed to the next exercise. The deployment should take about 5 minutes.
 
@@ -184,7 +188,7 @@ The main tasks for this exercise are as follows:
    $subnetName = 'subnet1'
    $location = '<Azure region>'
    $pipName = 'wac-public-ip'
-   $size = 'Standard_D2s_v3'
+   $size = 'Standard_D2s_v5'
    ```
 1. Run the following command to set the script parameters variable:
 
@@ -210,6 +214,10 @@ The main tasks for this exercise are as follows:
    ```powershell
    ./Deploy-WACAzVM.ps1 @scriptParams
    ```
+
+   > [!NOTE]
+   > Use **Standard_D2s_v5** first. If the script fails because the size is unavailable or Azure lacks capacity, set `$size` to **Standard_D2s_v6**, recreate `$scriptParams`, and rerun the script. If that attempt fails for the same reason, retry with **Standard_D2s_v7**.
+
 1. When prompted to provide the name for the local Administrator account, enter **Student**.
 1. When prompted to provide the password for the local Administrator account, enter **Pa55w.rd1234**.
 

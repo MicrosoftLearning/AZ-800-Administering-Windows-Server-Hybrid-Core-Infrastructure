@@ -60,6 +60,9 @@ This lab should take approximately **90** minutes to complete.
 
 1. When prompted, insert the credentials provided by the instructor.
 
+   > [!NOTE]
+   > The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, delete **AZ800-L0401-RG**, repeat Task 1 to recreate it, and rerun the deployment command with `-vmSize Standard_D2s_v6`. If that deployment fails for the same reason, delete and recreate the resource group, then retry with `-vmSize Standard_D2s_v7`.
+
    >**Note**: Wait for the deployment to complete before you proceed to the next exercise. The deployment should take about 5 minutes.
 
 1. In the Azure portal, close the Cloud Shell pane.
@@ -155,7 +158,7 @@ This lab should take approximately **90** minutes to complete.
    $subnetName = 'subnet1'
    $location = 'eastus'
    $pipName = 'wac-public-ip'
-   $size = 'Standard_D2s_v3'
+   $size = 'Standard_D2s_v5'
    ```
 
 1. From the Cloud Shell pane, run the following commands to set the script parameters variable:
@@ -188,6 +191,9 @@ This lab should take approximately **90** minutes to complete.
    ```powershell
    ./Deploy-WACAzVM.ps1 @scriptParams
    ```
+
+   > [!NOTE]
+   > Use **Standard_D2s_v5** first. If the script fails because the size is unavailable or Azure lacks capacity, set `$size` to **Standard_D2s_v6**, recreate `$scriptParams`, and rerun the script. If that attempt fails for the same reason, retry with **Standard_D2s_v7**.
 
 1. When prompted to provide the name for the local Administrator account, enter the **username** provided by the instructor.
 1. When prompted to provide the password for the local Administrator account, enter the **password** provided by the instructor

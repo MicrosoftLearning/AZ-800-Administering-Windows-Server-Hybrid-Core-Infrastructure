@@ -171,12 +171,12 @@ param (
     [Parameter(ParameterSetName='CreateVMGenerateCert', Mandatory=$false)]
     [Parameter(ParameterSetName='CreateVMSpecifyCert', Mandatory=$false)]
     [String]
-    $Size = "Standard_DS1_v2",
+    $Size = "Standard_D2s_v7",
 
     [Parameter(ParameterSetName='CreateVMGenerateCert', Mandatory=$false)]
     [Parameter(ParameterSetName='CreateVMSpecifyCert', Mandatory=$false)]
     [String]
-    $Image = "Win2019Datacenter",
+    $Image = "MicrosoftWindowsServer:WindowsServer:2022-Datacenter-g2:latest",
 
     [Parameter(ParameterSetName='CreateVMGenerateCert', Mandatory=$false)]
     [Parameter(ParameterSetName='CreateVMSpecifyCert', Mandatory=$false)]

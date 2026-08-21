@@ -176,7 +176,7 @@ param (
     [Parameter(ParameterSetName='CreateVMGenerateCert', Mandatory=$false)]
     [Parameter(ParameterSetName='CreateVMSpecifyCert', Mandatory=$false)]
     [String]
-    $Image = "Win2019Datacenter",
+    $Image = "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest",
 
     [Parameter(ParameterSetName='CreateVMGenerateCert', Mandatory=$false)]
     [Parameter(ParameterSetName='CreateVMSpecifyCert', Mandatory=$false)]

@@ -61,7 +61,7 @@ This lab should take approximately **90** minutes to complete.
 1. When prompted, insert the credentials provided by the instructor.
 
    > [!NOTE]
-   > The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, delete **AZ800-L0401-RG**, repeat Task 1 to recreate it, and rerun the deployment command with `-vmSize Standard_D2s_v6`. If that deployment fails for the same reason, delete and recreate the resource group, then retry with `-vmSize Standard_D2s_v7`.
+   > The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, rerun the deployment in **AZ800-L0401-RG** with `-vmSize Standard_D2s_v6`. If necessary, retry with `-vmSize Standard_D2s_v7`. If a retry fails because an existing or partially deployed resource causes a conflict, delete **AZ800-L0401-RG**, repeat Task 1 to recreate it, and rerun the deployment with the selected VM size.
 
    >**Note**: Wait for the deployment to complete before you proceed to the next exercise. The deployment should take about 5 minutes.
 
@@ -171,6 +171,7 @@ This lab should take approximately **90** minutes to complete.
      SubnetName = $subnetName
      GenerateSslCert = $true
      size = $size
+      Image = 'MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest'
      PublicIPAddressName = $pipName
      SecurityGroupName = $nsgName
    }

@@ -82,7 +82,7 @@ In this task, you will deploy three virtual machines into the same Azure region 
    ```
 
         > [!NOTE]
-        > The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, delete **AZ800-L0801-RG**, recreate the resource group, update the **vmSize** value in **L08-rg_template.parameters.json** to **Standard_D2s_v6**, and repeat the deployment. If that deployment fails for the same reason, delete and recreate the resource group, set **vmSize** to **Standard_D2s_v7**, and retry.
+        > The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, update the **vmSize** value in **L08-rg_template.parameters.json** to **Standard_D2s_v6** and redeploy to **AZ800-L0801-RG**. If necessary, retry with **Standard_D2s_v7**. If a retry fails because an existing or partially deployed resource causes a conflict, delete and recreate **AZ800-L0801-RG**, then redeploy with the selected VM size.
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 3 minutes.
 

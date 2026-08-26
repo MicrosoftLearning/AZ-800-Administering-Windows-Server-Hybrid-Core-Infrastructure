@@ -48,11 +48,14 @@ In this task, you will use the Azure portal to create resource groups and create
    |Availability options|No infrastructure redundancy required|
    |Image|**Windows Server 2022 Datacenter: Azure Edition - Gen2**|
    |Run with Azure Spot discount|No|
-   |Size|**Standard_D2s_v3**|
+   |Size|**Standard_D2s_v5**|
    |Username|**Student**|
    |Password|**Pa55w.rd1234**|
    |Public inbound ports|None|
    |Would you like to use an existing Windows Server license|Off|
+
+   > [!NOTE]
+   > Use **Standard_D2s_v5** first. If the size is unavailable or Azure lacks capacity in the selected region, use **Standard_D2s_v6**. If that size is also unavailable, use **Standard_D2s_v7**.
 
 1. Select **Next: Disks >**, and then on the **Create a virtual machine** page, on the **Disks** tab, specify the following settings, leaving all other settings with their default values:
 

@@ -86,7 +86,7 @@ $scriptParams = @{
     VaultName = "my-key-vault"
     CertName = "my-cert"
     Location = "eastus"
-    Size = "Standard_D4s_v3"
+    Size = "Standard_D4s_v5"
     SubnetName = "my-subnet-name"
     PublicIpAddressName = "my-public-ip-name"
 }
@@ -171,12 +171,12 @@ param (
     [Parameter(ParameterSetName='CreateVMGenerateCert', Mandatory=$false)]
     [Parameter(ParameterSetName='CreateVMSpecifyCert', Mandatory=$false)]
     [String]
-    $Size = "Standard_DS1_v2",
+    $Size = "Standard_D2s_v5",
 
     [Parameter(ParameterSetName='CreateVMGenerateCert', Mandatory=$false)]
     [Parameter(ParameterSetName='CreateVMSpecifyCert', Mandatory=$false)]
     [String]
-    $Image = "Win2019Datacenter",
+    $Image = "MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest",
 
     [Parameter(ParameterSetName='CreateVMGenerateCert', Mandatory=$false)]
     [Parameter(ParameterSetName='CreateVMSpecifyCert', Mandatory=$false)]

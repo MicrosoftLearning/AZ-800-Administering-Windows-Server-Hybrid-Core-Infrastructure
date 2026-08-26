@@ -30,9 +30,14 @@
     },
     "vmSize": {
       "type": "string",
-      "defaultValue": "Standard_D2s_v3",
+      "defaultValue": "Standard_D2s_v5",
+      "allowedValues": [
+        "Standard_D2s_v5",
+        "Standard_D2s_v6",
+        "Standard_D2s_v7"
+      ],
       "metadata": {
-        "description": "VM size"
+        "description": "Select a VM size available in the deployment region."
       }
     },
     "diskType": {
@@ -60,7 +65,7 @@
     "windowsImage": {
       "publisher": "MicrosoftWindowsServer",
       "offer": "WindowsServer",
-      "sku": "2022-Datacenter",
+      "sku": "2022-datacenter-azure-edition",
       "version": "latest"
     },
     "computeAPIVersion": "2019-07-01",

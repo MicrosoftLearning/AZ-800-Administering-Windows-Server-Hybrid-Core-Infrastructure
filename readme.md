@@ -1,3 +1,5 @@
+**This course will be retired on 2026-9-30. Once course is retired, all GitHub repos will be removed. Thank you!**
+
 # AZ-800T00: Administering Windows Server Hybrid Core Infrastructure
 
 - **[Download Latest Student Handbook and AllFiles Content](../../releases/latest)**

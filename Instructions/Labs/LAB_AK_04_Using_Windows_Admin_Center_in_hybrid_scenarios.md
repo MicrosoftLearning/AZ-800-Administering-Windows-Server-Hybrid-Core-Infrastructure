@@ -134,7 +134,8 @@ This lab should take approximately **90** minutes to complete.
 
 #### Task 2: Create an Azure Network Adapter
 
->**Note**: Due to recent changes in the WAC console, this step is currently unavailable to execute.
+> [!NOTE]
+> Azure Network Adapter creation is currently unavailable in Windows Admin Center. Skip this task and continue to Exercise 3.
 
 ## Exercise 3: Deploying Windows Admin Center gateway in Azure
 

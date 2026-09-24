@@ -141,22 +141,8 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Create an Azure Network Adapter
 
-1. On **SEA-ADM1**, in the Microsoft Edge window displaying Windows Admin Center, attempt to create an Azure Network Adapter again.
-1. Create an Azure Network Adapter with the following settings:
-
-   |Setting|Value|
-   |---|---|
-   |Subscription|The name of the Azure subscription you are using in this lab|
-   |Location|eastus|
-   |Virtual network|az800l04-vnet|
-   |Gateway subnet|10.4.3.224/27|
-   |Gateway SKU|VpnGw1|
-   |Client Address Space|192.168.0.0/24|
-   |Authentication Certificate|Auto-generated Self-signed root and client Certificate|
-
-1. On **SEA-ADM1**, switch to the Microsoft Edge window displaying the Azure portal and verify that a new virtual network gateway with the name starting with **WAC-Created-vpngw-** is being provisioned.
-
-   >**Note**: The provisioning of the Azure virtual network gateway can take up to 45 minutes. Do not wait for the provisioning to complete but instead proceed to the next exercise.
+> [!NOTE]
+> Azure Network Adapter creation is currently unavailable in Windows Admin Center. Skip this task and continue to Exercise 3.
 
 ## Exercise 3: Deploying Windows Admin Center gateway in Azure
 
